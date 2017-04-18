@@ -129,12 +129,12 @@ input {
 </div>
 
 <ul id="myUL">
-  <li>Hit the gym</li>
-  <li class="checked">Pay bills</li>
-  <li>Meet George</li>
-  <li>Buy eggs</li>
-  <li>Read a book</li>
-  <li>Organize office</li>
+  <li>修自行车</li>
+  <li class="checked">建立blog</li>
+  <li>遍历行情数据源</li>
+  <li>去图书馆</li>
+  <li>实现画K线功能</li>
+  <li>《远航》乐谱编辑</li>
 </ul>
 
 <script>
