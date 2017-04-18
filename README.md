@@ -1,4 +1,12 @@
 [Home](https://littleflute.github.io/blog/) [docs](https://littleflute.github.io/blog/docs)
+  <div id="xdbanner">
+        <span id="xdlogo">v0.0.1</span>
+
+        <a href="https://littleflute.github.io/blog/" class="button fork"><strong>Home</strong></a>
+        
+        <a href="https://littleflute.github.io/blog/docs" class="button fork"><strong>docs</strong></a>
+        
+      </div><!-- end banner -->
 
 ## Welcome to GitHub Pages
 
