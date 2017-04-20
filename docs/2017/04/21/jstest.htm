@@ -1,0 +1,165 @@
+<html>
+<head>
+<script language="JavaScript">
+<!-- 
+var strDiv='';
+var color="#ff00ff";
+function xdPaint(){
+	document.getElementById("div1").innerHTML=strDiv;
+}
+function xdStr(x,y,c,fz){
+  var s='<div style="position:absolute;left:'+x+';top:'+y+';font-size='+fz+'">';
+      s+=c+'</div>';     
+   strDiv+=s;
+}
+function xdPoint (x,y,w,h){
+  var s='<div style="position:absolute;'+
+		'left:' + x + 'px;'+
+		'top:' + y + 'px;'+
+		'width:' + w + 'px;'+
+		'height:' + h + 'px;'+
+		'clip:rect(0,'+w+'px,'+h+'px,0);'+
+		'background-color:' + this.color +
+		';"><\/div>';
+	strDiv+=s;  
+}
+
+function xdLine(x1, y1, x2, y2)
+{
+	if (x1 > x2)
+	{
+		var _x2 = x2;
+		var _y2 = y2;
+		x2 = x1;
+		y2 = y1;
+		x1 = _x2;
+		y1 = _y2;
+	}
+	var dx = x2-x1, dy = Math.abs(y2-y1),
+	x = x1, y = y1,
+	yIncr = (y1 > y2)? -1 : 1;
+
+	if (dx >= dy)
+	{
+		var pr = dy<<1,
+		pru = pr - (dx<<1),
+		p = pr-dx,
+		ox = x;
+		while ((dx--) > 0)
+		{
+			++x;
+			if (p > 0)
+			{
+				xdPoint(ox, y, x-ox, 1);
+				y += yIncr;
+				p += pru;
+				ox = x;
+			}
+			else p += pr;
+		}
+		xdPoint(ox, y, x2-ox+1, 1);
+	}
+
+	else
+	{
+		var pr = dx<<1,
+		pru = pr - (dy<<1),
+		p = pr-dy,
+		oy = y;
+		if (y2 <= y1)
+		{
+			while ((dy--) > 0)
+			{
+				if (p > 0)
+				{
+					xdPoint(x++, y, 1, oy-y+1);
+					y += yIncr;
+					p += pru;
+					oy = y;
+				}
+				else
+				{
+					y += yIncr;
+					p += pr;
+				}
+			}
+			xdPoint(x2, y2, 1, oy-y2+1);
+		}
+		else
+		{
+			while ((dy--) > 0)
+			{
+				y += yIncr;
+				if (p > 0)
+				{
+					xdPoint(x++, oy, 1, y-oy);
+					p += pru;
+					oy = y;
+				}
+				else p += pr;
+			}
+			xdPoint(x2, oy, 1, y2-oy+1);
+		}
+	}
+}
+
+function xdNt(x,y,c,tn,tm,fz){ 
+  var tmY=0;
+  var tnY=fz;
+  xdStr(x,y,c,fz);
+ 
+  switch(tm){
+  case "0": tmY=fz/5; break;
+  case "1": tmY=fz/3; xdStr(x,y,'_',fz);break;
+  case "2": tmY=fz/2; xdStr(x,y,'_',fz);xdStr(x,y+fz/6,'_',fz); break;
+  default: break;
+  }
+   //*
+  switch(tn){
+  case "1":  //  /.
+    xdStr(x+fz/8,y+tmY,'.',fz);xdStr(x+fz/8,y+tmY+fz/6,'.',fz);break;    
+  case "2":  //  //..
+    xdStr(x+fz/8,y+tmY,'.',fz);  break;
+  case "3": break;
+  case "4"://  .1
+    xdStr(x+fz/8,y-fz*3/4,'.',fz);  break;
+  case "5": //  ..1
+    xdStr(x+fz/8,y-fz*3/4,'.',fz); xdStr(x+fz/8,y-fz*11/12,'.',fz);    break;
+  default:
+    break;
+  }
+  //*/
+}
+
+var t=0;
+var X1,Y1,X2,Y2;
+function MyClick(){
+  var scrlY =document.body.scrollTop;
+  var scrlX =document.body.scrollLeft;
+  var x=event.clientX+scrlX-2;
+  var y=event.clientY+scrlY-2; 
+  if(t){
+  	t=0;
+  	X2=x,Y2=y;
+  	xdLine(X1,Y1,X2,Y2);
+  }
+  else{
+  	t=1;
+  	X1=x;Y1=y;
+  	xdNt(x,y,'5','2','2',22);
+  }
+  
+  xdPaint();
+}
+//-->
+</script>
+</head>
+<body >
+<div id="div1">点鼠标左键看看</div>
+<script language="JavaScript">
+<!-- 
+	document.onclick=MyClick;
+//-->
+</script>
+</body>
+</html>

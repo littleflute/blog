@@ -1,0 +1,119 @@
+<HTML>
+<HEAD>
+<META NAME="GENERATOR" Content="Microsoft Developer Studio">
+<META HTTP-EQUIV="Content-Type" content="text/html; charset=gb_2312-80">
+<TITLE>Xd javascript函数库</TITLE>
+<SCRIPT src="xde.js" type=text/javascript></SCRIPT>
+<script language="JavaScript" >
+<!--
+var color = "#000000"
+var rad = Math.PI/180 
+var a;
+var fontsz=10;//音符宽,行高
+
+var ClickTimes=0;
+var x1,y1,x2,y2;
+
+function Swap(a,b){var t=a;a=b;b=t;}
+function xdPrint(str){	
+	document.getElementById("div1").innerHTML +=str;
+}
+
+function xdPoint(x,y,w,h) //点
+{
+	var s= '<div style="position:absolute;'+
+		'left:' + x + 'px;'+
+		'top:' + y + 'px;'+
+		'width:' + w + 'px;'+
+		'height:' + h + 'px;'+
+		'clip:rect(0,'+w+'px,'+h+'px,0);'+
+		'background-color:' + color +';"><\/div>';
+    	xdPrint(s);
+}
+
+
+function xdLine(x1,y1,x2,y2) //线
+{
+	var iTag=0;
+	var dx,dy,tx,ty,inc1,inc2,d,curx,cury;
+
+	xdPoint(x1,y1,1,1);
+	
+	if(x1==x2 && y1==y2)
+	{
+		return;
+	}
+	dx=Math.abs(x2-x1);
+	dy=Math.abs(y2-y1);
+	if(dx<dy)
+	{
+		iTag=1;
+		Swap(x1, y1);
+		Swap(x2, y2);
+		Swap(dx, dy);
+	}
+	tx=(x2-x1)>0?1:-1;
+	ty=(y2-y1)>0?1:-1;
+	curx=x1;
+	cury=y1;
+	inc1=2*dy;
+	inc2=2*(dy-dx);
+	d=inc1-dx;
+	while(curx!=x2)
+	{
+		curx+=tx;
+		if(d<0)
+		{
+			d+=inc1;
+		}
+		else
+		{
+			cury+=ty;
+			d+=inc2;
+		}
+		if(iTag)
+		{
+			xdPoint(cury, curx,1,1);
+		}
+		else
+		{
+			xdPoint(curx, cury,1,1);
+		}
+	}
+}
+
+function MouseClick(){     
+    if(ClickTimes==0){
+    	x1=window.event.x;y1=window.event.y;ClickTimes++;
+    	x1=x1+document.body.scrollLeft;    
+	y1=y1+document.body.scrollTop;
+    }
+    else
+    {
+    	x2=window.event.x;y2=window.event.y;
+	x2=x2+document.body.scrollLeft;
+   	y2=y2+document.body.scrollTop;
+    	ClickTimes=0;
+    	jg2.setColor("#0000ff"); // blue
+    	jg2.drawLine(x1,y1,x2,y2);
+    	jg2.paint();
+    }
+
+
+}
+-->
+</script>
+</head>
+
+<body bgcolor="#808000" onClick="MouseClick()">
+<div id="div1">aas</div>
+<div id="anotherCanvas" style="position:absolute;left:0px;top:0px;width=1000px;height=1000px;"></div> 
+<script language="JavaScript">
+<!--
+var jg2 = new jsGraphics("anotherCanvas");
+xdPrint(color);
+xdPoint(10,10,1,1);
+-->
+</script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<html>
+<head>
+<script language="JavaScript">
+<!-- 
+var color = "#ff00ff" 
+var strnt="132;131;132; 30;131;132;232; 30;|30;132;131;132; 30;131;132;232; 30;|30;132;131;132; 30;131;132;232; 30;|30;132;131;132; 30;131;132;232; 30;|30;132;131;132; 30;131;132;232; 30;|30;132;131;132; 30;131;132;232; 30;|30;"
+var strly="轻;轻;地; ; ;我;将;"
+
+var Nnt=strnt.lastIndexOf(";")+1;
+strnt=strnt.split(";");
+strly=strly.split(";");
+var strDiv='';
+
+function xdPoint (x,y,w,h){
+  var s='<div style="position:absolute;left:'+x+';top:'+y+';">';
+      s+='<table width="'+w+'" height="'+h+'" border="0" cellpadding="0" cellspacing="0" bgcolor="'+color+'"></div>';   
+ //  document.getElementById("div1").innerHTML +=s;
+ //    strDiv=s;
+  //   alert(strDiv);
+}
+function xdPaint(){
+	document.getElementById("div1").innerHTML=strDiv;
+//	alert(strDiv);
+}
+function xdStr(x,y,c,fz){
+  var s='<div style="position:absolute;left:'+x+';top:'+y+';font-size='+fz+'">';
+      s+=c+'</div>';   
+  // document.getElementById("div1").innerHTML +=s;
+   strDiv+=s;
+}
+function xdNt(x,y,c,tn,tm,fz){ 
+  var tmY=0;
+  var tnY=fz;
+  xdStr(x,y,c,fz);
+ 
+  switch(tm){
+  case "0": tmY=fz/5; break;
+  case "1": tmY=fz/3; xdStr(x,y,'_',fz);break;
+  case "2": tmY=fz/2; xdStr(x,y,'_',fz);xdStr(x,y+fz/6,'_',fz); break;
+  default: break;
+  }
+   //*
+  switch(tn){
+  case "1":  //  /.
+    xdStr(x+fz/8,y+tmY,'.',fz);xdStr(x+fz/8,y+tmY+fz/6,'.',fz);break;    
+  case "2":  //  //..
+    xdStr(x+fz/8,y+tmY,'.',fz);  break;
+  case "3": break;
+  case "4"://  .1
+    xdStr(x+fz/8,y-fz*3/4,'.',fz);  break;
+  case "5": //  ..1
+    xdStr(x+fz/8,y-fz*3/4,'.',fz); xdStr(x+fz/8,y-fz*11/12,'.',fz);    break;
+  default:
+    break;
+  }
+  //*/
+}
+function MyClick(){
+  var scrlY =document.body.scrollTop;
+  var scrlX =document.body.scrollLeft;
+  var x=event.clientX+scrlX;
+  var y=event.clientY+scrlY; 
+  var fz=28; 
+  
+  var n=Nnt/4;
+  var i;
+  for(i=0;i<n;i++){
+  	xdNt(x+i*fz/2,y-fz*4,strnt[i].charAt(0),strnt[i].charAt(1),strnt[i].charAt(2),fz);  	
+  }
+    
+  for(i=0;i<7;i++){
+  	xdStr(x+i*fz/2,y-fz*4+2*fz,strly[i],fz/2);  	
+  }
+  //xdNt(x+fz/2,y-fz*4,strnt[1],5,1,fz);
+  
+  //xdNt(x,y-fz*2,5,4,1,fz);xdNt(x+fz/2,y-fz*2,3,4,0,fz);
+  
+ // xdNt(x,y,5,2,0,fz);xdNt(x+fz/2,y,3,2,1,fz);
+  //xdNt(x,y+fz*2,5,1,1,fz);xdNt(x+fz/2,y+fz*2,3,1,0,fz);
+  //xdPoint(x,y,2,2);
+  //xdStr(x,y,5,122);
+  xdPaint();
+}
+
+//-->
+</script>
+</head>
+<body >
+<div id="div1">点鼠标左键看看</div>
+<script language="JavaScript">
+<!-- 
+	document.onclick=MyClick;
+//-->
+</script>
+</body>
+</html>

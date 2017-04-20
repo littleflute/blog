@@ -1,0 +1,123 @@
+<html>
+<head>
+<title>JpInput</title>
+
+<STYLE  type="text/css">TD {
+ FONT-SIZE: 9pt
+}
+
+</STYLE>
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+</head>
+
+<!--  [body]===================================================================================== -->
+<body bgcolor="#fef4d9">
+
+<div id="div1" style = "font-size=12pt"></div>
+
+<script language="JavaScript">
+<!-- 
+//	document.onclick=MyClick;
+//-->
+function ClearDiv1()
+{
+	document.getElementById("div1").innerHTML ="";
+	xdStr(10,10,"",12);
+}
+function xdStr(x,y,c,fz){
+  var s='<div style="position:absolute;left:'+x+';top:'+y+';font-size='+fz+'">';
+      s+=c+'</div>';   
+   document.getElementById("div1").innerHTML +=s;
+}
+
+ var ascstr="a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z";
+ ascstr=ascstr.split(",");
+
+var x=10;
+var y=10;
+var fz=12;
+function keysubmit(e)
+{
+     if (event.keyCode>96 && event.keyCode<122)
+     {
+        if (getime.T2.value==""){txt1=event.keyCode-97;}
+        getime.T2.value=getime.T2.value+ascstr[event.keyCode-97];
+        if (getime.T2.value.length>3)            
+        {            
+            
+             getime.T2.value="";
+             getime.T1.value="";
+        }
+        else
+        {
+             
+           
+         }    
+         return(false);
+     }
+     if (event.keyCode==13)
+     {
+	y +=fz;
+     }
+     if (event.keyCode==32)
+     {
+        xdStr (x,y,getime.T2.value,fz);
+	x +=fz;
+        getime.T2.value="";
+        getime.T1.value="";
+        return(false);
+     }
+     if (event.keyCode>47 && event.keyCode<58 && getime.T1.value!="")
+     {
+        teststr2=getime.T1.value;
+        teststr2=teststr2.split(" ");
+        getime.S1.value=getime.S1.value + teststr2[(event.keyCode-48)*2+1];
+        getime.T1.value="";
+        getime.T2.value="";
+        return(false);
+     }   
+     return(true);
+}
+</script>
+
+
+<TABLE style="BORDER-COLLAPSE: collapse" onfocus=getime.S1.focus(); 
+borderColor=#111111 height=145 cellSpacing=0 cellPadding=0 width=755 border=0>
+  <FORM name=getime method=post>
+  <TBODY>
+  <TR>
+    <TD width=755 colSpan=4 height=69>
+      <P align=center><FONT color=#ff0000 style="font-size:9pt"><B>在线中文输入<SPAN 
+      lang=en-us>V0.2c(2002.8.25)</SPAN></B></FONT></P></TD></TR>
+  <TR>
+    <TD vAlign=center width=86 height=157 rowSpan=3>
+      <P align=left><SPAN lang=en-us></SPAN> </P>
+      <P align=center>    </P></TD>
+    <TD vAlign=center width=669 colSpan=3 height=114><TEXTAREA onkeypress="return keysubmit();" style="BORDER-RIGHT: 1px solid; PADDING-RIGHT: 4px; BORDER-TOP: 1px solid; PADDING-LEFT: 4px; PADDING-BOTTOM: 1px; BORDER-LEFT: 1px solid; PADDING-TOP: 1px; BORDER-BOTTOM: 1px solid" name=S1 rows=12 cols=82></TEXTAREA></TD></TR>
+  <TR>
+    <TD vAlign=center width=669 colSpan=3 height=22><FONT color=#f00000><SPAN 
+      lang=en-us>                    
+      </SPAN>可以用数字键选字</FONT></TD></TR>
+  <TR>
+    <TD 
+    style="BORDER-RIGHT: #7f9db9 1px solid; PADDING-RIGHT: 4px; BORDER-TOP: #7f9db9 1px solid; PADDING-LEFT: 4px; PADDING-BOTTOM: 1px; BORDER-LEFT: #7f9db9 1px solid; PADDING-TOP: 1px; BORDER-BOTTOM: #7f9db9 1px solid" 
+    width=104 bgColor=#ffffff height=21>五笔：<INPUT 
+      style="BORDER-RIGHT: #ffffff 1px solid; PADDING-RIGHT: 4px; BORDER-TOP: #ffffff 1px solid; PADDING-LEFT: 4px; PADDING-BOTTOM: 1px; BORDER-LEFT: #ffffff 1px solid; PADDING-TOP: 1px; BORDER-BOTTOM: #ffffff 1px solid" 
+      onfocus=getime.S1.focus(); size=8 name=T2></TD>
+    <TD 
+    style="BORDER-RIGHT: #7f9db9 1px solid; PADDING-RIGHT: 4px; BORDER-TOP: #7f9db9 1px solid; PADDING-LEFT: 4px; PADDING-BOTTOM: 1px; BORDER-LEFT: #7f9db9 1px solid; PADDING-TOP: 1px; BORDER-BOTTOM: #7f9db9 1px solid" 
+    width=470 bgColor=#ffffff height=21><INPUT 
+      style="BORDER-RIGHT: #ffffff 1px solid; PADDING-RIGHT: 4px; BORDER-TOP: #ffffff 1px solid; PADDING-LEFT: 4px; PADDING-BOTTOM: 1px; BORDER-LEFT: #ffffff 1px solid; PADDING-TOP: 1px; BORDER-BOTTOM: #ffffff 1px solid" 
+      onfocus=getime.S1.focus(); size=61 name=T1></TD>
+    <TD 
+    style="PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; PADDING-TOP: 0px" 
+    width=77 height=21>　</TD></TR>
+<FORM></TBODY></TABLE>
+<FORM METHOD="post">
+<INPUT TYPE="button" VALUE="清空" onClick="ClearDiv1()" style="background-color: #8000FF; color: rgb(255,255,255)">
+</form>
+</body>
+</html>
+

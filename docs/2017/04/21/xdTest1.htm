@@ -1,0 +1,185 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE>Xd Test 1</TITLE>
+<META http-equiv=expires content=0>
+<META http-equiv=content-type content="text/html; charset=iso-8859-1">
+<SCRIPT src="xdApi_Walter.js" type=text/javascript></SCRIPT>
+</HEAD>
+<BODY bgColor=#00ffff>
+
+
+<TABLE>
+  <TBODY>
+  <TR>
+    <TD width=80> </TD>
+    <TD>
+      <TABLE>
+        <TBODY>
+          <TD><BIG>&nbsp;<BR>&nbsp;<BR><B>Try it out:</B></BIG> </TD></TR>
+        <TR>
+          <TD>
+            <TABLE cellSpacing=0 cellPadding=0 width="100%" bgColor=#000099 
+            border=0>
+              <TBODY>
+              <TR>
+                <TD>
+                  <TABLE cellSpacing=1 cellPadding=0 width="100%" border=0>
+                    <TBODY>
+                    <TR>
+                      <TD bgColor=white>
+                        <FORM action="">
+                        <TABLE cellSpacing=0>
+                          <TBODY>
+                          <TR align=right>
+                            <TD><INPUT style="WIDTH: 100%" onclick=DRAW(this.value) type=button value=drawLine()></TD>
+                            <TD>x1<INPUT maxLength=4 size=5 value=50 
+                              name=dl_x1>&nbsp;</TD>
+                            <TD>y1<INPUT maxLength=4 size=5 value=-330 
+                              name=dl_y1>&nbsp;</TD>
+                            <TD>x2<INPUT maxLength=4 size=5 value=500 
+                              name=dl_x2>&nbsp;</TD>
+                            <TD>y2<INPUT maxLength=4 size=5 value=800 
+                              name=dl_y2>&nbsp;</TD></TR>
+                          <TR align=right>
+                            <TD><INPUT style="WIDTH: 100%" onclick=DRAW(this.value) type=button value=drawRect()></TD>
+                            <TD>x<INPUT maxLength=4 size=5 value=130 
+                              name=dr_x>&nbsp;</TD>
+                            <TD>y<INPUT maxLength=4 size=5 value=20 
+                            name=dr_y>&nbsp;</TD>
+                            <TD>w<INPUT maxLength=4 size=5 value=490 
+                              name=dr_w>&nbsp;</TD>
+                            <TD>h<INPUT maxLength=4 size=5 value=80 
+                            name=dr_h>&nbsp;</TD></TR>
+                          <TR align=right>
+                            <TD><INPUT style="WIDTH: 100%" onclick=DRAW(this.value) type=button value=fillRect()></TD>
+                            <TD>x<INPUT maxLength=4 size=5 value=-70 
+                              name=fr_x>&nbsp;</TD>
+                            <TD>y<INPUT maxLength=4 size=5 value=130 
+                              name=fr_y>&nbsp;</TD>
+                            <TD>w<INPUT maxLength=4 size=5 value=160 
+                              name=fr_w>&nbsp;</TD>
+                            <TD>h<INPUT maxLength=4 size=5 value=100 
+                              name=fr_h>&nbsp;</TD></TR>
+                          <TR align=right>
+                            <TD><INPUT onclick=DRAW(this.value) type=button value=fillPolygon()></TD>
+                            <TD colSpan=4>x<INPUT size=25 value=80,126,-30,-60 
+                              name=fp_x>&nbsp;y<INPUT size=25 value=0,130,40,100 
+                              name=fp_y> </TD></TR>
+                          <TR align=right>
+                            <TD><INPUT style="WIDTH: 100%" onclick=DRAW(this.value) type=button value=drawEllipse()></TD>
+                            <TD>x<INPUT maxLength=4 size=5 value=350 
+                              name=do_x>&nbsp;</TD>
+                            <TD>y<INPUT maxLength=4 size=5 value=-30 
+                              name=do_y>&nbsp;</TD>
+                            <TD>w<INPUT maxLength=3 size=5 value=140 
+                              name=do_w>&nbsp;</TD>
+                            <TD>h<INPUT maxLength=4 size=5 value=250 
+                              name=do_h>&nbsp;</TD></TR>
+                          <TR align=right>
+                            <TD><INPUT style="WIDTH: 100%" onclick=DRAW(this.value) type=button value=fillEllipse()></TD>
+                            <TD>x<INPUT maxLength=4 size=5 value=20 
+                            name=fo_x>&nbsp;</TD>
+                            <TD>y<INPUT maxLength=4 size=5 value=150 
+                              name=fo_y>&nbsp;</TD>
+                            <TD>w<INPUT maxLength=4 size=5 value=440 
+                              name=fo_w>&nbsp;</TD>
+                            <TD>h<INPUT maxLength=4 size=5 value=800 
+                              name=fo_h>&nbsp;</TD></TR>
+                          <TR>
+                            <TD colSpan=5>
+                              <TABLE cellSpacing=0 cellPadding=0 width="100%">
+                                <TBODY>
+                                <TR>
+                                <TD>setColor("#<INPUT maxLength=6 size=7 
+                                value=00aaaa name=Color>") </TD>
+                                <TD align=middle>setStroke(<INPUT maxLength=2 
+                                size=3 value=4 name=Stroke>) </TD>
+                                <TD align=right>setStroke(Stroke.DOTTED<INPUT 
+                                type=checkbox name=Dotted>) 
+                              </TD></TR></TBODY></TABLE><INPUT style="FONT-WEIGHT: bold; WIDTH: 290px" onclick=;if(jg2)jg2.clear(); type=button value="clear() this test area"> 
+                            </TD></TR>
+                          <TR>
+                            <TD colSpan=5 height=250>
+                              <DIV id=dt 
+                              style="LEFT: -80px; POSITION: relative; TOP: 10px; HEIGHT: 1px"></DIV>
+                              <DIV id=test 
+                              style="Z-INDEX: 2; LEFT: 0px; OVERFLOW: visible; WIDTH: 400px; POSITION: relative; TOP: 0px; HEIGHT: 250px">
+                              <CENTER><SMALL>Test 
+                            Canvas</SMALL></CENTER></DIV></TD></TR></TBODY></TABLE></FORM></TD></TR></TBODY>
+</TABLE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE>
+
+<SCRIPT type=text/javascript>
+<!--
+var jg2=new xdCanvas("test");
+var jg3 = new xdCanvas("dt");
+function DRAW(shape)
+{
+    if (jg_n4 || window.opera && !document.defaultView)
+    {
+        alert('In Netscape 4 and Opera < version 7, the functionality\n"Draw into a canvas, even after the page has fully loaded" isn\'t available.\nThese browsers can only draw directly into the document\nwhile the page is parsed.');
+        return;
+    }
+
+
+    if (window.event) event.cancelBubble = true;
+    var f=document.forms[0];
+
+    var color = ''+f.Color.value;
+    for (var z = 0; z<color.length; z++)
+        if (isNaN(parseInt(color.charAt(z), 16)))
+            color = color.substring(0, z) + '6' + color.substring(z+1);
+
+
+
+    var t0 = (new Date()).getTime();
+
+    jg2.setColor("#"+color);
+    jg2.setStroke(f.Dotted.checked? Stroke.DOTTED : parseInt(f.Stroke.value));
+
+    if (shape=="drawLine()")
+        jg2.drawLine(parseInt(f.dl_x1.value), parseInt(f.dl_y1.value), parseInt(f.dl_x2.value), parseInt(f.dl_y2.value));
+    else if (shape=="drawRect()")
+        jg2.drawRect(parseInt(f.dr_x.value), parseInt(f.dr_y.value), parseInt(f.dr_w.value), parseInt(f.dr_h.value));
+    else if(shape=="fillRect()")
+        jg2.fillRect(parseInt(f.fr_x.value), parseInt(f.fr_y.value), parseInt(f.fr_w.value), parseInt(f.fr_h.value));
+    else if(shape=="drawEllipse()")
+        jg2.drawEllipse(parseInt(f.do_x.value), parseInt(f.do_y.value), parseInt(f.do_w.value), parseInt(f.do_h.value));
+    else if(shape=="fillEllipse()")
+        jg2.fillEllipse(parseInt(f.fo_x.value), parseInt(f.fo_y.value), parseInt(f.fo_w.value), parseInt(f.fo_h.value));
+    else if(shape=="fillPolygon()")
+    {
+        var pgx = f.fp_x.value.split(',');
+        var pgy = f.fp_y.value.split(',');
+        var comm = '\n \nNote:\nValues must be separated with commas from each other.';
+        if (pgx.length!=pgy.length) alert('The number of x und y values must be equal.'+comm);
+        else
+        {
+            for (var z = 0; z<pgx.length; z++)
+            {
+                if (isNaN(pgx[z] = parseInt(pgx[z])) || isNaN(pgy[z] = parseInt(pgy[z])))
+                {
+                    alert('Invalid x or y value.'+comm);
+                    return;
+                }
+            }
+            jg2.fillPolygon(pgx, pgy);
+        }
+    }
+    jg2.paint();
+    var t1 = (new Date()).getTime() - t0;
+    jg3.clear();
+    jg3.setColor('#'+color);
+    jg3.setFont('verdana,geneva,sans-serif', '12px', Font.BOLD);
+    jg3.drawString(t1 + ' milliseconds', 0, 10);
+    jg3.drawRect(0,10,100,10);
+    jg3.drawStringRect(t1 + ' ms',0,50,200,20);
+    jg3.paint();
+}
+
+
+//-->
+</SCRIPT>
+
+
+</BODY></HTML>
