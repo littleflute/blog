@@ -3,11 +3,12 @@
 ##[docs](https://littleflute.github.io/blog/docs)
 
 <div id="xdbanner" style="position: fixed; left: 50%; margin-left: -325px; padding: 10px 12px; margin-top: 6px; line-height: 14px; font-size: 14px; background-color: #FFE788;">
-        <span id="xdlogo">v0.0.2</span>
+        <span id="xdlogo">v0.1.2</span>
 
         <a href="https://littleflute.github.io/blog/" class="button fork"><strong>Home</strong></a>
         
         <a href="https://littleflute.github.io/blog/docs" class="button fork"><strong>docs</strong></a>
+        <a href="https://littleflute.github.io/blog/html/songs" class="button fork"><strong>songs</strong></a>
         
       </div><!-- end banner -->
 
