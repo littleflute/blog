@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<style>
+#myDiv{
+	position:absolute; 
+    background:black;
+    /*left can not put here!!!*/
+    
+    height:	300px;
+    border: 1px solid blue;
+}
+#hDiv{
+	position:absolute; 
+    background:red;
+    left:	0px;
+    top:	0px;
+    width:	50px;
+    
+    border: 0px solid red;
+}
+#vDiv{
+	position:absolute; 
+    background:red;
+    left:	0px;
+    top:	0px;
+    width:	50px;
+    
+    border: 0px solid red;
+}
+#demo{position:absolute;top:10px;left:55px;
+	border:1px red solid;height:50px;width:500px;}
+</style>
+<body>
+
+<div id="myDiv" style="left:55px;width:	500px;height:300px;top:	150px;">
+<div id="vDiv"></div>
+<div id="hDiv"></div>
+</div>
+ 
+<p id="demo" style=""></p>
+
+<script> 
+var x = document.getElementById("myDiv");
+addHandler();
+
+function addHandler(){
+
+	if (x.addEventListener) {
+    	x.addEventListener("mousemove", myMousemove);
+	} else if (x.attachEvent) {
+    	x.attachEvent("onmousemove", myMousemove);
+	}
+} 
+function myMousemove(e){
+	var s = "";
+    var o = document.getElementById("demo");
+    s += "left:" + x.style.left;
+    s += "<br>clientX:" + e.clientX;
+    s += "screenX:" + e.screenX;
+    var myX = e.clientX - parseFloat(x.style.left);
+    s += "<br>myX:" + myX;
+    o.innerHTML = s;
+    
+    
+    var v = document.getElementById("vDiv");
+    v.style.left	= (myX-2) + "px";
+    v.style.width 	= 1+ "px";
+    v.style.height	= x.style.height;
+    var h = document.getElementById("hDiv");
+    var myY = e.clientY -parseFloat(x.style.top);
+    h.style.top		= (myY-2) + "px";
+    h.style.height	= 1+"px";
+    h.style.width	= x.style.width;
+}
+</script>
+
+</body>
+</html>
