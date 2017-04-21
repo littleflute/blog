@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+#myDIV {
+    background-color: coral;
+    border: 1px solid;
+    padding: 50px;
+    color: white;
+}
+</style>
+</head>
+<body>
+<a href="https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_element_removeeventlistener_crossbrowser">ref</a><br>
+<p>The removeEventListener() method is not supported Internet Explorer 8 and earlier versions.</p>
+
+<p>This example demonstrates a solution that will work for all browsers.</p>
+
+<div id="myDIV">This div element has an onmousemove event handler that displays a random number every time you move your mouse inside this orange field.
+  <p>Click the button to remove the DIV's event handler.</p>
+  <button onclick="removeHandler()" >remove</button>
+  <button onclick="addHandler()" >add</button>
+</div>
+
+<p id="demo"></p>
+
+<script>
+var x = document.getElementById("myDIV");
+addHandler();
+
+function addHandler(){
+
+	if (x.addEventListener) {
+    	x.addEventListener("mousemove", myFunction);
+	} else if (x.attachEvent) {
+    	x.attachEvent("onmousemove", myFunction);
+	}
+}
+
+function myFunction(e) {
+    document.getElementById("demo").innerHTML = e.clientX;//Math.random();
+}
+
+function removeHandler() {
+    if (x.removeEventListener) {
+        x.removeEventListener("mousemove", myFunction);
+    } else if (x.detachEvent) {
+        x.detachEvent("onmousemove", myFunction);
+    }
+}
+</script>
+
+</body>
+</html>
