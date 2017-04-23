@@ -1,0 +1,77 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*键位练习*/
+#content #keyboard{margin-bottom:10px; border:none;}
+#keyboard .line1{padding-left:5px;}
+#keyboard .line1 div{float:left; height:58px; width:65px; background-image:url(../images/bg_typing.jpg); background-position:-389px 0px; background-repeat:no-repeat; background-color:#9980DB;}
+#keyboard #art_text{height:60px; padding:10px 0px;}
+#keyboard #art_text h3{line-height:40px; color:#F00; background:#FDB; text-align:center; font-size:32px; padding:10px 0px;}
+#keyboard .line1 div ul{height:53px; background-image:url(../images/bg_typing.jpg); background-repeat:no-repeat; background-position: -456px 0px; padding:5px 0px 0px 0px;}
+#keyboard .line1 div ul li{line-height:19px; text-align:center; font-weight:bold; font-size:16px;}
+#keyboard .line1 div ul li.fj{background:url(../images/bg_key_ico.gif) no-repeat center 11px;}
+#keyboard .line1 div ul li.enter_ico{background:url(../images/bg_key_ico.gif) no-repeat 30px -82px; padding-left:25px;}
+#keyboard .line1 div ul li.shift_ico{background:url(../images/bg_key_ico.gif) no-repeat 30px -100px;}
+#keyboard .line1 .b_on{width:65px; background-position:-389px -59px; background-color:#74E396;}
+#keyboard .line1 .b_on ul{background-position:-456px -59px;}
+#keyboard .line1 .b_on ul li{line-height:38px;}
+#keyboard .line1 .b1_on{width:65px; background-position:-389px -57px; background-color:#74E396;}
+#keyboard .line1 .b1_err{width:65px; background-position:-389px -116px; background-color:#E9856E;}
+#keyboard .line1 .b2{width:65px; background-position:-389px -178px; background-color:#7C8DDB;}
+#keyboard .line1 .b2_on{width:65px; background-position:-389px -57px; background-color:#74E396;}
+#keyboard .line1 .b2_err{width:65px; background-position:-389px -116px; background-color:#E9856E;}
+#keyboard .line1 .b_back{width:130px; background-position:-324px 0px;}
+#keyboard .line1 .b_back_on{width:130px; background-position:-324px -57px; background-color:#74E396;}
+#keyboard .line1 .b_back_err{width:130px; background-position:-324px -116px; background-color:#E9856E;}
+#keyboard .line1 .b_tab{width:97px; background-position:-357px 0px;}
+#keyboard .line1 .b_tab_on{width:97px; background-position:-357px -57px; background-color:#74E396;}
+#keyboard .line1 .b_tab_err{width:97px; background-position:-357px -116px; background-color:#E9856E;}
+#keyboard .line1 .b_lock{width:119px; background-position:-335px 0px;}
+#keyboard .line1 .b_lock_on{width:119px; background-position:-335px -57px; background-color:#74E396;}
+#keyboard .line1 .b_lock_err{width:119px; background-position:-335px -116px; background-color:#E9856E;}
+#keyboard .line1 .b_enter{width:140px; background-position:-314px 0px;}
+#keyboard .line1 .b_enter_on{width:140px; background-position:-314px -57px; background-color:#74E396;}
+#keyboard .line1 .b_enter_err{width:140px; background-position:-314px -116px; background-color:#E9856E;}
+#keyboard .line1 .b_shift{width:162px; background-position:-292px 0px;}
+#keyboard .line1 .b_shift_on{width:162px; background-position:-292px -57px; background-color:#74E396;}
+#keyboard .line1 .b_ctrl{width:120px; background-position:-334px 0px;}
+#keyboard .line1 .b_space{width:409px; background-position:-45px -178px;}
+#keyboard .line1 .b_space_on{width:409px; background-position:-45px -57px; background-color:#74E396;}
+#keyboard .line1 .b_space_err{width:409px; background-position:-45px -116px;}
+#keyboard .line1 .b_win{width:65px; background-position:-389px 0px;}
+#keyboard .line1 .b_win li{background:url(../images/bg_key_ico.gif) no-repeat center -10px;}
+#keyboard .line1 .b_mouse{width:65px; background-position:-389px 0px;}
+#keyboard .line1 .b_mouse li{background:url(../images/bg_key_ico.gif) no-repeat center -41px;}
+#keyboard .line1 .b_alt{width:65px; background-position:-389px -178px;}
+#keyboard .line1 .b_shift li,#keyboard .line1 .b_shift_on li,#keyboard .line1 .b_alt li,#keyboard .line1 .b_ctrl li,#keyboard .line1 .b_win li,#keyboard .line1 .b_mouse li{line-height:38px;}
+#keyboard .line1 .b_space ul,#keyboard .line1 .b_alt ul,#keyboard .line1 .b2 ul{background-position:-456px -178px;}
+#keyboard .line1 .b1_on ul,
+#keyboard .line1 .b2_on ul,
+#keyboard .line1 .b_back_on ul,
+#keyboard .line1 .b_enter_on ul,
+#keyboard .line1 .b_shift_on ul,
+#keyboard .line1 .b_tab_on ul,
+#keyboard .line1 .b_space_on ul,
+#keyboard .line1 .b_lock_on ul{background-position:-456px -57px; padding:7px 0px 0px 0px; height:51px;}
+#keyboard .line1 .b1_err ul,
+#keyboard .line1 .b2_err ul,
+#keyboard .line1 .b_back_err ul,
+#keyboard .line1 .b_enter_err ul,
+#keyboard .line1 .b_tab_err ul,
+#keyboard .line1 .b_space_err ul,
+#keyboard .line1 .b_lock_err ul{background-position:-456px -116px; padding:7px 0px 0px 0px; height:51px;}
+
+#content #keyboard_info{border:none; margin-bottom:10px; padding:0px 5px;}
+#keyboard_info .info_text{float:left; height:25px; line-height:25px; color:#333; }
+#keyboard_info .info_text ul li{float:left; background-image:url(../images/key_info_ico.gif); background-repeat:no-repeat; width:110px; padding-left:40px;}
+#keyboard_info .info_text ul li#shijian{background-position:10px 0px;}
+#keyboard_info .info_text ul li#sudu{background-position:10px -60px;}
+#keyboard_info .info_text ul li#right_num{background-position:10px -30px;}
+#keyboard_info .info_text ul li#jindu{background-position:10px -90px;}
+#keyboard_info #test{line-height:25px; padding:0px 5px;}
+/*设置练习文章*/
+#keyboard_info .setting{float:right; line-height:25px; height:25px; padding-right:10px;}
+#keyboard_info .setting #jump_menu{ padding:2px 0px;}
+#keyboard_info .setting #jump_menu optgroup{ font-style:normal; text-align:center;}
+#keyboard_info .setting #jump_menu option{padding:2px 0px; text-align:left;}
+#keyboard_info .setting #jump_menu option.on{color:#804000}
