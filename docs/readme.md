@@ -1,5 +1,5 @@
 ## [Home](..)
-#[v0.1.2](https://github.com/littleflute/blog/edit/master/docs/readme.md) [showme](https://littleflute.github.io/blog/docs)
+#[v0.1.3](https://github.com/littleflute/blog/edit/master/docs/readme.md) | [showme](https://littleflute.github.io/blog/docs)
 
 ## [最新文章]
 <div id="border:1px red solid;width:100px;height:20px;">
