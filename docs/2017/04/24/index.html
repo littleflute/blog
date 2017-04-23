@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<body>
+<!--
+xdblogID:2017041400
+-->
+Address:<br>
+<textarea id="myTextarea" style="width:300px;height:350px;">
+JavaScript: Set Cursor Position of textarea
+
+JavaScript: Set Cursor Position of textarea
+</textarea>
+
+<p>Click the button to select the contents of the text area.</p>
+
+<button type="button" onclick="myFunction()">select All</button>
+<button type="button" onclick="boldText()">boldText</button>
+<button type="button" onclick="setF(20)">20</button>
+
+<script>
+function myFunction() {
+    document.getElementById("myTextarea").select();
+}
+function setF(i){  
+     setCaretToPos(document.getElementById("myTextarea"), i);
+}
+var txtarea = document.getElementById("myTextarea");
+function boldText() {
+	var s = txtarea.value.substring(1,5);
+    txtarea.value = s;
+                txtarea.focus();
+             }
+   
+   
+function setSelectionRange(input, selectionStart, selectionEnd) {
+if (input.setSelectionRange) {
+input.focus();
+input.setSelectionRange(selectionStart, selectionEnd);
+}
+else if (input.createTextRange) {
+var range = input.createTextRange();
+range.collapse(true);
+range.moveEnd('character', selectionEnd);
+range.moveStart('character', selectionStart);
+range.select();
+}
+}
+
+function setCaretToPos (input, pos) {
+setSelectionRange(input, pos, pos);
+}
+</script>
+ 
+</body>
+</html>
