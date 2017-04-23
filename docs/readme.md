@@ -1,8 +1,8 @@
 ## [Home](..)
-#[v0.3.2](https://github.com/littleflute/blog/edit/master/docs/readme.md) | [showme](https://littleflute.github.io/blog/docs)
+#[v0.4.1](https://github.com/littleflute/blog/edit/master/docs/readme.md) | [showme](https://littleflute.github.io/blog/docs)
 
 ## [最新文章]
-<div id="test" style="border:1px red solid;width:100px;height:20px;">test
+<div id="test" style="border:1px red solid;width:500px;height:220px;">test
 </div>
 <script>
 getData("https://littleflute.github.io/blog/docs/2017/04/23");
