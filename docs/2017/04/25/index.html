@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<style>
+#demo1{border:1px solid green;width:300px;height:100px;
+}
+#demo2{border:1px solid blue;width:300px;height:100px;
+}
+</style>
+<body onmousedown="mydown()" onkeydown="myKeydown()">
+ 
+<p id="demo1" style=""></p>
+
+<p id="demo2" style=""></p>
+<script>
+function xdDom()
+{
+	this.id			= "";
+    this.init 		= function(i){
+    	this.id	= i;
+    };
+    this.mousedown 	= function(e,x){
+    	if(x.id != this.id) return;
+    	alert(this.id);
+    };
+    this.keydown 	= function(e,x){
+    	if(x.id != this.id) return;
+    	alert(this.id);
+    };
+}
+
+var x1 = new xdDom();
+var x2 = new xdDom(); 
+x2.init("demo2");
+x1.init("demo1");
+
+ function mydown(e) {
+    var targ;
+    if (!e) {
+        var e = window.event;
+    }
+    if (e.target) {
+        targ = e.target;
+    } else if (e.srcElement) {
+        targ = e.srcElement;
+    }
+    var tid;
+    tid = targ.id;
+    x1.mousedown(e,targ);
+    x2.mousedown(e,targ);
+}
+
+ function myKeydown(e) {
+    var targ;
+    if (!e) {
+        var e = window.event;
+    }
+    if (e.target) {
+        targ = e.target;
+    } else if (e.srcElement) {
+        targ = e.srcElement;
+    }
+    var tid;
+    tid = targ.id;
+    x1.keydown(e,targ);
+    x2.keydown(e,targ);
+}
+</script>
+</body>
+</html>
