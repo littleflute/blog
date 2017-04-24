@@ -1,113 +1,26 @@
-
 <!DOCTYPE html>
 <html>
-<style>
-#myDiv{
-	position:absolute; 
-    background:black;
-    /*left can not put here!!!*/
-    
-    height:	300px;
-    border: 1px solid blue;
-}
-#hDiv{
-	position:absolute; 
-    background:red;
-    left:	0px;
-    top:	0px;
-    width:	50px;
-    
-    border: 0px solid red;
-}
-#vDiv{
-	position:absolute; 
-    background:red;
-    left:	0px;
-    top:	0px;
-    width:	50px;
-    
-    border: 0px solid red;
-}
-#valueDiv{
-	position:absolute; 
-    background:blue;
-    left:	500px;
-    top:	0px;
-    width:	50px;
-    height:	50px;
-    
-    border: 0px solid red;
-}
-#ttDiv{
-	position:absolute; 
-    background:green;
-    left:	10px;
-    top:	300px;
-    width:	50px;
-    height:	50px;
-    
-    border: 0px solid red;
-}
-#demo{position:absolute;top:10px;left:55px;
-	border:1px red solid;height:50px;width:500px;}
-</style>
+<head>
+
+    <link rel="stylesheet" href="0422.css">
+</head>
+
 <body>
 
-<div id="myDiv" style="left:55px;width:	500px;height:300px;top:	150px;">
+<div id="myDiv" style="v:0.2.1;left:11px;width:	500px;height:300px;top:	100px;">
 	<div id="vDiv"></div>
 	<div id="hDiv"></div>
 	<div id="valueDiv"></div>
 	<div id="ttDiv"></div>
 </div>
  
-<p id="demo" style=""></p>
+<p id="demo" style="">
+	<div id="myVer1"></div>
+	<div id="myVer2"></div>
+	<div id="myVer3"></div>
+</p>
 
-<script> 
-var x = document.getElementById("myDiv");
-addHandler();
 
-function addHandler(){
-
-	if (x.addEventListener) {
-    	x.addEventListener("mousemove", myMousemove);
-	} else if (x.attachEvent) {
-    	x.attachEvent("onmousemove", myMousemove);
-	}
-} 
-function myMousemove(e){
-	var s = "";
-    var o = document.getElementById("demo");
-    s += "left:" + x.style.left;
-    s += "<br>clientX:" + e.clientX;
-    s += "screenX:" + e.screenX;
-    var myX = e.clientX - parseFloat(x.style.left);
-    s += "<br>myX:" + myX;
-    o.innerHTML = s;
-    
-    
-    var v = document.getElementById("vDiv");
-    v.style.left	= (myX-2) + "px";
-    v.style.width 	= 1+ "px";
-    v.style.height	= x.style.height;
-    
-    var h = document.getElementById("hDiv");
-    var myY = e.clientY -parseFloat(x.style.top);
-    h.style.top		= (myY-2) + "px";
-    h.style.height	= 1+"px";
-    h.style.width	= x.style.width;
-    
-    var vv = document.getElementById("valueDiv"); 
-    vv.style.top	= (myY-2) + "px";
-    vv.innerHTML	= myY;
- 
- 	
-    
-    var tt = document.getElementById("ttDiv");
-    tt.style.left	= (myX-2) + "px";
-    tt.innerHTML	= myX;
-    
-}
-</script>
-
+<script src="0422.js"></script>
 </body>
 </html>

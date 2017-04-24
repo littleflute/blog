@@ -1,0 +1,73 @@
+
+#demo{position:absolute;top:10px;left:55px;
+	border:1px red solid;height:50px;width:500px;
+	background:green;
+}
+#myVer1{position:absolute;
+	left:300px;
+	border:1px blue solid;
+	height:50px;width:50px;
+	background:url(myImg.gif) no-repeat -10px 1px;
+	
+}
+#myVer2{position:absolute;
+	left:380px;
+	border:1px red solid;
+	height:50px;width:50px;
+	background:url(myImg.gif) no-repeat -274px 1px;
+	
+}
+#myVer3{position:absolute;
+	left:450px;
+	border:1px yellow solid;
+	height:50px;width:50px;
+	background:url(myImg.gif) no-repeat -558px 1px;
+	
+}
+#myDiv{
+	position:absolute; 
+    background:black;
+    /*left can not put here!!!*/
+    
+    height:	300px;
+    border: 1px solid blue;
+}
+#hDiv{background:url(myImg.gif) no-repeat -274px 1px;
+	position:absolute; 
+    background:red;
+    left:	0px;
+    top:	0px;
+    width:	50px;
+    
+    border: 0px solid red;
+}
+#vDiv{
+	position:absolute; 
+    background:red;
+    left:	0px;
+    top:	0px;
+    width:	50px;
+    
+    border: 0px solid red;
+}
+#valueDiv{background:url(myImg.gif) no-repeat -274px 1px;
+	position:absolute; 
+ /*   background:red;
+*/    left:	500px;
+    top:	0px;
+    width:	50px;
+    height:	50px;
+    
+    border: 0px solid red;
+}
+#ttDiv{
+	position:absolute; 
+    background:green;
+    left:	10px;
+    top:	300px;
+    width:	50px;
+    height:	50px;
+    
+    border: 0px solid red;
+}
+
