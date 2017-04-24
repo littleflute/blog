@@ -5,20 +5,20 @@
     <link rel="stylesheet" href="0422.css">
 </head>
 
-<body>
+<body onmousedown="whichElement(event)" onmousemove="mousemoveOn(event)" onmouseup="mouseupOn(event)" onmouseout="mouseoutOf(event)">
 
-<div id="myDiv" style="v:0.2.1;left:11px;width:	500px;height:300px;top:	100px;">
+<div id="myDiv" style="left:13px;width:	500px;height:300px;top:	100px;">
 	<div id="vDiv"></div>
 	<div id="hDiv"></div>
 	<div id="valueDiv"></div>
 	<div id="ttDiv"></div>
 </div>
  
-<p id="demo" style="">
-	<div id="myVer1"></div>
+<div id="demo" style="left:50px;">
+	<div id="myVer1" style="left:220px;"></div>
 	<div id="myVer2"></div>
 	<div id="myVer3"></div>
-</p>
+</div>
 
 
 <script src="0422.js"></script>

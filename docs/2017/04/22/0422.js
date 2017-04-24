@@ -1,27 +1,137 @@
-var v0422 = "0.0.2";
+var v0422 = "0.9.1";
 
-var x = document.getElementById("myDiv");
+var vvv	= document.getElementById("demo").innerHTML;
 
-addHandler();
+var eXdMouseMove	=	1;
+var eXdMouseDown	=	2;
 
-function addHandler(){
+addHandler("myDiv",eXdMouseMove); 
+  
+var myVer1Ctx = { 
+    id			: "myVer1",
+	bHit		: false,
+	x1			: 0,
+	nClick		: 0,
+	mousedown	: function(e,x)
+	{
+		if(x.id		!= this.id) return;
+		if(this.nClick==0)		this.x1		= e.clientX;
+		this.nClick++;  
+	},
+	mouseup		: function(e,x)
+	{
+		if(x.id != this.id) return;
+		this.nClick = 0;
 
-	if (x.addEventListener) {
-    	x.addEventListener("mousemove", myMousemove);
-	} else if (x.attachEvent) {
-    	x.attachEvent("onmousemove", myMousemove);
+	},
+	mouseout	: function(e,x)
+	{
+		if(x.id != this.id) return;
+		this.nClick = 0;
+
+	},
+    mousemove	: function(e,x) 
+	{
+		if(x.id != this.id) return; 
+		if(this.nClick==1)
+		{
+			x.style.left = parseFloat(x.style.left) + e.clientX -this.x1 + "px"; 
+		}
+
 	}
-} 
-function myMousemove(e){
+};
+
+function addHandler(id,eNo){
+	var x	= document.getElementById(id);
+
+	switch(eNo)
+	{
+	case 1: //eXdMouseMove
+		{
+			if (x.addEventListener) {
+    			x.addEventListener("mousemove",function(e){myMousemove(e,x);});
+			} else if (x.attachEvent) {
+    			x.attachEvent("onmousemove", function(e){myMousemove(e,x);});
+			}
+		}
+		break;
+	case 2: //eXdMouseDown
+		{ 
+		}
+		break;
+	}
+}  
+function whichElement(e) {
+    var targ;
+    if (!e) {
+        var e = window.event;
+    }
+    if (e.target) {
+        targ = e.target;
+    } else if (e.srcElement) {
+        targ = e.srcElement;
+    }
+    var tid;
+    tid = targ.id;
+ //   alert("You clicked on : " + tid + " element.");
+	
+	myVer1Ctx.mousedown(e,targ);
+}
+function mousemoveOn(e) {
+    var targ;
+    if (!e) {
+        var e = window.event;
+    }
+    if (e.target) {
+        targ = e.target;
+    } else if (e.srcElement) {
+        targ = e.srcElement;
+    }
+	myVer1Ctx.mousemove(e,targ); 
+}
+function mouseupOn(e) {
+    var targ;
+    if (!e) {
+        var e = window.event;
+    }
+    if (e.target) {
+        targ = e.target;
+    } else if (e.srcElement) {
+        targ = e.srcElement;
+    } 
+	myVer1Ctx.mouseup(e,targ);
+}
+function mouseoutOf(e){
+    var targ;
+    if (!e) {
+        var e = window.event;
+    }
+    if (e.target) {
+        targ = e.target;
+    } else if (e.srcElement) {
+        targ = e.srcElement;
+    } 
+	myVer1Ctx.mouseout(e,targ);
+
+}
+
+function myMousemove(e,x){ 
+	myDivMousemove(e,x);
+}
+ 
+ 
+function myDivMousemove(e,x){ 
+	if(x.id != "myDiv") return;
+
 	var s = "";
     var o = document.getElementById("demo");
-    s += "html:" + x.style.v + " ";
+    s += "html:" + parseInt(x.style.left) + " ";
 	s += "js:" + v0422; 
     s += "<br>clientX:" + e.clientX;
     s += "screenX:" + e.screenX;
     var myX = e.clientX - parseFloat(x.style.left);
     s += "<br>myX:" + myX;
-    o.innerHTML = s;
+    o.innerHTML = vvv + s ;
     
     
     var v = document.getElementById("vDiv");
