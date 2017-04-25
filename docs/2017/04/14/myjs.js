@@ -4,7 +4,7 @@ function Win()
 	{
 		Winid++;
 		title = title || "æ–°çª—å£ - åŠ è½½ä¸­...";
-		wbody = wbody || "&nbsp;<p align='center'><img src='/img/201008/win/Loader.gif' align='top' style='margin-top:-10px;margin-right:4px' />æ­£åœ¨è½½å…¥çŽ¯å¢ƒé¡¹â€¦</p>";
+		wbody = wbody || "&nbsp;<p align='center'><img src='win/Loader.gif' align='top' style='margin-top:-10px;margin-right:4px' />æ­£åœ¨è½½å…¥çŽ¯å¢ƒé¡¹â€¦</p>";
 		w = w || 350;
 		h = h || 150;
 		l = l || parseInt(Math.random() * 500);
