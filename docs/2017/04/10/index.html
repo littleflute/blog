@@ -1,0 +1,85 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<HTML xmlns=" http://www.w3.org/1999/xhtml"><HEAD><TITLE>js图片放大</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=utf-8">
+<SCRIPT language=javascript type=text/javascript>
+var $ = function(thisId) {
+    return document.getElementById(thisId)
+};
+var $$ = function(othisId, thoseTag) {
+    return othisId.getElementsByTagName(thoseTag)
+};
+function addLoadEvent(func) {
+    var oldonload = window.onload;
+    if (typeof window.onload != 'function') {
+        window.onload = func;
+    } else {
+        window.onload = function() {
+            oldonload();
+            func();
+        }
+    }
+}
+function preparePhoto() {
+    if (!$) {
+        return false
+    };
+    if (!$$) {
+        return false
+    };
+    var links = $$($("linkBox"), "img");
+    for (i = 0; i < links.length; i++) {
+        links[i].onmousemove = function() {
+            return showPic(this);
+        }
+    }
+}
+function showPic(url) {
+    var scoure = url.getAttribute("src");
+    $("imgBox").setAttribute("src", scoure);
+    return false;
+}
+addLoadEvent(preparePhoto);
+
+</SCRIPT>
+<STYLE> {
+ PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+#container {
+ MARGIN: 0px auto; TEXT-ALIGN: center
+}
+#photoHandler {
+ MARGIN: 0px auto; TEXT-ALIGN: center
+}
+H1 {
+ PADDING-LEFT: 60px; BACKGROUND: #666666; MARGIN-BOTTOM: 5px; COLOR: #99cc00; LINE-HEIGHT: 50px; BORDER-BOTTOM: #333333 5px solid; HEIGHT: 50px; TEXT-ALIGN: left
+}
+UL {
+ BORDER-TOP-STYLE: none; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; LIST-STYLE-TYPE: none; BORDER-BOTTOM-STYLE: none
+}
+LI {
+ DISPLAY: inline; MARGIN-RIGHT: 10px
+}
+#linkBox IMG {
+ BORDER-RIGHT: #00ccff 2px solid; BORDER-TOP: #00ccff 2px solid; BORDER-LEFT: #00ccff 2px solid; BORDER-BOTTOM: #00ccff 2px solid; TEXT-DECORATION: none
+}
+#photoHandler {
+ PADDING-RIGHT: 5px; BORDER-TOP: #333333 5px solid; PADDING-LEFT: 5px; BACKGROUND: #999999; PADDING-BOTTOM: 5px; PADDING-TOP: 5px
+}
+#imgBox {
+ BORDER-RIGHT: #333333 5px solid; BORDER-TOP: #333333 5px solid; BACKGROUND: #cccccc; BORDER-LEFT: #333333 5px solid; BORDER-BOTTOM: #333333 5px solid
+}
+</style>
+<META content="MSHTML 6.00.2900.5945" name=GENERATOR></HEAD>
+<BODY>
+<DIV id=photoHandler><IMG id=imgBox></DIV>
+<DIV id=container>
+<H1>请等待图片加载完成，否则看不到预想效果</H1>
+<UL id=linkBox>
+  <LI><IMG height=110 src="http://www.newxing.com/Tech/UploadPic/2010-4/201042314334389066.jpg" width=150></A></LI>
+  <LI><IMG height=110 src="http://www.newxing.com/Tech/UploadPic/2010-4/201042314335299514.jpg" width=150></A></LI>
+  <LI><IMG height=110 src="http://www.newxing.com/Tech/UploadPic/2010-4/201042314335837749.jpg" width=150></A></LI>
+  <LI><IMG height=110 src="http://www.newxing.com/Tech/UploadPic/2010-4/20104231434691005.jpg" width=150></A> </LI>
+  </UL>
+</DIV>
+<SCRIPT type=text/javascript>showPic($$($("linkBox"),"img")[0]);</SCRIPT>
+</BODY></HTML>
