@@ -36,11 +36,11 @@ function Win()
 			wintag[i][0].appendChild(temp);
 			if (i == 8)
 			{
-				temp.style.cssText = "float:left;height:"+ wintag[i][1] +"px;width:"+ wintag[i][2] +"px;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/img/201008/win/"+ wintag[i][3] +".png', sizingMethod='scale');background:url('/img/201008/win/"+ wintag[i][3] +".png') !important;background:;cursor:se-resize";
+				temp.style.cssText = "float:left;height:"+ wintag[i][1] +"px;width:"+ wintag[i][2] +"px;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='win/"+ wintag[i][3] +".png', sizingMethod='scale');background:url('win/"+ wintag[i][3] +".png') !important;background:;cursor:se-resize";
 			}
 			else if (wintag[i][3])
 			{
-				temp.style.cssText = "float:left;height:"+ wintag[i][1] +"px;width:"+ wintag[i][2] +"px;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/img/201008/win/"+ wintag[i][3] +".png', sizingMethod='scale');background:url('/img/201008/win/"+ wintag[i][3] +".png') !important;background:;";
+				temp.style.cssText = "float:left;height:"+ wintag[i][1] +"px;width:"+ wintag[i][2] +"px;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='win/"+ wintag[i][3] +".png', sizingMethod='scale');background:url('win/"+ wintag[i][3] +".png') !important;background:;";
 			}
 			else
 			{
@@ -58,7 +58,7 @@ function Win()
 				temp.onmousedown = function(e){ MyWin.Move(this.getAttribute("Fid"), e ? e : window.event, 1) };
 			}
 		}
-		mytie.childNodes[1].innerHTML = "<div style=\"position:absolute;overflow:hidden;height:15px;top:12px;padding-left:4px;padding-right:4px;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/img/201008/win/tt.png', sizingMethod='scale');background:url('/img/201008/win/tt.png') !important;background:;\"></div><div class=\"wmin\" onclick=\"MyWin.Min('win"+ Winid +"')\" title=\"æœ€å°åŒ–\"></div><div class=\"wmax\" onclick=\"MyWin.Max('win"+ Winid +"',this)\" title=\"æœ€å¤§åŒ–\"></div><div class=\"wclo\" title=\"å…³é—­çª—å£\" onclick=\"MyWin.Close('win"+ Winid +"',100)\"></div>";
+		mytie.childNodes[1].innerHTML = "<div style=\"position:absolute;overflow:hidden;height:15px;top:12px;padding-left:4px;padding-right:4px;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='win/tt.png', sizingMethod='scale');background:url('win/tt.png') !important;background:;\"></div><div class=\"wmin\" onclick=\"MyWin.Min('win"+ Winid +"')\" title=\"æœ€å°åŒ–\"></div><div class=\"wmax\" onclick=\"MyWin.Max('win"+ Winid +"',this)\" title=\"æœ€å¤§åŒ–\"></div><div class=\"wclo\" title=\"å…³é—­çª—å£\" onclick=\"MyWin.Close('win"+ Winid +"',100)\"></div>";
 		this.Title("win"+ Winid, title);
 		this.Body("win"+ Winid, wbody);
 		this.Move_e("win"+ Winid, l, t, 0, 0);
