@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="utf-8">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>Vista窗体演示</title>
+<style>
+*{-moz-user-select:none;}
+*{cursor:default}
+body{background:url('/img/201008/win/3.jpg');margin:0px;padding:0px;overflow:hidden;text-align:left;font:normal 12px Arial,宋体}
+body>div{margin-right:auto;margin-left:auto}
+#smenu{position:absolute;overflow:hidden;filter:alpha(Opacity=60,style=0);opacity:0.6;height:30px;width:100%;left:0px;bottom:-1px;background:url('/img/201008/win/menubg.jpg');padding:0px;padding-left:3px}
+.Menu{float:left;margin-right:4px;margin-top:1px;color:#fff;overflow:hidden;cursor:pointer;background:url('/img/201008/win/Menu.gif');height:27px;width:116px;border:0;padding-top:3px !important;padding-top:6px}
+.win {
+    position:absolute;
+    overflow:hidden;
+    padding:0px;
+    }
+.wmin {position:absolute;background:url('/img/201008/win/c.gif');top:8px !important;overflow:hidden;width:26px;height:17px;top:7px;right:82px}
+.wmax {position:absolute;background:url('/img/201008/win/c.gif') -26px;top:8px !important;overflow:hidden;width:24px;height:17px;top:7px;right:58px}
+.wclo {position:absolute;background:url('/img/201008/win/c.gif') -50px;top:8px !important;overflow:hidden;width:43px;height:17px;top:7px;right:15px}
+.tie {overflow:hidden;height:30px;width:100%}
+.boy {overflow:hidden;width:100%}
+.bom {overflow:hidden;height:30px;width:100%}
+</style>
+</head>
+<script type="text/javascript" src="/img/201008/fun.js"></SCRIPT>
+<script type="text/javascript">
+//请保留一下我的邮件  lzg1215@gmail.com
+function $(Id){return(document.getElementById(Id))}
+function SetBg(o, Img, Color)
+{
+    o.style.background = "url('/img/201008/win/"+ Img +".gif')";
+    o.style.color = "#"+ Color;
+}
+function moveNull(oo)
+{
+    for(var i = 0; i < oo.childNodes.length;)
+    {
+        if (oo.childNodes[i].tagName == undefined)
+            oo.removeChild(oo.childNodes[i]);
+        else
+            i++;
+    }
+}
+var zIndex = 0;
+var Winid  = 0;
+var Ie = /msie/i.test(navigator.userAgent);
+if (Ie)
+    document.oncontextmenu=function(){event.returnValue=false};
+</SCRIPT>
+<body scroll="no" onload="MyWin.Create('新兴网络-www.newxing.com','[pg]http://www.newxing.com')" oncontextmenu="return false" ondragstart="return false" onSelectStart="return false">
+
+<div id="smenu">
+    <div class="Menu" onMouseover="SetBg(this,'menu1','000')" onmouseout="SetBg(this,'menu','fff')">后台主系统</div>
+    <div class="Menu" onMouseover="SetBg(this,'menu1','000')" onmouseout="SetBg(this,'menu','fff')">Main System</div>
+    <div class="Menu" onclick="MyWin.Create()" onMouseover="SetBg(this,'menu1','000')" onmouseout="SetBg(this,'menu','fff')">新增窗口</div>
+</div>
+<div id="sright">
+</div>
+</body>
+</html>
