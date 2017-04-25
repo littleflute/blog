@@ -1,0 +1,102 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Playing Cards with CSS3!</title>
+<style type="text/css">
+body { background: #DDDDDD; overflow: hidden; }
+body .fire { color: #FF0000; }
+p {
+background: #FFFFFF; border: 1px solid #CCCCCC;
+border-radius: 5px 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px;
+box-shadow: 5px 5px 5px #CCCCCC; -webkit-box-shadow: 5px 5px #CCCCCC; -moz-box-shadow: 5px 5px #CCCCCC;
+filter: progid:DXImageTransform.Microsoft.Shadow(color='#CCCCCC', Direction=135, Strength=5);
+font-size: 25px; text-align: center;
+height: 30px; width: 600px; margin: -35px -300px; padding: 10px 15px; position: absolute; bottom: 50px; left: 50%; z-index: 99;
+}
+ul {
+background: #FFFFFF; border: 1px solid #CCCCCC;
+background:-moz-linear-gradient(top, #FFFFFF, #DDDDDD); background:-webkit-gradient(linear,0 0, 0 100%, from(#FFFFFF), to(#DDDDDD));
+border-radius: 5px 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px;
+box-shadow: 5px 5px 5px #CCCCCC; -webkit-box-shadow: 5px 5px #CCCCCC; -moz-box-shadow: 5px 5px #CCCCCC;
+filter: progid:DXImageTransform.Microsoft.Shadow(color='#CCCCCC', Direction=135, Strength=5);
+font-size: 50px;
+margin: 0; padding: 0 15px; position: absolute; right: 20px; top: 15px; z-index: 99;
+    }
+        ul li {
+            display: inline;
+            list-style-type: none;
+        }
+            ul li a {
+            color: #000000;
+            display: block; float: left; padding: 0 10px;
+            text-decoration: none;
+            }
+        .base {
+background: #FFFFFF; border: 1px solid #CCCCCC; color: #000000;
+background:-moz-linear-gradient(top, #FFFFFF, #DDDDDD); background:-webkit-gradient(linear,0 0, 0 100%, from(#FFFFFF), to(#DDDDDD));
+border-radius: 5px 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px;
+box-shadow: 5px 5px 5px #CCCCCC; -webkit-box-shadow: 5px 5px #CCCCCC; -moz-box-shadow: 5px 5px #CCCCCC;
+filter: progid:DXImageTransform.Microsoft.Shadow(color='#CCCCCC', Direction=135, Strength=5);
+height: 360px; top: 50%; margin-top: -180px; width: 260px; left: 50%; margin-left: -130px; z-index: 9;
+cursor: pointer; font-size: 50px; text-decoration: none;
+padding: 15px 0 0 25px; position: absolute;
+}
+        strong {
+            font-size: 250px;
+            position: absolute; left: 50%; top: 50%; margin-top: -160px;
+            -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,0.4)), to(rgba(0,0,0,1)));
+        }
+        em {
+            font-size: 40px; font-style: normal;
+            display: block; margin-bottom: -15px;
+        }
+        label span {
+            -webkit-transform: rotate(-180deg); -moz-transform: rotate(-180deg); -o-transform: rotate(-180deg); filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
+            position: absolute; bottom: 15px; right: 25px;
+        }
+        #spades strong { margin-left: -68px; } #spades em { margin-left: 0; }
+        #hearts strong { margin-left: -70px; } #hearts em { margin-left: 1px; }
+        #clubs strong { margin-left: -80px; } #clubs em { margin-left: 3px; }
+        #diamonds strong { margin-left: -60px; } #diamonds em { margin-left: -2px; }
+        fieldset { display: none; }
+        fieldset:target { display: block; }
+        fieldset:target .card+label { -webkit-animation-name: scaler; -webkit-animation-duration: 1.75s; -webkit-animation-iteration-count: 1; }
+        fieldset:target .card:checked+label { -webkit-animation-name: effectx; -webkit-animation-duration: 3s; -webkit-transform: scale(0); }
+        .close {
+            background: #DDDDDD; cursor: default;
+            left: 0; top: 0; position: absolute; height: 100%; width: 100%; z-index: 1;
+            text-indent: -999em;
+        }
+        @-webkit-keyframes scaler { from { -webkit-transform: scale(0); } to { -webkit-transform: scale(1); } }
+        @-webkit-keyframes effectx {
+            from { -webkit-transform: rotateX(0deg); }
+            to { -webkit-transform: scale3d(1.2, 1.2, 1.2) rotateX(-90deg) translateZ(500px) rotate(180deg); -webkit-animation-duration: 30s; }
+        }
+        </style>
+        <script type="text/javascript">
+            function bootup(){
+            if (location.hash == "") { location.hash="#spades"; } var tds = document.getElementsByTagName("a"); direct();
+            for( var x=0; x < tds.length; x++ ){tds[x].onclick = function(){setTimeout(direct, 1);};}
+        }
+        function direct(){
+            /*@cc_on @if (@_jscript_version > 5.6)
+            var counted = document.getElementsByTagName("fieldset");
+            for( var x=0; x < counted.length; x++ ){ counted[x].style.display = "none" }
+            document.getElementById(location.hash.substr(1)).style.display = "block";
+            @end @*/
+        }
+        window.onload=bootup;
+        </SCRIPT>
+    </head>
+    <body>
+    <ul><li><a title="Select Spades" href="#spades">&#9824;</a></li><li><a class="fire" title="Select Hearts" href="#hearts">&#9829;</a></li><li><a title="Select Clubs" href="#clubs">&#9827;</a></li><li><a class="fire" title="Select Diamonds" href="#diamonds">&#9830;</a></li></ul>
+    <form action="">
+            <fieldset id="spades"><input class="card" id="spade" type="radio" name="spade" value="spade" /><label class="base" for="spade" title="This is the Ace of Spades!"><span><em>A</em>&#9824;</span><strong>&#9824;</strong><em>A</em>&#9824;</label><input id="cancel1" type="reset" name="spade" value="cancel" checked="checked" /><label class="close" for="cancel1">Spades</label></fieldset>
+            <fieldset id="hearts"><input class="card" id="heart" type="radio" name="heart" value="heart" /><label class="base fire" for="heart" title="This is the Ace of Hearts!"><span><em>A</em>&#9829;</span><strong>&#9829;</strong><em>A</em>&#9829;</label><input id="cancel2" type="reset" name="heart" value="cancel" checked="checked" /><label class="close" for="cancel2">Hearts</label></fieldset>
+            <fieldset id="clubs"><input class="card" id="club" type="radio" name="club" value="club" /><label class="base" for="club" title="This is the Ace of Clubs!"><span><em>A</em>&#9827;</span><strong>&#9827;</strong><em>A</em>&#9827;</label><input id="cancel3" type="reset" name="club" value="cancel" checked="checked" /><label class="close" for="cancel3">Clubs</label></fieldset>
+            <fieldset id="diamonds"><input class="card" id="diamond" type="radio" name="diamond" value="diamond" /><label class="base fire" for="diamond" title="This is the Ace of Diamonds!"><span><em>A</em>&#9830;</span><strong>&#9830;</strong><em>A</em>&#9830;</label><input id="cancel4" type="reset" name="diamond" value="cancel" checked="checked" /><label class="close" for="cancel4">Diamonds</label></fieldset>
+        </form>
+<p>Select an option above to change the suit displayed!</p>
+</body>   
+</html>
