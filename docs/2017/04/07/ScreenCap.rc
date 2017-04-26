@@ -371,13 +371,13 @@ END
 
 STRINGTABLE DISCARDABLE 
 BEGIN
-    ID_APP_EXIT             "退出\n退出应用程序"
+    ID_APP_EXIT             "app exit\n app exit"
 END
 
 STRINGTABLE DISCARDABLE 
 BEGIN
-    ID_VIEW_TOOLBAR         "显隐工具栏\n显示或隐藏工具栏"
-    ID_VIEW_STATUS_BAR      "显隐状态栏\n显示或隐藏状态栏"
+    ID_VIEW_TOOLBAR         "tool bar\n tool bar"
+    ID_VIEW_STATUS_BAR      "status bar\n status bar"
 END
 
 STRINGTABLE DISCARDABLE 
@@ -406,16 +406,16 @@ END
 STRINGTABLE DISCARDABLE 
 BEGIN
     ID_FILEOPEN             "Open"
-    ID_FILENEW              "新建\n建立新文档"
+    ID_FILENEW              "New File\n new file"
     ID_FILESAVE             "Save"
-    ID_EDITCUT              "剪切\n剪切被选对象并将其置于剪贴板上"
-    ID_EDITCOPY             "复制\n复制被选对象并将其置于剪贴板上"
-    ID_EDITPASTE            "粘贴\n插入剪贴板内容"
-    ID_FILEPRINT            "打印\n打印当前的图片"
-    ID_ABOUT                "关于\n显示程序信息，版本号和版权"
-    ID_FILEPRINTPREVIEW     "打印预览\n显示整页"
-    ID_FILEPRINTSETUP       "打印设置\n改变打印机及打印选项"
-    ID_VIEWADDRBAR          "显隐地址栏\n显视或隐藏地址栏"
+    ID_EDITCUT              "edit cut\n editcup"
+    ID_EDITCOPY             "edit copy\n edit copy"
+    ID_EDITPASTE            "edit paste\n edit paste"
+    ID_FILEPRINT            "file print\n file print"
+    ID_ABOUT                "about\n about"
+    ID_FILEPRINTPREVIEW     "print preview\n print preview"
+    ID_FILEPRINTSETUP       "print setup\n print setup"
+    ID_VIEWADDRBAR          "view addr bar\n veiw addr bar"
 END
 
 STRINGTABLE DISCARDABLE 

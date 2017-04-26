@@ -93,6 +93,10 @@ LRESULT CMainWnd::WindowProc(UINT msg,WPARAM wParam,LPARAM lParam)
 				m_wndToolBar.CheckedButton(ID_ICONMODE,TRUE);
 			}
 		}
+		else if(wParam == SC_CLOSE)
+		{
+			PostQuitMessage(0);
+		}
 		else
 			lResult = DefWindowProc(m_hWnd,msg,wParam,lParam);
 		break;
@@ -382,14 +386,14 @@ void CMainWnd::OnCommand(UINT uCode,UINT uID,HWND hwndCtrl)
 			ReCalcLayout();
 		}
 		break;
-	case ID_ABOUT://显示关于对话框
+	case ID_ABOUT: 
 		{
 			CAboutDlg About;
 			About.Create(this,IDD_ABOUTBOX);
 			About.DoModal();
 		}
 		break;
-	case ID_APP_EXIT://退出
+	case ID_APP_EXIT: 
 		GetWindowPlacement(m_hWnd,&m_WndPlm);
 		PostQuitMessage(0);
 		OnClose();
