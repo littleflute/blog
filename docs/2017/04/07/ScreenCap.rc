@@ -1,0 +1,453 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (P.R.C.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDM_MAINMENU MENU PRELOAD DISCARDABLE 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&Open\tCtrl+O",               ID_FILEOPEN
+        MENUITEM "&Save\tCtrl+S",               ID_FILESAVE
+        MENUITEM "另 存 为(&A)...",             ID_FILE_SAVEAS
+        MENUITEM SEPARATOR
+        MENUITEM "关    闭(&C)",                ID_FILECLOSE
+        MENUITEM "关闭所有(&L)",                ID_FILE_CLOSEALL
+        MENUITEM SEPARATOR
+        MENUITEM "打    印(&P)\tCtrl+P",        ID_FILEPRINT
+        MENUITEM SEPARATOR
+        MENUITEM "退    出(&X)",                ID_APP_EXIT
+    END
+    POPUP "&Edit"
+    BEGIN
+        MENUITEM "选择(&S)",                    ID_SELECT
+        MENUITEM SEPARATOR
+        MENUITEM "剪切(&T)\tCtrl+X",            ID_EDITCUT
+        MENUITEM "复制(&C)\tCtrl+C",            ID_EDITCOPY
+        MENUITEM "粘贴(&P)\tCtrl+V",            ID_EDITPASTE
+        MENUITEM SEPARATOR
+        MENUITEM "裁剪(&C)",                    ID_CROP
+        MENUITEM "调整尺寸(&R)",                ID_RESIZE
+    END
+    POPUP "&View"
+    BEGIN
+        MENUITEM "工具栏(&T)",                  ID_VIEWTOOLBAR, CHECKED
+        MENUITEM "状态栏(&S)",                  ID_VIEWSTATUSBAR, CHECKED
+    END
+    POPUP "&Capture"
+    BEGIN
+        MENUITEM "抓取全屏幕(&F)",              ID_CAPSCREEN
+        MENUITEM "抓取选择区域(&S)",            ID_CAPSELECT
+        MENUITEM "抓取指定对象(&O)",            ID_CAPOBJECT
+    END
+    POPUP "&Tools"
+    BEGIN
+        MENUITEM "设置(&C)",                    ID_SETINGS
+        MENUITEM "图标方式运行(&T)",            ID_ICONMODE
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "关于屏幕捕快(&A)",            ID_ABOUT
+    END
+END
+
+IDR_POPUP MENU DISCARDABLE 
+BEGIN
+    POPUP ""
+    BEGIN
+        MENUITEM "打开主窗口(&M)",              ID_OPENMAINWND
+        MENUITEM SEPARATOR
+        MENUITEM "抓取全屏幕(&F)",              ID_CAPSCREEN
+        MENUITEM "抓取选择区(&S)",              ID_CAPSELECT
+        MENUITEM "抓取对象(&O)",                ID_CAPOBJECT
+        MENUITEM SEPARATOR
+        MENUITEM "关于屏幕捕快(&A)",            ID_ABOUT
+        MENUITEM "关闭托盘图标(&C)",            ID_ICONMODE
+        MENUITEM "退出程序(&X)",                ID_APP_EXIT
+    END
+    POPUP "pop1"
+    BEGIN
+        MENUITEM "打开主窗口(&M)",              ID_OPENMAINWND
+        MENUITEM SEPARATOR
+        MENUITEM "抓取全屏幕(&F)",              ID_CAPSCREEN
+        MENUITEM "抓取选择区域(&S)",            ID_CAPSELECT
+        MENUITEM "抓取指定对象(&O)",            ID_CAPOBJECT
+        MENUITEM SEPARATOR
+        MENUITEM "关于屏幕捕快(&A)",            ID_ABOUT
+        MENUITEM "关闭托盘图标(&C)",            ID_ICONMODE
+        MENUITEM "退出程序(&X)",                ID_APP_EXIT
+    END
+END
+
+IDR_CONTEXT MENU DISCARDABLE 
+BEGIN
+    POPUP "pop2"
+    BEGIN
+        MENUITEM "保    存(&S)\tCtrl+S",        ID_FILESAVE
+        MENUITEM "另 存 为(&A)",                ID_FILE_SAVEAS
+        MENUITEM "打    印(&P)\tCtrl+P",        ID_FILEPRINT
+        MENUITEM "关    闭(&C)",                ID_FILECLOSE
+        MENUITEM SEPARATOR
+        MENUITEM "剪    切(&T)\tCtrl+X",        ID_EDITCUT
+        MENUITEM "复    制(&C)\tCtrl+C",        ID_EDITCOPY
+        MENUITEM SEPARATOR
+        MENUITEM "调整尺寸(&R)",                ID_RESIZE
+        MENUITEM SEPARATOR
+        MENUITEM "设置背景色(&B)",              ID_SETBACKCOLOR
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDT_TOOLBAR TOOLBAR DISCARDABLE  16, 16
+BEGIN
+    BUTTON      ID_FILEOPEN
+    BUTTON      ID_FILECLOSE
+    BUTTON      ID_FILE_CLOSEALL
+    BUTTON      ID_FILESAVE
+    BUTTON      ID_FILE_SAVEAS
+    BUTTON      ID_FILEPRINT
+    SEPARATOR
+    BUTTON      ID_EDITCOPY
+    BUTTON      ID_EDITCUT
+    BUTTON      ID_EDITPASTE
+    BUTTON      ID_SELECT
+    BUTTON      ID_CROP
+    BUTTON      ID_RESIZE
+    SEPARATOR
+    BUTTON      ID_CAPSCREEN
+    BUTTON      ID_CAPSELECT
+    BUTTON      ID_CAPOBJECT
+    SEPARATOR
+    BUTTON      ID_ICONMODE
+    BUTTON      ID_ABOUT
+    BUTTON      ID_APP_EXIT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDT_TOOLBAR             BITMAP  MOVEABLE PURE   "res\\Toolbar.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_MAINICON            ICON    DISCARDABLE     "res\\Main.ico"
+IDI_ICON1               ICON    DISCARDABLE     "res\\scrcap01.ico"
+IDI_ICON2               ICON    DISCARDABLE     "res\\icon2.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  0, 0, 261, 149
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "关于千里目"
+FONT 9, "宋体"
+BEGIN
+    ICON            IDI_MAINICON,IDR_MAINFRAME,87,22,20,20
+    LTEXT           "屏幕捕快1.8版",IDC_CAPTION,119,29,64,8,SS_NOPREFIX
+    LTEXT           "Copyright (C) 1999 - 2000 Firebird Workroom",IDC_STATIC,
+                    66,89,140,8
+    DEFPUSHBUTTON   "确定",IDOK,106,134,50,14,WS_GROUP
+    GROUPBOX        "",IDC_STATIC,2,0,257,132
+    LTEXT           "版权所有：     Firebird Workroom",IDC_STATIC,69,56,129,
+                    8
+    LTEXT           "软件作者：     秦     传     安",IDC_STATIC,69,73,126,8
+    LTEXT           "E_mail: ",IDC_STATIC,87,117,28,8
+    LTEXT           "Tel: (0792)6323086",IDC_STATIC,94,104,74,9
+    LTEXT           "chings@163.net",IDC_EMAILTO,117,117,59,9,SS_NOTIFY | 
+                    NOT WS_GROUP
+END
+
+IDD_CAPFORM DIALOGEX 0, 0, 150, 74
+STYLE DS_SETFOREGROUND | WS_POPUP
+EXSTYLE WS_EX_TOOLWINDOW
+FONT 10, "System", 0, 0, 0x1
+BEGIN
+END
+
+IDD_RESIZE DIALOG DISCARDABLE  0, 0, 209, 113
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "调整图片尺寸"
+FONT 9, "宋体"
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,142,61,33,13
+    PUSHBUTTON      "放弃",IDCANCEL,143,83,32,13
+    EDITTEXT        IDC_EDIT_SCALE,22,29,33,12,ES_AUTOHSCROLL
+    LTEXT           "%",IDC_STATIC,57,31,10,10
+    CONTROL         "Slider1",IDC_SLIDER1,"msctls_trackbar32",WS_TABSTOP,63,
+                    27,133,17
+    GROUPBOX        "",IDC_STATIC,7,7,195,99
+    EDITTEXT        IDC_EDIT_WIDTH,37,63,38,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_HEIGHT,38,85,38,12,ES_AUTOHSCROLL
+    LTEXT           "宽：",IDC_STATIC,18,65,19,9
+    LTEXT           "高：",IDC_STATIC,18,88,18,9
+END
+
+IDD_SETINGDLG DIALOGEX 0, 0, 249, 161
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "屏幕捕快 - 设置"
+FONT 9, "宋体", 0, 0, 0x1
+BEGIN
+    PUSHBUTTON      "确定",IDOK,144,144,33,13
+    PUSHBUTTON      "放弃",IDCANCEL,195,144,33,13
+    GROUPBOX        "启动时",IDC_STATIC,6,9,97,43
+    CONTROL         "常规窗口",IDC_GENERAL,"Button",BS_AUTORADIOBUTTON,25,22,
+                    64,12
+    CONTROL         "托盘图标",IDC_TRAYICON,"Button",BS_AUTORADIOBUTTON,25,
+                    35,44,11
+    GROUPBOX        "全屏抓图设置",IDC_STATIC,111,9,128,61
+    LTEXT           "热键:",IDC_STATIC,117,23,22,9
+    CONTROL         "Alt",IDC_CHECK_ALT,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,142,23,28,9
+    CONTROL         "Shift",IDC_CHECK_SHIFT,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,169,23,33,8
+    CONTROL         "Ctrl",IDC_CHECK_CTRL,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,203,23,29,8
+    LTEXT           "键:",IDC_STATIC,125,38,14,10
+    CONTROL         "图标方式下不自动显示主窗口",IDC_CHECK_AUTOSHOW,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,117,55,116,10
+    GROUPBOX        "默认保存格式",IDC_STATIC,111,107,128,30
+    CONTROL         "BMP",IDC_RADIO_BMP,"Button",BS_AUTORADIOBUTTON,125,122,
+                    28,9
+    CONTROL         "JPG",IDC_RADIO_JPG,"Button",BS_AUTORADIOBUTTON,167,122,
+                    24,8
+    CONTROL         "GIF",IDC_RADIO_GIF,"Button",BS_AUTORADIOBUTTON,207,121,
+                    23,8
+    GROUPBOX        "默认保存路径",IDC_STATIC,111,76,128,30
+    EDITTEXT        IDC_EDIT_DEFDIR,119,87,101,12,ES_AUTOHSCROLL
+    CONTROL         "",IDC_SELDIR,"Button",BS_OWNERDRAW | WS_TABSTOP,219,87,
+                    11,12,WS_EX_CLIENTEDGE
+    GROUPBOX        "外观",IDC_STATIC,6,56,97,99
+    LTEXT           "工具栏背景：",IDC_STATIC,13,67,51,8
+    CONTROL         "无(按钮色)",IDC_TBK_NON,"Button",BS_AUTORADIOBUTTON,22,
+                    77,53,9
+    CONTROL         "梯度:",IDC_TBK_GRAD,"Button",BS_AUTORADIOBUTTON,22,91,
+                    33,8
+    LTEXT           "低调:",IDC_STATIC1,57,91,23,8
+    LTEXT           "高调:",IDC_STATIC2,57,103,23,8
+    CONTROL         "位图:",IDC_TBK_BITMAP,"Button",BS_AUTORADIOBUTTON,22,
+                    129,32,9
+    CONTROL         "",IDC_SELBKFILE,"Button",BS_OWNERDRAW | WS_TABSTOP,86,
+                    128,12,11,WS_EX_CLIENTEDGE
+    LTEXT           "主视图背景：",IDC_STATIC3,11,143,49,8
+    LTEXT           "样式:",IDC_STATIC,57,115,20,8
+    EDITTEXT        IDC_EDIT_STYLE,81,113,14,12,ES_NUMBER
+    EDITTEXT        IDC_EDIT_BKFILE,55,128,32,12,ES_AUTOHSCROLL
+    CONTROL         "HotKey1",IDC_HOTKEY1,"msctls_hotkey32",WS_BORDER | 
+                    WS_TABSTOP,140,36,92,13
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        BOTTOMMARGIN, 148
+    END
+
+    IDD_CAPFORM, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 143
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 67
+    END
+
+    IDD_RESIZE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 202
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 106
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Cursor
+//
+
+IDC_MOVE_DOWN           CURSOR  DISCARDABLE     "res\\cursor1.cur"
+IDC_MOVE_UP             CURSOR  DISCARDABLE     "res\\cursor2.cur"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS DISCARDABLE 
+BEGIN
+    "C",            ID_EDITCOPY,            VIRTKEY, CONTROL, NOINVERT
+    "O",            ID_FILEOPEN,            VIRTKEY, CONTROL, NOINVERT
+    "P",            ID_FILEPRINT,           VIRTKEY, CONTROL, NOINVERT
+    "S",            ID_FILESAVE,            VIRTKEY, CONTROL, NOINVERT
+    "V",            ID_EDITPASTE,           VIRTKEY, CONTROL, NOINVERT
+    "X",            ID_EDITCUT,             VIRTKEY, CONTROL, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_FILECLOSE            "关闭\n关闭当前图片文件"
+    ID_FILESAVEAS           "另存为\n将活动文档以一个新文件名保存"
+    ID_FILEPAGESETUP        "页面设置\n改变打印选项"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_APP_EXIT             "退出\n退出应用程序"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_VIEW_TOOLBAR         "显隐工具栏\n显示或隐藏工具栏"
+    ID_VIEW_STATUS_BAR      "显隐状态栏\n显示或隐藏状态栏"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    AFX_IDS_SCSIZE          "改变窗口大小"
+    AFX_IDS_SCMOVE          "改变窗口位置"
+    AFX_IDS_SCMINIMIZE      "将窗口缩小成图标"
+    AFX_IDS_SCMAXIMIZE      "把窗口放大到最大尺寸"
+    AFX_IDS_SCNEXTWINDOW    "切换到下一个文档窗口"
+    AFX_IDS_SCPREVWINDOW    "切换到先前的文档窗口"
+    AFX_IDS_SCCLOSE         "关闭活动的窗口并提示保存所有文档"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    AFX_IDS_SCRESTORE       "把窗口恢复到正常大小"
+    AFX_IDS_SCTASKLIST      "激活任务表"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    AFX_IDS_PREVIEW_CLOSE   "关闭打印预览模式\n取消预阅"
+    IDS_CURSORPOS           "       "
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_FILEOPEN             "Open"
+    ID_FILENEW              "新建\n建立新文档"
+    ID_FILESAVE             "Save"
+    ID_EDITCUT              "剪切\n剪切被选对象并将其置于剪贴板上"
+    ID_EDITCOPY             "复制\n复制被选对象并将其置于剪贴板上"
+    ID_EDITPASTE            "粘贴\n插入剪贴板内容"
+    ID_FILEPRINT            "打印\n打印当前的图片"
+    ID_ABOUT                "关于\n显示程序信息，版本号和版权"
+    ID_FILEPRINTPREVIEW     "打印预览\n显示整页"
+    ID_FILEPRINTSETUP       "打印设置\n改变打印机及打印选项"
+    ID_VIEWADDRBAR          "显隐地址栏\n显视或隐藏地址栏"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_FILE_CLOSEALL        "colse all\nclose all"
+    ID_FILE_SAVEAS          "save as\nsave as"
+    ID_SELECT               "select\nselect"
+    ID_CROP                 "crop\ncrop"
+    ID_CAPSCREEN            "capture screen\ncapture screen"
+    ID_CAPSELECT            "Capture AOI\ncapture AOI"
+    ID_CAPOBJECT            "Capture Object\nCapture object"
+    ID_RESIZE               "resize\nresize image"
+    ID_ICONMODE             "icon mode\nicon mode"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_SETBACKCOLOR         "set background clolor\nset background color"
+END
+
+#endif    // Chinese (P.R.C.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
