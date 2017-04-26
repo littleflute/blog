@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>GCube-JavaScript立方体插件-download by http://www.NewXing.com</title>
+</head>
+ 
+<body>
+<script src="Cube.js"></script>
+<script> 
+var MyFace =
+[
+	{id: Cube.FACE_FRONT,	pic: "G1"},
+	{id: Cube.FACE_BACK,	pic: "g2"},
+	{id: Cube.FACE_LEFT,	pic: "o2"},
+	{id: Cube.FACE_BOTTOM,	pic: "l"},
+	{id: Cube.FACE_RIGHT,	pic: "o1"},
+	{id: Cube.FACE_TOP,		pic: "e"}
+];
+ 
+onload = OnLoad;
+onresize = OnResize;
+document.onmousemove = OnMouseMove;
+ 
+var GCube = new Cube();
+var cx, cy;
+var dx, dy;
+ 
+function OnLoad()
+{
+	var oImg;
+ 
+	OnResize();
+	GCube.setRadius(50);
+ 
+	for(var i=0; i<6; i++)
+	{
+		oImg = document.createElement("img");
+		oImg.src = "res/" + MyFace[i].pic + ".gif";
+		document.body.appendChild(oImg);
+ 
+		GCube.setFace(MyFace[i].id, oImg);
+	}
+ 
+	setInterval(OnTimer, 16);
+}
+ 
+function OnResize()
+{
+	var de = document.documentElement;
+	cx = de.clientWidth / 2;
+	cy = de.clientHeight / 2;
+ 
+	GCube.setLocate(cx, cy);
+}
+ 
+function OnMouseMove(e)
+{
+	e = e || event;
+ 
+	dx = e.clientX - cx;
+	dy = e.clientY - cy;
+}
+ 
+function OnTimer()
+{
+	GCube.rotate(dy/50, -dx/50);
+}
+</script>
+</body>
+</html>
