@@ -1,4 +1,4 @@
-var v0422 = "1.1.2";
+var v0422 = "1.2.3";
 
 var vvv	= document.getElementById("demo").innerHTML;
 
@@ -62,31 +62,15 @@ var myKLines		= {
 	},
 	parseKLines	: function(eID)
 	{
-		var sRet	= "";
 		var a		= this.kLines.split(";");
 		var x		= 50;
 		for(var i = 0; i<a.length-1; i++)
 		{
 			var ohlc = a[i].split(",");
-			var oY = this.getYByVal(ohlc[0]);
-			var hY = this.getYByVal(ohlc[1]);
-			var lY = this.getYByVal(ohlc[2]);
-			var cY = this.getYByVal(ohlc[3]);
 			var dXX	= 10;
 			x		+= dXX;
-			var h = lY - hY;
-			if(hY>0)
-			{
-				this.draw_1_KLine(eID,x,oY,hY,lY,cY);
-			}
-			sRet += a[i];
-			sRet += "    :    "+ this.getYByVal(ohlc[0]) + "-";
-			sRet += this.getYByVal(ohlc[1]) + "-";
-			sRet += this.getYByVal(ohlc[2]) + "-";
-			sRet += this.getYByVal(ohlc[3]);
-			sRet += "<br>";
+			this.draw_1_KLine(eID,x,ohlc[0],ohlc[1],ohlc[2],ohlc[3]);
 		}
-		return sRet;
 	},
 	drawFrame	: function(eID)
 	{
@@ -101,34 +85,28 @@ var myKLines		= {
 		 
 		p.appendChild(o);
 	},
-	draw_1_KLine	: function(eID,x,oY,hY,lY,cY)
+	draw_1_KLine	: function(eID,x,o,h,l,c)
 	{
 		var p				= document.getElementById(eID);
 		var oHightLow		= document.createElement("div");
-		var	hh				= 0;
-		var d			= 2;
-		var y;
+		 
 		var color;
 		
-		if(cY > oY)
-		{
-			y		= oY;
-			hh		= cY - oY;
+		if(o > c)
+		{ 
 			color	= "green";
 		}  
-		if(cY <= oY)
+		else
 		{
-			y		= cY;
-			hh		= oY - cY;
-			hh		= hh?hh:1;
 			color	= "red";
 		}
+
 		oHightLow.style.position	= "absolute";
 		oHightLow.style.border		= "0px blue solid";
 		oHightLow.style.width		= "1px";
 		oHightLow.style.left		= x + "px";
-		oHightLow.style.top			= hY + "px";
-		oHightLow.style.height		= lY-hY + "px";
+		oHightLow.style.top			= Math.min(this.getYByVal(h),this.getYByVal(l)) + "px";
+		oHightLow.style.height		= Math.abs(this.getYByVal(h)-this.getYByVal(l)) + "px";
 		oHightLow.style.background	= color;
 		p.appendChild(oHightLow);
 
@@ -138,8 +116,10 @@ var myKLines		= {
 		oOpenClose.style.position	= "absolute";
 		oOpenClose.style.border		= "0px blue solid";
 		oOpenClose.style.width		= "5px";
-		oOpenClose.style.left		= x - d + "px";
-		oOpenClose.style.top		= y + "px";
+		oOpenClose.style.left		= x - 2 + "px";
+		oOpenClose.style.top		= Math.min(this.getYByVal(o),this.getYByVal(c)) + "px";
+		var hh	= Math.abs(this.getYByVal(o)-this.getYByVal(c));
+		hh = hh?hh:1;
 		oOpenClose.style.height		= hh + "px";
 		oOpenClose.style.background	= color; 
 		p.appendChild(oOpenClose);
@@ -186,13 +166,13 @@ var myKLines		= {
 	},
 	drawAll		: function(eID)
 	{
-		this.drawFrame(eID);
+	//	this.drawFrame(eID);
 		this.parseKLines(eID);
 	},
 	e : "0.0.2" 
 }//	___myKlinesEnd:"2017.04.27 9:25am";
 
-myKLines.setMaxMinVal(1295,1195);
+myKLines.setMaxMinVal(1300,1180);
 myKLines.setMaxMinXY(100,280,10,10);
 //myKLines.getDataFromSrc("http://www.beautifullover.org/php/xau-days.txt");
 myKLines.getData(xauDays);
