@@ -1,4 +1,4 @@
-var v0422 = "1.0.1";
+var v0422 = "1.1.2";
 
 var vvv	= document.getElementById("demo").innerHTML;
 
@@ -17,7 +17,6 @@ var myKLines		= {
 	maxVal		: 0,
 	minVal		: 0,
 	kLines		: "",//1275,1279,1270,1274;",
-	DataFromSrc	: "",
 	
 	xdPush		: function(o,h,l,c)
 	{
@@ -195,7 +194,8 @@ var myKLines		= {
 
 myKLines.setMaxMinVal(1295,1195);
 myKLines.setMaxMinXY(100,280,10,10);
-myKLines.getDataFromSrc("http://www.beautifullover.org/php/xau-days.txt");
+//myKLines.getDataFromSrc("http://www.beautifullover.org/php/xau-days.txt");
+myKLines.getData(xauDays);
 
 
 
