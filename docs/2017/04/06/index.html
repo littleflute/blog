@@ -1,0 +1,164 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>二级横向菜单</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="text/javascript">
+startList = function() {
+    if (document.all && document.getElementById) {
+        navRoot = document.getElementById("nav");
+            for (i=0; i < navRoot.childNodes.length; i++) {
+                node = navRoot.childNodes[i];
+                if (node.nodeName=="LI") {
+                    node.onmouseover=function() {
+                    this.className+=" over";
+                }
+                node.onmouseout=function() {
+                    this.className=this.className.replace(" over", "");
+                }
+            }
+        }
+    }
+}
+window.onload = startList;
+</SCRIPT>
+<style type="text/css" media="all">
+html {min-width: 742px;}
+img{border:0;}
+p.access {display:none;}
+div#counters{display:none;}
+a{text-decoration: none;}
+body{
+    overflow:auto;
+    text-align: center;
+    margin: 0 auto;
+    padding: 0;
+    border: 0;
+}
+ul#nav,ul#nav ul{
+    margin: 0 auto;
+    text-align:left;
+    padding: 0;
+    list-style: none;
+    background:#fff;
+    z-index:99;
+}
+ul#nav {
+    width:732px;
+    display:block;
+    height:24px;
+    clear:both;
+}
+ul#nav li {
+    position: relative;
+    z-index:999;
+    float:left;
+}
+ul#nav ul li{
+    display:block;
+}
+ul#nav ul {
+    width:100px;
+    height:auto;
+    position: absolute;
+    text-align:left;
+    left: 0px;
+    display: none;
+    border:solid 1px #697210;
+}
+ul#nav li.over a,ul#nav li:hover a{
+    border-color:#E2144A;
+    background: #fdd;
+    font-weight:bold;
+    color: #E2144A;
+}
+ul#nav li.over ul a,ul#nav li:hover ul a{
+    background:#fff;
+    font-weight:normal;
+    color:#777;
+}
+ul#nav li.over ul a:hover,ul#nav li:hover ul a:hover{
+    background:#fff;
+    font-weight:normal;
+    color: #E2144A;
+    background: #fdd;
+    border-color:#E2144A;
+    font-weight:bold;
+}
+
+ul#nav a {
+    font-size:14px;
+    line-height:17px;
+    display: block;
+    padding:0 0 0 10px;
+    width:78px;
+    color: #777;
+    height:17px;
+    background: #fff;
+    border-left:solid 1px #fff;
+    border-top:solid 1px #fff;
+    border-right:solid 1px #fff;
+    border-bottom:solid 5px #697210;
+}
+ul#nav ul li{
+    width:100px;
+    border:0;
+}
+/* Fix IE. Hide from IE Mac \*/
+* html ul#nav li { float: left; height: 17px; }
+* html ul#nav li a {  height: 17px; }
+ul#nav ul a { padding: 2px 0px 2px  10px;border:0;width:90px; }
+ul#nav li:hover ul,ul#nav  li.over ul { display: block; }
+</style>
+</head>
+<body>
+<p>一款面试时写的菜单</p>
+<ul id="nav">
+    <li><a href="#">文章</a>
+        <ul>
+            <li><a href="#">随笔</a></li>
+            <li><a href="#">小说</a></li>
+        </ul>
+    </li>
+    <li><a href="#">设计</a>
+        <ul>
+            <li><a href="#">漫画</a></li>
+            <li><a href="#">摄影</a></li>
+            <li><a href="#">图文</a></li>
+        </ul>
+    </li>
+    <li><a href="#">资源</a>
+        <ul>
+            <li><a href="#">代码</a></li>
+            <li><a href="#">素材</a></li>
+        </ul>
+    </li>
+    <li><a href="#">收藏夹</a></li>
+    <li><a href="#">爱好</a>
+        <ul>
+            <li><a href="#">哲学</a></li>
+            <li><a href="#">小说</a></li>
+        </ul>
+    </li>
+    <li><a href="#">日记</a>
+        <ul>
+            <li><a href="#">生活</a></li>
+            <li><a href="#">工作</a></li>
+        </ul>
+    </li>
+    <li><a href="#">日程</a>
+        <ul>
+            <li><a href="#">计划事项</a></li>
+            <li><a href="#">已做事项</a></li>
+        </ul>
+    </li>
+    <li><a href="#">其他</a>
+        <ul>
+            <li><a href="#">关于</a></li>
+            <li><a href="#">留言</a></li>
+        </ul>
+    </li>
+</ul>
+</body>
+</html>
