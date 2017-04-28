@@ -1,27 +1,4 @@
 
-<!-- xd banner -->
-<div id="xdbanner" style="position: fixed; left: 50%; margin-left: -325px; padding: 10px -10px; margin-top: -20px; line-height: 14px; font-size: 14px; background-color: #FFE788;">
-        <span id="xdlogo">v0.2.0</span>
-
-        <a href="https://littleflute.github.io/blog/" class="button fork"><strong>Home</strong></a>
-        
-        <a href="https://littleflute.github.io/blog/docs" class="button fork"><strong>docs</strong></a>
-        <a href="https://littleflute.github.io/blog/html/songs" class="button fork"><strong>songs</strong></a>
-        
-</div>
-<!-- end xd banner -->
-<!-- xd script-->
-<script>
-var x = document.getElementsByTagName("h1")[0];
-x.innerHTML = "LittleFlute's Blog V0.0.6";
-var b	= document.getElementById("banner");
-var s = b.innerHTML;
-s += "<a href='docs' class='button downloads'>docs</a>";
-s += "<a href='html' class='button downloads'>html</a>";
-b.innerHTML = s;
-</script>
-<!-- end xd script-->
-
 
 ## [Home](https://littleflute.github.io/blog/) 
 
@@ -64,3 +41,16 @@ Your Pages site will use the layout and styles from the Jekyll theme you have se
 ### Support or Contact
 
 Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+
+
+<!-- xd script-->
+<script>
+var x = document.getElementsByTagName("h1")[0];
+x.innerHTML = "LittleFlute's Blog V0.0.7";
+var b	= document.getElementById("banner");
+var s = b.innerHTML;
+s += "<a href='docs' class='button downloads'>docs</a>";
+s += "<a href='html' class='button downloads'>html</a>";
+b.innerHTML = s;
+</script>
+<!-- end xd script-->
