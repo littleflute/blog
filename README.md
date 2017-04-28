@@ -10,15 +10,17 @@
         
 </div>
 <!-- end xd banner -->
-
 <!-- xd script-->
 <script>
 var x = document.getElementsByTagName("h1")[0];
-x.innerHTML = "xd debug";
+x.innerHTML = "LittleFlute's Blog V0.0.6";
+var b	= document.getElementById("banner");
+var s = b.innerHTML;
+s += "<a href='docs' class='button downloads'>docs</a>";
+s += "<a href='html' class='button downloads'>html</a>";
+b.innerHTML = s;
 </script>
 <!-- end xd script-->
-
-
 
 
 ## [Home](https://littleflute.github.io/blog/) 
