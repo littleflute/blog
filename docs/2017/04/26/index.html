@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<body>
+ <p id="demo"></p>
+<div id="xd1" style="border:1px red solid;width:100px;height:100px;">
+</div>
+<div id="xd2" style="border:1px blue solid;width:500px;height:100px;"></div>
+<div id="xd3" style="border:1px green solid;width:500px;height:100px;"></div>
+<div id="xd4" style="border:1px green solid;width:500px;height:100px;"></div>
+<script>
+ addHandler("xd1",1);
+ addHandler("xd1",2);
+ addHandler("xd1",3);
+ 
+function handlerFun(eNo,e,tag)
+{
+	switch(eNo)
+    {
+    case 1:
+	    document.getElementById("xd2").innerHTML = Date();
+        break;
+    case 2:
+	    document.getElementById("xd3").innerHTML = Date();
+        break;
+    case 3:
+	    document.getElementById("xd4").innerHTML = Date();
+        break;
+    }
+}
+function addHandler(id,eNo){
+	var x	= document.getElementById(id);
+
+	switch(eNo)
+	{
+	case 1: //eXdMouseMove
+		{
+			if (x.addEventListener) {
+    			x.addEventListener("mousemove",function(e){handlerFun(eNo,e,x);});
+			} else if (x.attachEvent) {
+    			x.attachEvent("onmousemove", function(e){handlerFun(eNo,e,x);});
+			}
+		}
+		break;
+	case 2: //eXdMouseDown
+		{ 
+			if (x.addEventListener) {
+    			x.addEventListener("mousedown",function(e){handlerFun(eNo,e,x);});
+			} else if (x.attachEvent) {
+    			x.attachEvent("onmousedown", function(e){handlerFun(eNo,e,x);});
+			}
+		}
+		break;
+	case 3: //eXdMouseUp
+		{ 
+			if (x.addEventListener) {
+    			x.addEventListener("mouseup",function(e){handlerFun(eNo,e,x);});
+			} else if (x.attachEvent) {
+    			x.attachEvent("onmouseup", function(e){handlerFun(eNo,e,x);});
+			}
+		}
+		break;
+	}
+} 
+
+</script>
+
+</body>
+</html> 
