@@ -1,17 +1,30 @@
-## [Home](https://littleflute.github.io/blog/) 
 
-##[docs](https://littleflute.github.io/blog/docs)
-
-<div id="xdbanner" style="position: fixed; left: 50%; margin-left: -325px; padding: 10px 12px; margin-top: 6px; line-height: 14px; font-size: 14px; background-color: #FFE788;">
-        <span id="xdlogo">v0.1.2</span>
+<!-- xd banner -->
+<div id="xdbanner" style="position: fixed; left: 50%; margin-left: -325px; padding: 10px -10px; margin-top: -20px; line-height: 14px; font-size: 14px; background-color: #FFE788;">
+        <span id="xdlogo">v0.2.0</span>
 
         <a href="https://littleflute.github.io/blog/" class="button fork"><strong>Home</strong></a>
         
         <a href="https://littleflute.github.io/blog/docs" class="button fork"><strong>docs</strong></a>
         <a href="https://littleflute.github.io/blog/html/songs" class="button fork"><strong>songs</strong></a>
         
-      </div><!-- end banner -->
+</div>
+<!-- end xd banner -->
 
+<!-- xd script-->
+<script>
+var x = document.getElementsByTagName("h1")[0];
+x.innerHTML = "xd debug";
+</script>
+<!-- end xd script-->
+
+
+
+
+## [Home](https://littleflute.github.io/blog/) 
+
+##[docs](https://littleflute.github.io/blog/docs)
+ 
 ## Welcome to GitHub Pages
 
 You can use the [editor on GitHub](https://github.com/littleflute/blog/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
