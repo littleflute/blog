@@ -1,0 +1,77 @@
+
+
+
+<!DOCTYPE html>  
+<html>
+<head>
+<title>Genesis Chapter1</title>
+<style>
+.selectBtn{
+	background:yellow;
+}
+.notSelectedBtn{
+	background:blue;
+	color:red;
+}
+</style>
+</head>  
+<body>  
+V0.5.5
+ <br>
+ <div id="DivCurTime"></div>
+<br>
+<button onclick="getCurTime()" type="button">Get current time position</button> 
+
+<button onclick="setCurTime(0)" type="button">00</button><br>  
+
+<button onclick="moveMS(-0.05)" type="button" >Time-50ms</button> 
+<button onclick="moveMS(-0.01)" type="button">-10ms</button> 
+<button onclick="moveMS(0.01)" type="button">+10ms</button> 
+<button onclick="moveMS(0.05)" type="button">+50ms</button> 
+<button onclick="setCurTime(5)" type="button">Set time position to 5 seconds</button><br>  
+
+<button onclick="changeImage(this,'g01-0103.jpg')" type="button" id="g01-0103" class="selectBtn">1:01-1:03</button>
+<button onclick="changeImage(this,'g01-0408.jpg')" type="button" class="notSelectedBtn">1:04-1:08</button>
+<button onclick="changeImage(this,'g01-0912.jpg')" type="button" class="notSelectedBtn">1:09-1:12</button>
+<button onclick="changeImage(this,'g01-1318.jpg')" type="button" class="notSelectedBtn">1:13-1:18</button>
+<button onclick="changeImage(this,'g01-1922.jpg')" type="button" class="notSelectedBtn">1:19-1:22</button>
+<button onclick="changeImage(this,'g01-2325.jpg')" type="button" class="notSelectedBtn">1:23-1:25</button>
+<button onclick="changeImage(this,'g01-2628.jpg')" type="button" class="notSelectedBtn">1:26-1:28</button>
+<button onclick="changeImage(this,'g01-2931.jpg')" type="button" class="notSelectedBtn">1:29-1:31</button>
+<br>  
+<img id="myImage" onclick="changeImage()" src="g01-0103.jpg" width="640" height="480">
+
+  
+<audio id="myPlayer" width="720" height="480" controls> 
+ <source src="g01.mp3" type="audio/mp3">  
+Your browser does not support HTML5 audio. 
+</audio>  
+
+ 
+
+<script>  
+var vid = document.getElementById("myPlayer"); 
+var s = document.getElementById("g01-0103");
+
+ 
+function changeImage(o,src) {
+	var image = document.getElementById('myImage');
+	image.src = src;
+	s.className = "notSelectedBtn";  
+	s = o;
+	s.className = "selectBtn";
+}
+
+function getCurTime() {  
+   document.getElementById("DivCurTime").innerHTML= vid.currentTime; 
+}   
+function setCurTime(t) { 
+   vid.currentTime=t;  
+   getCurTime();
+}  
+function moveMS(ms) { 
+   vid.currentTime+=ms;
+   getCurTime();  
+}   
+</script> 
+</body> 
