@@ -50,7 +50,7 @@ Having trouble with Pages? Check out our [documentation](https://help.github.com
 <!-- xd script-->
 <script>
 var x = document.getElementsByTagName("h1")[0];
-x.innerHTML = "LittleFlute's Blog V0.1.4";
+x.innerHTML = "LittleFlute's Blog V0.1.5";
 var b	= document.getElementById("banner");
 var s = b.innerHTML;
 s += "<a href='docs' class='button downloads'>docs</a>";
@@ -69,6 +69,9 @@ function loadDoc(src) {
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
       var str = this.responseText;
+      document.getElementById("demo").innerHTML =str;
+      
+      /*
       var pos = str.indexOf("scale=1.16199");
       if(pos !=-1)
       {
@@ -76,6 +79,7 @@ function loadDoc(src) {
          gStr += "%<br%>";
          document.getElementById("demo").innerHTML = gStr;
       }
+      */
     }
   };
   xhttp.open("GET", src, true);
