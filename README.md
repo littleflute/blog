@@ -47,22 +47,23 @@ Your Pages site will use the layout and styles from the Jekyll theme you have se
 
 Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
 
-
 <!-- xd script-->
 <script>
 var x = document.getElementsByTagName("h1")[0];
-x.innerHTML = "LittleFlute's Blog V0.2.0";
+x.innerHTML = "LittleFlute's Blog V0.3.3";
 var b	= document.getElementById("banner");
 var s = b.innerHTML;
 s += "<a href='docs' class='button downloads'>docs</a>";
 s += "<a href='html' class='button downloads'>html</a>";
 b.innerHTML = s;
 
+
 var gN   = 0;
 var gStr = "";
 function songSrc(n)
 {
-    var s = "html/songs/s00" + n + ".html";
+	gN = n;
+    var s = "https://littleflute.github.io/blog/html/songs/s00" + n + ".html";
     return s;
 }
 function loadDoc(src) {
@@ -78,9 +79,17 @@ function loadDoc(src) {
       document.getElementById("debug").innerHTML = pos;
       if(pos !=-1)
       {
-         gStr += src;
-         gStr += "%<br%>";
+         gStr += gN;
+         gStr += ": ";
+         gStr += "<a href=' ";
+		 gStr += src;
+         gStr += "'> ";
+		 gStr += gN;
+		 gStr += "</a>";
+         gStr += "<br>";
          document.getElementById("demo").innerHTML = gStr;
+		 loadDoc(songSrc(gN+1));
+
       }
      //*/
     }
@@ -88,6 +97,9 @@ function loadDoc(src) {
   xhttp.open("GET", src, true);
   xhttp.send();
 }
+ 
+loadDoc(songSrc(1));
 
 </script>
 <!-- end xd script-->
+
