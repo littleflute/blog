@@ -51,7 +51,7 @@ Having trouble with Pages? Check out our [documentation](https://help.github.com
 <!-- xd script-->
 <script>
 var x = document.getElementsByTagName("h1")[0];
-x.innerHTML = "LittleFlute's Blog V0.1.9";
+x.innerHTML = "LittleFlute's Blog V0.2.0";
 var b	= document.getElementById("banner");
 var s = b.innerHTML;
 s += "<a href='docs' class='button downloads'>docs</a>";
