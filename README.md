@@ -1,4 +1,5 @@
 ## Xd Demo
+<div id="debug">
 <div id="demo">
 <h2>The XMLHttpRequest Object</h2>
 <button type="button" onclick="loadDoc(songSrc(1))">Change Content</button>
@@ -50,7 +51,7 @@ Having trouble with Pages? Check out our [documentation](https://help.github.com
 <!-- xd script-->
 <script>
 var x = document.getElementsByTagName("h1")[0];
-x.innerHTML = "LittleFlute's Blog V0.1.6";
+x.innerHTML = "LittleFlute's Blog V0.1.7";
 var b	= document.getElementById("banner");
 var s = b.innerHTML;
 s += "<a href='docs' class='button downloads'>docs</a>";
@@ -71,8 +72,10 @@ function loadDoc(src) {
       var str = this.responseText;
       document.getElementById("demo").innerHTML =str;
       
-      //*
+      //
       var pos = str.indexOf("scale=1.165199");
+      
+      document.getElementById("debug").innerHTML = pos;
       if(pos !=-1)
       {
          gStr += strc;
