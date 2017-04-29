@@ -50,14 +50,15 @@ Having trouble with Pages? Check out our [documentation](https://help.github.com
 <!-- xd script-->
 <script>
 var x = document.getElementsByTagName("h1")[0];
-x.innerHTML = "LittleFlute's Blog V0.1.2";
+x.innerHTML = "LittleFlute's Blog V0.1.3";
 var b	= document.getElementById("banner");
 var s = b.innerHTML;
 s += "<a href='docs' class='button downloads'>docs</a>";
 s += "<a href='html' class='button downloads'>html</a>";
 b.innerHTML = s;
 
-var n = 1;
+var gN   = 0;
+var gStr = "";
 function songSrc(n)
 {
     var s = "html/songs/s00" + n + ".html";
@@ -67,8 +68,14 @@ function loadDoc(src) {
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
-      document.getElementById("demo").innerHTML =
-      this.responseText;
+      var str = this.responseText;
+      var pos = str.indexOf("scale=1.16199");
+      if(pos !=-1)
+      {
+         gStr += strc;
+         gStr += "%<br%>";
+         document.getElementById("demo").innerHTML = gStr;
+      }
     }
   };
   xhttp.open("GET", src, true);
