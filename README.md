@@ -1,4 +1,8 @@
-
+##Xd Demo
+<div id="demo">
+<h2>The XMLHttpRequest Object</h2>
+<button type="button" onclick="loadDoc()">Change Content</button>
+</div>
 
 ## [Home](https://littleflute.github.io/blog/) 
 
@@ -46,11 +50,24 @@ Having trouble with Pages? Check out our [documentation](https://help.github.com
 <!-- xd script-->
 <script>
 var x = document.getElementsByTagName("h1")[0];
-x.innerHTML = "LittleFlute's Blog V0.0.7";
+x.innerHTML = "LittleFlute's Blog V0.0.8";
 var b	= document.getElementById("banner");
 var s = b.innerHTML;
 s += "<a href='docs' class='button downloads'>docs</a>";
 s += "<a href='html' class='button downloads'>html</a>";
 b.innerHTML = s;
+
+function loadDoc() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("demo").innerHTML =
+      this.responseText;
+    }
+  };
+  xhttp.open("GET", "ajax_info.txt", true);
+  xhttp.send();
+}
+
 </script>
 <!-- end xd script-->
