@@ -28,14 +28,14 @@
 <div id="txt" ></div>
 <br>
 <div id="debug" ></div><br>
-<button onclick="xdTimer.changeImage(this,'g01-0103.jpg')" type="button" id="g01-0103" class="selectBtn">1:01-1:03</button>
-<button onclick="xdTimer.changeImage(this,'g01-0408.jpg')" type="button" id="g01-0408" class="notSelectedBtn">1:04-1:08</button>
-<button onclick="xdTimer.changeImage(this,'g01-0912.jpg')" type="button" id="g01-0912" class="notSelectedBtn">1:09-1:12</button>
-<button onclick="xdTimer.changeImage(this,'g01-1318.jpg')" type="button" id="g01-1318" class="notSelectedBtn">1:13-1:18</button>
-<button onclick="xdTimer.changeImage(this,'g01-1922.jpg')" type="button" id="g01-1922" class="notSelectedBtn">1:19-1:22</button>
-<button onclick="xdTimer.changeImage(this,'g01-2325.jpg')" type="button" id="g01-2325" class="notSelectedBtn">1:23-1:25</button>
-<button onclick="xdTimer.changeImage(this,'g01-2628.jpg')" type="button" id="g01-2628" class="notSelectedBtn">1:26-1:28</button>
-<button onclick="xdTimer.changeImage(this,'g01-2931.jpg')" type="button" id="g01-2931" class="notSelectedBtn">1:29-1:31</button>
+<button onclick="xdTimer.onClickBtn(this)" type="button" id="g01-0103" class="selectBtn">1:01-1:03</button>
+<button onclick="xdTimer.onClickBtn(this,'g01-0408.jpg')" type="button" id="g01-0408" class="notSelectedBtn">1:04-1:08</button>
+<button onclick="xdTimer.onClickBtn(this,'g01-0912.jpg')" type="button" id="g01-0912" class="notSelectedBtn">1:09-1:12</button>
+<button onclick="xdTimer.onClickBtn(this,'g01-1318.jpg')" type="button" id="g01-1318" class="notSelectedBtn">1:13-1:18</button>
+<button onclick="xdTimer.onClickBtn(this,'g01-1922.jpg')" type="button" id="g01-1922" class="notSelectedBtn">1:19-1:22</button>
+<button onclick="xdTimer.onClickBtn(this,'g01-2325.jpg')" type="button" id="g01-2325" class="notSelectedBtn">1:23-1:25</button>
+<button onclick="xdTimer.onClickBtn(this,'g01-2628.jpg')" type="button" id="g01-2628" class="notSelectedBtn">1:26-1:28</button>
+<button onclick="xdTimer.onClickBtn(this,'g01-2931.jpg')" type="button" id="g01-2931" class="notSelectedBtn">1:29-1:31</button>
 <br>  
 <img id="myImage" src="g01-0103.jpg" width="640" height="400">
 <audio id="myPlayer" width="720" height="480" controls> 
@@ -53,10 +53,7 @@ var s = document.getElementById("g01-0103");
 function getCurTime() {  
    document.getElementById("DivCurTime").innerHTML= vid.currentTime; 
 }   
-function setCurTime(t) { 
-   vid.currentTime=t;  
-   getCurTime();
-}  
+
 function moveMS(ms) { 
    vid.currentTime+=ms;
    getCurTime();  
@@ -66,6 +63,7 @@ function xdRun(){
 	xdTimer.startTime();
 }
 var xdTimer = {
+	
 	changeImage : function (o,src) {
 		var image = document.getElementById('myImage');
 		image.src = src;
@@ -113,12 +111,68 @@ var xdTimer = {
 		 	this.changeImage(o,'g01-0912.jpg');
 		} 
 	},
-
+	onClickBtn : function (o) {
+		var id = "g01-0103";
+		if(id==o.id)
+		{
+			var img = id+".jpg";
+			this.changeImage(o,img);
+			this.setCurTime(0);
+		}
+		id = "g01-0408";
+		if(id==o.id)
+		{
+			var img = id+".jpg";
+			this.changeImage(o,img);
+			this.setCurTime(35);
+		}
+		id = "g01-0912";
+		if(id==o.id)
+		{
+			var img = id+".jpg";
+			this.changeImage(o,img);
+			this.setCurTime(71);
+		}  
+		id = "g01-1318";
+		if(id==o.id)
+		{
+			var img = id+".jpg";
+			this.changeImage(o,img);
+			this.setCurTime(115);
+		}  
+		id = "g01-1922";
+		if(id==o.id)
+		{
+			var img = id+".jpg";
+			this.changeImage(o,img)
+		}  
+		id = "g01-2325";
+		if(id==o.id)
+		{
+			var img = id+".jpg";
+			this.changeImage(o,img)
+		}  
+		id = "g01-2628";
+		if(id==o.id)
+		{
+			var img = id+".jpg";
+			this.changeImage(o,img)
+		}  
+		id = "g01-2931";
+		if(id==o.id)
+		{
+			var img = id+".jpg";
+			this.changeImage(o,img)
+		}  
+	},
+	setCurTime : function (t) { 
+		vid.currentTime=t;  
+	},  
 	setV : function() {
 		var v		= document.getElementById("v");
 		var sHTML	= "<a target='_blank' href=";
 		sHTML		+= "'https://github.com/littleflute/blog/edit/master/docs/2017/04/27/index.html'>";
-		sHTML		+= "V1.0.8";
+		sHTML		+= "V1.2.4";
 		v.innerHTML	= sHTML;
 	}
 };
