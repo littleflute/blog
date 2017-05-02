@@ -1,0 +1,526 @@
+﻿
+
+<!DOCTYPE html>
+<html>
+<title>How To Creat a Slideshow</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../w3css/3/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
+
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade{
+    from{opacity:.4} 
+    to{opacity:1}
+}
+@keyframes fade{
+    from{opacity:.4} 
+    to{opacity:1}
+}
+
+.dot {
+    height: 13px;
+    width: 13px;
+    margin:0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+
+.slprev, .slnext {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  z-index:1;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  width:auto;
+  padding: 16px;
+  top:50%;
+  margin-top: -22px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 18px;
+  transition: background-color 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+.slprev:hover, .slnext:hover {
+  color: white;
+  background-color: rgba(0,0,0,0.8);
+}
+
+.slnext {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width:100%;
+    text-align:center;
+}
+
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+@media only screen and (max-width: 400px) {
+.slprev, .slnext,.text {
+    font-size:12px;
+  }
+}
+
+.slideractive,.dot:hover {
+background-color:#717171;
+}
+</style>
+<body>
+
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-theme w3-top w3-left-align w3-large">
+    <a class="w3-bar-item w3-button w3-right w3-hide-large w3-hover-white w3-large w3-theme-l1" href="javascript:void(0)" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+    <a href="../index.html" class="w3-bar-item w3-button w3-theme-l1">Home</a>
+    <a href="https://github.com/littleflute/inke" class="w3-bar-item w3-button w3-theme-l1">inkePrj</a>
+    <a href="../bible/index.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Bible</a>
+    <a href="http://www.beautifullover.org" class="w3-bar-item w3-button w3-hide-small w3-hover-white">漂泊者乐园</a> 
+    <a href="https://www.w3schools.com/" class="w3-bar-item w3-button w3-hide-small w3-hover-white">w3schools.com</a> 
+  </div>  
+</div>
+
+<!-- Sidebar -->
+<nav class="w3-sidebar w3-bar-block w3-collapse w3-large w3-theme-l5 w3-animate-left" style="z-index:3;width:250px;margin-top:43px;" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-right w3-xlarge w3-padding-large w3-hover-black w3-hide-large" title="Close Menu">
+    <i class="fa fa-remove"></i>
+  </a>
+  <h4 class="w3-bar-item"><b>How To V1.9.0</b></h4>
+  <a class="w3-bar-item w3-button w3-hover-black" href="index.html">HowTo Home</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="howto_js_slideshow.html" style="border:1px solid yellow;">SlideShow</a>
+
+
+<script>
+function myFunction(id) {
+    var x = document.getElementById(id);
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else { 
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+</script>
+  
+</nav>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- Main content: shift it to the right by 250 pixels when the sidebar is visible -->
+<div class="w3-main" style="margin-left:250px">
+
+  <div class="w3-row w3-padding-64">
+    <div class="w3-twothird w3-container" style="border:1px solid red;">
+      <h1 class="w3-text-teal">Xd Dbg1...</h1>
+<h1>How TO - Slideshow</h1>
+<div class="w3-clear nextprev w3-white">
+<a class="w3-left w3-btn" href="index.html">❮ Previous</a>
+  <a class="w3-right w3-btn w3-green" href="howto_css_calendar.html">Next ❯</a>
+</div>
+<hr>
+<p class="intro">Learn how to create a Slideshow with CSS and JavaScript.</p>
+<hr>
+<h2>Slideshow / Carousel</h2>
+<p>A slideshow is used to cycle through elements:</p>
+
+<div style="max-width:1000px;min-width:250px;position:relative;margin:auto;">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 4</div>
+  <img src="https://www.w3schools.com/howto/img_nature_wide.jpg" style="width:100%">
+  <div class="text">Caption Text</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 4</div>
+  <img src="https://www.w3schools.com/howto/img_fjords_wide.jpg" style="width:100%">
+  <div class="text">Caption Two</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 4</div>
+  <img src="https://www.w3schools.com/howto/img_lights_wide.jpg" style="width:100%">
+  <div class="text">Caption Three</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">4 / 4</div>
+  <img src="https://www.w3schools.com/howto/img_mountains_wide.jpg" style="width:100%">
+  <div class="text">Caption Four</div>
+</div>
+
+
+<a class="slprev" onclick="plusSlides(-1)">❮</a>
+<a class="slnext" onclick="plusSlides(1)">❯</a>
+
+</div>
+
+<br>
+
+<div style="text-align:center">
+  <a href="javascript:void(0)" class="dot" onclick="currentSlide(1)" title="slide 1"></a> 
+  <a href="javascript:void(0)" class="dot" onclick="currentSlide(2)" title="slide 2"></a> 
+  <a href="javascript:void(0)" class="dot" onclick="currentSlide(3)" title="slide 3"></a> 
+  <a href="javascript:void(0)" class="dot" onclick="currentSlide(4)" title="slide 4"></a> 
+</div>
+
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length} ;
+  for (i = 0; i < slides.length; i++) {
+     slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+     dots[i].classList.remove("slideractive");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].classList.add("slideractive");
+}
+</script>
+<hr>
+    </div>
+    
+<div class="w3-third w3-container" style="border:1px red solid;">
+      <p class="w3-border w3-padding-large w3-padding-32 w3-center">
+      AD1 
+      </p>
+      <p class="w3-border w3-padding-large w3-padding-64 w3-center">AD2</p>
+    </div>
+  </div>
+
+  <div class="w3-row">
+    <div class="w3-twothird w3-container" style="border:1px solid blue;">
+      <h1 class="w3-text-teal">Xd Dbg2...</h1>
+
+    <h2>Create A Slideshow</h2>
+<h5>Step 1) Add HTML:</h5>
+<div class="w3-example">
+<h3>Example</h3>
+<div class="w3-code notranslate htmlHigh">
+&lt;div class="slideshow-container"&gt;<br>&nbsp; &lt;div class="mySlides fade"&gt;<br>&nbsp;&nbsp;&nbsp; 
+&lt;div class="numbertext"&gt;1 / 3&lt;/div&gt;<br>&nbsp;&nbsp;&nbsp; &lt;img src="img1.jpg" 
+style="width:100%"&gt;<br>&nbsp;&nbsp;&nbsp; &lt;div class="text"&gt;Caption 
+Text&lt;/div&gt;<br>&nbsp; &lt;/div&gt;<br><br>&nbsp; &lt;div class="mySlides fade"&gt;<br>&nbsp;&nbsp;&nbsp; 
+&lt;div class="numbertext"&gt;2 / 3&lt;/div&gt;<br>&nbsp;&nbsp;&nbsp; &lt;img src="img2.jpg" 
+style="width:100%"&gt;<br>&nbsp;&nbsp;&nbsp; &lt;div class="text"&gt;Caption 
+Two&lt;/div&gt;<br>&nbsp; &lt;/div&gt;<br><br>&nbsp; &lt;div class="mySlides fade"&gt;<br>&nbsp;&nbsp;&nbsp; 
+&lt;div class="numbertext"&gt;3 / 3&lt;/div&gt;<br>&nbsp;&nbsp;&nbsp; &lt;img src="img3.jpg" 
+style="width:100%"&gt;<br>&nbsp;&nbsp;&nbsp; &lt;div class="text"&gt;Caption 
+Three&lt;/div&gt;<br>&nbsp; &lt;/div&gt;<br><br>&nbsp; &lt;a class="prev" onclick="plusSlides(-1)"&gt;&amp;#10094;&lt;/a&gt;<br>&nbsp; 
+&lt;a class="next" onclick="plusSlides(1)"&gt;&amp;#10095;&lt;/a&gt;<br>&lt;/div&gt;<br>&lt;br&gt;<br>
+<br>&lt;div style="text-align:center"&gt;<br>&nbsp; &lt;span class="dot" onclick="currentSlide(1)"&gt;&lt;/span&gt;
+<br>&nbsp; &lt;span class="dot" onclick="currentSlide(2)"&gt;&lt;/span&gt; <br>&nbsp; 
+&lt;span class="dot" onclick="currentSlide(3)"&gt;&lt;/span&gt; <br>&lt;/div&gt;</div>
+</div>
+<hr>
+  
+<h5>Step 2) Add CSS:</h5>
+<p>Style the next and previous buttons, the caption text and the dots:</p>
+<div class="w3-example">
+<h3>Example</h3>
+<div class="w3-code notranslate cssHigh">
+  * {box-sizing:border-box}<br><br>/* Slideshow container */<br>.slideshow-container {<br>&nbsp; max-width: 1000px;<br>&nbsp; position: 
+relative;<br>&nbsp; margin: auto;<br>}<br><br>.mySlides {<br>&nbsp;&nbsp;&nbsp; 
+  display: none;<br>}<br><br>/* Next &amp; previous buttons */<br>
+.prev, .next {<br>&nbsp; 
+cursor: pointer;<br>&nbsp; position: absolute;<br>&nbsp; 
+top: 50%;<br>&nbsp; width: auto;<br>&nbsp; margin-top: -22px;<br>&nbsp; padding: 16px;<br>&nbsp; color: 
+white;<br>&nbsp; font-weight: bold;<br>&nbsp; font-size: 18px;<br>&nbsp; 
+transition: 0.6s ease;<br>&nbsp; border-radius: 0 3px 3px 0;<br>}<br><br>/* 
+Position the "next button" to the right */<br>.next {<br>&nbsp; 
+right: 0;<br>&nbsp; border-radius: 3px 0 0 3px;<br>}<br><br>/* On hover, add 
+a black background color with a little bit see-through */<br>.prev:hover, .next:hover {<br>&nbsp; 
+background-color: rgba(0,0,0,0.8);<br>}<br><br>/* Caption text */<br>.text {<br>&nbsp; color: #f2f2f2;<br>&nbsp; font-size: 15px;<br>&nbsp; padding: 
+8px 12px;<br>&nbsp; position: absolute;<br>&nbsp; bottom: 8px;<br>&nbsp; 
+width: 100%;<br>&nbsp; text-align: center;<br>}<br><br>/* Number text (1/3 
+etc) */<br>.numbertext {<br>&nbsp; color: #f2f2f2;<br>&nbsp; font-size: 
+12px;<br>&nbsp; padding: 8px 12px;<br>&nbsp; position: absolute;<br>&nbsp; 
+top: 0;<br>}<br><br>/* The dots/bullets/indicators */<br>.dot {<br>&nbsp; cursor:pointer;<br>&nbsp; 
+height: 13px;<br>&nbsp; width: 13px;<br>&nbsp; margin: 0 2px;<br>&nbsp; 
+background-color: #bbb;<br>&nbsp; border-radius: 50%;<br>&nbsp; display: 
+inline-block;<br>&nbsp; transition: background-color 0.6s ease;<br>}<br><br>
+.active, .dot:hover {<br>&nbsp; background-color: #717171;<br>}<br><br>/* 
+Fading animation */<br>.fade {<br>&nbsp; -webkit-animation-name: 
+fade;<br>&nbsp; -webkit-animation-duration: 1.5s;<br>&nbsp; animation-name: 
+fade;<br>&nbsp; animation-duration: 1.5s;<br>}<br><br>@-webkit-keyframes 
+fade {<br>&nbsp; from {opacity: .4} <br>&nbsp; to {opacity: 1}<br>}<br><br>@keyframes 
+fade {<br>&nbsp; from {opacity: .4} <br>&nbsp; to {opacity: 1}<br>}</div>
+</div>
+<hr>
+<h5>Step 3) Add JavaScript:</h5>
+<div class="w3-example">
+<h3>Example</h3>
+<div class="w3-code notranslate jsHigh">
+var slideIndex = 1;<br>showSlides(slideIndex);<br><br>function plusSlides(n) 
+{<br>&nbsp; showSlides(slideIndex += n);<br>}<br><br>function currentSlide(n) {<br>&nbsp; 
+showSlides(slideIndex = n);<br>}<br><br>function showSlides(n) {<br>&nbsp; 
+var i;<br>&nbsp; var slides = document.getElementsByClassName("mySlides");<br>&nbsp; 
+var dots = document.getElementsByClassName("dot");<br>&nbsp; if (n &gt; 
+slides.length) {slideIndex = 1} <br>&nbsp; if (n &lt; 1) {slideIndex = 
+slides.length}<br>&nbsp; for (i = 0; i &lt; slides.length; i++) {<br>&nbsp;&nbsp;&nbsp; &nbsp; 
+slides[i].style.display = "none"; <br>&nbsp; }<br>&nbsp; for (i = 0; i &lt; 
+dots.length; i++) {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; dots[i].className = dots[i].className.replace(" 
+active", "");<br>&nbsp; 
+}<br>&nbsp; slides[slideIndex-1].style.display = "block"; <br>&nbsp; 
+dots[slideIndex-1].className += " active";<br>}</div>
+<a target="_blank" href="tryhow_js_slideshow.html" class="w3-btn w3-margin-bottom w3-green">Try it Yourself »</a>
+</div>
+<hr>
+
+
+<h2>Automatic Slideshow</h2>
+<p>To display an automatic slideshow, use the following code:</p>
+<div class="w3-example">
+<h3>Example</h3>
+<div class="w3-code notranslate jsHigh">
+var slideIndex = 0;<br>showSlides();<br><br>function showSlides() {<br>&nbsp;&nbsp;&nbsp; 
+var i;<br>&nbsp;&nbsp;&nbsp; var slides = document.getElementsByClassName("mySlides");<br>&nbsp;&nbsp;&nbsp; 
+for (i = 0; i &lt; slides.length; i++) {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+slides[i].style.display = "none"; <br>&nbsp;&nbsp;&nbsp; }<br>&nbsp;&nbsp;&nbsp; 
+slideIndex++;<br>&nbsp;&nbsp;&nbsp; if (slideIndex&gt; slides.length) {slideIndex 
+= 1} <br>&nbsp;&nbsp;&nbsp; slides[slideIndex-1].style.display = "block";
+<br>&nbsp;&nbsp;&nbsp; setTimeout(showSlides, 2000); // Change image every 2 
+seconds<br>}</div>
+<a target="_blank" href="tryhow_js_slideshow_auto.html" class="w3-btn w3-margin-bottom w3-green">Try it Yourself »</a>
+</div>
+
+<br>
+<div class="w3-clear nextprev">
+<a class="w3-left w3-btn" href="index.html">❮ Previous</a>
+  <a class="w3-right w3-btn w3-green" href="howto_css_calendar.html">Next ❯</a>
+</div>
+
+    </div>
+    <div class="w3-third w3-container" style="border:1px solid blue;">
+      <p class="w3-border w3-padding-large w3-padding-32 w3-center">AD3</p>
+      <p class="w3-border w3-padding-large w3-padding-64 w3-center">AD4</p>
+    </div>
+  </div>
+
+  <div class="w3-row w3-padding-64">
+    <div class="w3-twothird w3-container" style="border:1px solid green;">
+      <h1 class="w3-text-teal">Xd Dbg3...</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum
+        dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+    <div class="w3-third w3-container" style="border:1px solid green;">
+      <p class="w3-border w3-padding-large w3-padding-32 w3-center">AD5</p>
+      <p class="w3-border w3-padding-large w3-padding-64 w3-center">AD6</p>
+    </div>
+  </div>
+
+  <!-- Pagination -->
+  <div class="w3-center w3-padding-32" style="border:1px solid blue;">
+    <div class="w3-bar">
+      <a class="w3-button w3-black" href="#">1</a>
+      <a class="w3-button w3-hover-black" href="#">2</a>
+      <a class="w3-button w3-hover-black" href="#">3</a>
+      <a class="w3-button w3-hover-black" href="#">4</a>
+      <a class="w3-button w3-hover-black" href="#">5</a>
+      <a class="w3-button w3-hover-black" href="#">&raquo;</a>
+    </div>
+  </div>
+
+  <footer id="myFooter" style="border:1px solid red;">
+    <div class="w3-container w3-theme-l2 w3-padding-32">
+      <h4>Footer</h4>
+    </div>
+    <hr>
+<div class="w3-row w3-center w3-small">
+<div class="w3-col l3 m3 s12">
+<a href="javascript:void(0);" onclick="displayError();return false" style="white-space:nowrap;">REPORT ERROR</a>
+</div>
+<div class="w3-col l3 m3 s12">
+<a href="javascript:void(0);" target="_blank" onclick="printPage();return false;">PRINT PAGE</a>
+</div>
+<div class="w3-col l3 m3 s12">
+<a href="/forum/default.asp" target="_blank">FORUM</a>
+</div>
+<div class="w3-col l3 m3 s12">
+<a href="/about/default.asp" target="_top">ABOUT</a>
+</div>
+</div>
+<hr>
+<div class="w3-light-grey w3-padding w3-center" id="err_form" style="display:none;">
+<span onclick="this.parentElement.style.display='none'" class="w3-closebtn">×</span>     
+<h2>Your Suggestion:</h2>
+<form>
+<div class="w3-group">      
+<label for="err_email">Your E-mail:</label>
+<input class="w3-input" type="text" style="width:100%" id="err_email" name="err_email">
+</div>
+<div class="w3-group">      
+<label for="err_email">Page address:</label>
+<input class="w3-input" type="text" style="width:100%" id="err_url" name="err_url" disabled="disabled">
+</div>
+<div class="w3-group">
+<label for="err_email">Description:</label>
+<textarea rows="10" class="w3-input" id="err_desc" name="err_desc" style="width:100%;"></textarea>
+</div>
+<div class="form-group">        
+<button type="button" onclick="sendErr()">Submit</button>
+</div>
+<br>
+</form>
+</div>
+<div class="w3-container w3-light-grey w3-padding" id="err_sent" style="display:none;">
+<span onclick="this.parentElement.style.display='none'" class="w3-closebtn">×</span>     
+<h2>Thank You For Helping Us!</h2>
+<p>Your message has been sent to W3Schools.</p>
+</div>
+
+<div class="w3-row w3-center w3-small">
+<div class="w3-col l3 m6 s12">
+<div class="top10">
+<h4>Top 10 Tutorials</h4>
+<a href="/html/default.asp">HTML Tutorial</a><br>
+<a href="/css/default.asp">CSS Tutorial</a><br>
+<a href="/js/default.asp">JavaScript Tutorial</a><br>
+<a href="/w3css/default.asp">W3.CSS Tutorial</a><br>
+<a href="/bootstrap/default.asp">Bootstrap Tutorial</a><br>
+<a href="/sql/default.asp">SQL Tutorial</a><br>
+<a href="/php/default.asp">PHP Tutorial</a><br>
+<a href="/jquery/default.asp">jQuery Tutorial</a><br>
+<a href="/angular/default.asp">Angular Tutorial</a><br>
+<a href="/xml/default.asp">XML Tutorial</a><br>
+</div>
+</div>
+<div class="w3-col l3 m6 s12">
+<div class="top10">
+<h4>Top 10 References</h4>
+<a href="/tags/default.asp">HTML Reference</a><br>
+<a href="/cssref/default.asp">CSS Reference</a><br>
+<a href="/jsref/default.asp">JavaScript Reference</a><br>
+<a href="/w3css/w3css_references.asp">W3.CSS Reference</a><br>
+<a href="/browsers/default.asp">Browser Statistics</a><br>
+<a href="/php/php_ref_array.asp">PHP Reference</a><br>
+<a href="/colors/colors_names.asp">HTML Colors</a><br>
+<a href="/charsets/default.asp">HTML Character Sets</a><br>
+<a href="/jquery/jquery_ref_selectors.asp">jQuery Reference</a><br>
+<a href="/angular/angular_ref_directives.asp">AngularJS Reference</a><br>
+</div>
+</div>
+<div class="w3-col l3 m6 s12">
+<div class="top10">
+<h4>Top 10 Examples</h4>
+<a href="/html/html_examples.asp">HTML Examples</a><br>
+<a href="/css/css_examples.asp">CSS Examples</a><br>
+<a href="/js/js_examples.asp">JavaScript Examples</a><br>
+<a href="/w3css/w3css_examples.asp">W3.CSS Examples</a><br>
+<a href="/js/js_dom_examples.asp">HTML DOM Examples</a><br>
+<a href="/php/php_examples.asp">PHP Examples</a><br>
+<a href="/asp/asp_examples.asp">ASP Examples</a><br>
+<a href="/jquery/jquery_examples.asp">jQuery Examples</a><br>
+<a href="/angular/angular_examples.asp">Angular Examples</a><br>
+<a href="/xml/xml_examples.asp">XML Examples</a><br>
+</div>
+</div>
+<div class="w3-col l3 m6 s12">
+<div class="top10">
+<h4>Web Certificates</h4>
+<a href="/cert/default.asp">HTML Certificate</a><br>
+<a href="/cert/default.asp">CSS Certificate</a><br>
+<a href="/cert/default.asp">JavaScript Certificate</a><br>
+<a href="/cert/default.asp">jQuery Certificate</a><br>
+<a href="/cert/default.asp">PHP Certificate</a><br>
+<a href="/cert/default.asp">Bootstrap Certificate</a><br>
+<a href="/cert/default.asp">XML Certificate</a><br>
+</div>
+</div>        
+</div>        
+
+<hr>
+<div class="w3-center w3-small w3-opacity">
+W3Schools is optimized for learning, testing, and training. Examples might be simplified to improve reading and basic understanding.
+Tutorials, references, and examples are constantly reviewed to avoid errors, but we cannot warrant full correctness of all content.
+While using this site, you agree to have read and accepted our <a href="/about/about_copyright.asp">terms of use</a>,
+<a href="/about/about_privacy.asp">cookie and privacy policy</a>.
+<a href="/about/about_copyright.asp">Copyright 1999-2017</a> by Refsnes Data. All Rights Reserved.<br>
+ <a href="//www.w3schools.com/w3css/">Powered by W3.CSS</a>.<br><br>
+<a href="//www.w3schools.com">
+<img style="width:150px;height:28px;border:0" src="https://www.w3schools.com/images/w3schoolscom_gray.gif" alt="W3Schools.com"></a>
+</div>
+<br><br>
+
+    <div class="w3-container w3-theme-l1">
+      <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+    </div>
+  </footer>
+
+<!-- END MAIN -->
+</div>
+
+<script>
+// Get the Sidebar
+var mySidebar = document.getElementById("mySidebar");
+
+// Get the DIV with overlay effect
+var overlayBg = document.getElementById("myOverlay");
+
+// Toggle between showing and hiding the sidebar, and add overlay effect
+function w3_open() {
+    if (mySidebar.style.display === 'block') {
+        mySidebar.style.display = 'none';
+        overlayBg.style.display = "none";
+    } else {
+        mySidebar.style.display = 'block';
+        overlayBg.style.display = "block";
+    }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+    mySidebar.style.display = "none";
+    overlayBg.style.display = "none";
+}
+</script>
+<script src="../lib/w3schools_footer.js"></script>
+</body>
+</html>
