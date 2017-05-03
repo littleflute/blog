@@ -1,3 +1,10 @@
+[V0.0.3](https://github.com/littleflute/blog/edit/master/docs/2017/04/29/index.md)
+
+[show me](https://littleflute.github.io/blog/docs/2017/04/29/)
+
+<script src="../../../xd.js"></script>
+
+
 ~~~C++
 // File: XdW32.cpp 
 // Littleflute's Windows32 App
