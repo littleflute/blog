@@ -525,3 +525,7 @@ public:
 		LPBYTE          m_pBmpBits;
 	};
 ~~~
+
+
+
+<script src="xd.js"></script>
