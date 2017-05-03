@@ -531,4 +531,4 @@ public:
 
 
 
-<script src="xd.js"></script>
+<script src="../../../xd.js"></script>
