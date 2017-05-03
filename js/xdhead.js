@@ -1,0 +1,10 @@
+var x = document.getElementsByTagName("h1")[0];
+x.innerHTML = "LittleFlute's Blog V0.4.1";
+var b	= document.getElementById("banner");
+var s = b.innerHTML;
+var path = location.href;
+s += "<a href='";
+s += path;
+s += "/docs' class='button downloads'>docs</a>";
+s += "<a href='html' class='button downloads'>html</a>";
+b.innerHTML = s;
