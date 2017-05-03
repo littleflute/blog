@@ -1,0 +1,9 @@
+; B1Mng.def : Declares the module parameters for the DLL.
+
+LIBRARY      "B1Mng"
+DESCRIPTION  'B1Mng Windows Dynamic Link Library'
+
+EXPORTS
+    ; Explicit exports can go here
+
+	OnBlApi
