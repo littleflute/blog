@@ -1,7 +1,7 @@
-[V0.0.5](https://github.com/littleflute/blog/edit/master/docs/2017/04/30/index.md)
+[V0.0.6](https://github.com/littleflute/blog/edit/master/docs/2017/04/30/index.md)
 
 [show me](https://littleflute.github.io/blog/docs/2017/04/30/)
-<script src="../../../../xd.js"></script>
+<script src="../../../../js/xdhead.js.js"></script>
 
 ~~~ C++
 //File: XdBmp.h
