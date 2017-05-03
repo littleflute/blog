@@ -1,4 +1,5 @@
 [v0.0.1](https://github.com/littleflute/blog/edit/master/docs/2017/04/04/index.md)
+[show me](https://littleflute.github.io/blog/docs/2017/04/04)
 
 ~~~C++
 //File: BlConsole.h
