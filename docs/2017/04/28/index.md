@@ -1,5 +1,4 @@
-[V0.0.1](https://github.com/littleflute/blog/edit/master/docs/2017/04/28/index.md)
-
+[V0.0.2](https://github.com/littleflute/blog/edit/master/docs/2017/04/28/index.md)
 [show me](https://littleflute.github.io/blog/docs/2017/04/28/)
 
 <script src="../../../../xd.js"></script>
