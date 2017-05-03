@@ -1,3 +1,4 @@
+~~~C++
 // File: XdW32.cpp 
 // Littleflute's Windows32 App
 
@@ -133,3 +134,4 @@ int APIENTRY WinMain(HINSTANCE hInstance,
 { 
 	return	g_myApp.go(hInstance,nCmdShow);
 }
+~~~
