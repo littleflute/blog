@@ -1,6 +1,6 @@
 [V0.0.2](https://github.com/littleflute/blog/edit/master/docs/2017/04/30/index.md)
 
-[show me](https://github.com/littleflute/blog/docs/2017/04/30)
+[show me](https://littleflute.github.io/blog/docs/2017/04/30/)
 
 
 ~~~ C++
