@@ -1,8 +1,8 @@
-[V0.0.3](https://github.com/littleflute/blog/edit/master/docs/2017/04/29/index.md)
+[V0.0.4](https://github.com/littleflute/blog/edit/master/docs/2017/04/29/index.md)
 
 [show me](https://littleflute.github.io/blog/docs/2017/04/29/)
 
-<script src="../../../xd.js"></script>
+<script src="../../../../xd.js"></script>
 
 
 ~~~C++
