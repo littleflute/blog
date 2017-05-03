@@ -1,3 +1,5 @@
+[v0.0.1](https://github.com/littleflute/blog/edit/master/docs/2017/04/04/index.md)
+
 ~~~C++
 //File: BlConsole.h
 /*
