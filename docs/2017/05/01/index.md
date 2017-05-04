@@ -1,4 +1,10 @@
 
+[V0.0.2](https://github.com/littleflute/blog/edit/master/docs/2017/05/01/index.md)
+
+[show me](https://littleflute.github.io/blog/docs/2017/05/01/)
+<script src="../../../../js/xdhead.js"></script>
+
+
 ~~~C++
 //BlWHelp.h
 /*
