@@ -1,7 +1,7 @@
-[v0.0.2](https://github.com/littleflute/blog/edit/master/docs/2017/05/03/index.md)
+[v0.0.3](https://github.com/littleflute/blog/edit/master/docs/2017/05/03/index.md)
 
-[show this page](https://littleflute.guihub.io/blog/docs/2017/05/03)
-
+[show this page](https://littleflute.github.io/blog/docs/2017/05/03)
+>v0.0.3 fix [show this page](https://littleflute.github.io/blog/docs/2017/05/03)
 >v0.0.2 add button. 
 
 >V0.0.1 create this page.
