@@ -1,4 +1,6 @@
 
+//v0.0.2
+//v0.0.1
 
 var myGamePiece;
 var myObstacles = [];
@@ -17,7 +19,8 @@ var myGameArea = {
         this.canvas.width = 480;
         this.canvas.height = 270;
         this.context = this.canvas.getContext("2d");
-        document.body.insertBefore(this.canvas, document.body.childNodes[0]);
+        
+        document.body.insertBefore(this.canvas,document.getElementById("afterGameArea"));// document.body.childNodes[0]); v0.0.2
         this.frameNo = 0;
         this.interval = setInterval(updateGameArea, 20);
         },
