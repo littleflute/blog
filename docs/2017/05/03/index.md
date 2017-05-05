@@ -7,14 +7,17 @@
 >[ref](https://www.w3schools.com/graphics/game_intro.asp)
 
 
-[v0.0.4](https://github.com/littleflute/blog/edit/master/docs/2017/05/03/index.md)
-[edit: game.js](game.js)
+[v0.0.5](https://github.com/littleflute/blog/edit/master/docs/2017/05/03/index.md)
+
+[edit: game.js](https://github.com/littleflute/blog/edit/master/docs/2017/05/03/game.js)
 
 [show this page](https://littleflute.github.io/blog/docs/2017/05/03)
 
+>v0.0.5 fix: [edit: game.js](https://github.com/littleflute/blog/edit/master/docs/2017/05/03/game.js)
+
 >v0.0.4 
-.move button to up side.
-.[edit: game.js](game.js)
+>1.move button to up side.
+>2.[edit: game.js](game.js)
 
 >v0.0.3 fix [show this page](https://littleflute.github.io/blog/docs/2017/05/03)
 
