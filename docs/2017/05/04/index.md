@@ -36,6 +36,12 @@ body {
     font-size: 36px;
     margin-left: 50px;
 }
+.sidenav .closebtn1 {
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
 
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
@@ -49,9 +55,24 @@ body {
   <a href="#">Services</a>
   <a href="#">Clients</a>
   <a href="#">Contact</a>
+  <a href="javascript:void(0)" class="closebtn2" onclick="closeNav()">&times;</a>
+  <a href="#">About</a>
+  <a href="#">Services</a>
+  <a href="#">Clients</a>
+  <a href="#">Contact</a>
+  <a href="javascript:void(0)" class="closebtn2" onclick="closeNav()">&times;</a>
+  <a href="../../../../">Home</a>
+  <a href="../../../">docs</a>
+  <a href="../../">2017</a>
+  <a href="../">05</a>
 </div>
+[v0.0.2](https://github.com/littleflute/blog/edit/master/docs/2017/05/04/index.md)
 
-<h2>Animated Sidenav Example v0.0.1</h2>
+[show this page](https://littleflute.github.io/blog/docs/2017/05/04)
+
+>v0.0.2 add class: closebtn2 
+
+<h2>Animated Sidenav Example</h2>
 <p>Click on the element below to open the side navigation menu.</p>
 <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
 
