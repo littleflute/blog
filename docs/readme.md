@@ -1,8 +1,6 @@
 [Home](..)
-#[v0.4.3](https://github.com/littleflute/blog/edit/master/docs/readme.md) | [showme](https://littleflute.github.io/blog/docs)
+#[v0.4.4](https://github.com/littleflute/blog/edit/master/docs/readme.md) | [showme](https://littleflute.github.io/blog/docs)
 
-<div id="blog"></div>
- 
 <script>
 
 //<
@@ -18,6 +16,12 @@ function blogJS()
 	this.songStr	= "";
 	this.createHome = function (){
 		var b = document.getElementById("blog");
+        if(!b)
+        {
+        	b = document.createElement("div");
+            b.id = "blog";
+            document.body.appendChild(b);
+        }
 		var h = document.createElement("div");
 		h.id = this.home;
 		b.appendChild(h);
@@ -140,7 +144,7 @@ function blogJS()
 				} 
 	};
  
-	this.v		= "0.0.9";
+	this.v		= "0.1.0";
 };
 //>==class: blogJS==
  
