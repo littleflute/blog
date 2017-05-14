@@ -1,6 +1,5 @@
-## [Home](..)
-#[v0.4.2](https://github.com/littleflute/blog/edit/master/docs/readme.md) | [showme](https://littleflute.github.io/blog/docs)
-
+[Home](..)
+#[v0.4.3](https://github.com/littleflute/blog/edit/master/docs/readme.md) | [showme](https://littleflute.github.io/blog/docs)
 
 <div id="blog"></div>
  
@@ -43,7 +42,23 @@ function blogJS()
 		h.style.color = "green";
 
     };
-    
+    this.onBtnTest = function(o)
+    {
+    	var id = "x" + o.parentElement.id;
+      	var x = document.getElementById(id);
+    	if(x.style.display == "none")
+    	{
+    		x.style.display = "block";
+        	o.innerHTML = "-";
+       	 o.style.color = "red";
+    	}
+    	else
+    	{
+    		x.style.display = "none";
+        	o.innerHTML = "+";
+        	o.style.color = "green";
+    	}
+    };
 	this.showMe = function()
 	{
 		var x;
@@ -53,11 +68,15 @@ function blogJS()
 		for(x in this)
 		{
         	nID++;
+            
 			var d = document.createElement("div");
 			d.id = nID;
+            d.onFun = this.onBtnTest;
             d.innerHTML = x;
-            d.innerHTML += "<button onclick='onBtn(this)'>btn1</button>";
-			d.style.border = "solid 1px blue";
+            var bt= "<button onclick='this.parentElement.onFun(this)'>";
+            bt += "+</button>";
+			d.innerHTML += bt;
+            d.style.border = "solid 1px blue";
 			d.style.color = "red";
 			h.appendChild(d); 
             
@@ -121,22 +140,10 @@ function blogJS()
 				} 
 	};
  
-	this.v		= "0.0.5";
+	this.v		= "0.0.9";
 };
 //>==class: blogJS==
-function onBtn(o)
-{
-	var id = "x" + o.parentElement.id;
-    var x = document.getElementById(id);
-    if(x.style.display == "none")
-    {
-    	x.style.display = "block";
-    }
-    else
-    {
-    	x.style.display = "none";
-    }
-}
+ 
 var bj = new blogJS();
 bj.createHome();
 bj.createSongList();
@@ -146,9 +153,6 @@ bj.showMe();
 
 bj.loadASong(bj.getSongSrc(1),bj);
 </script>
-
-
-
 
 ## [最新文章]
 <div id="test" style="border:1px red solid;width:500px;height:220px;">test
