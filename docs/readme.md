@@ -1,5 +1,5 @@
-[Home](..)
-#[v0.4.4](https://github.com/littleflute/blog/edit/master/docs/readme.md) | [showme](https://littleflute.github.io/blog/docs)
+##[Home](..)
+#[v0.4.5](https://github.com/littleflute/blog/edit/master/docs/readme.md) | [showme](https://littleflute.github.io/blog/docs)
 
 <script>
 
@@ -198,3 +198,7 @@ function getData(src)
 
 #2017.4.19 1:51AM bjt
 建立本博客站。
+
+
+<div id="blog"></div>
+
