@@ -1,9 +1,12 @@
-## Xd Zone V0.0.2
+## Xd Zone V0.0.3
 <div id="debug"></div>
 <div id="demo">
 <h2>The XMLHttpRequest Object</h2>
 <button type="button" onclick="loadDoc(songSrc(1))">Change Content</button>
 </div>
+
+
+[blClassTest](blClassTest.html)
 
 ## [Home](https://littleflute.github.io/blog/) 
 
