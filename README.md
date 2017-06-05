@@ -1,4 +1,4 @@
-## Xd Zone [V0.0.5](https://github.com/littleflute/blog/edit/master/README.md)
+## Xd Zone [V0.0.6](https://github.com/littleflute/blog/edit/master/README.md)
 <div id="debug"></div>
 <div id="demo">
 <h2>The XMLHttpRequest Object</h2>
@@ -54,7 +54,10 @@ Your Pages site will use the layout and styles from the Jekyll theme you have se
 
 Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
  
- #xd.js
+ # xd1
+ ## xd2
+ ### xd3
+ 
 ~~~html
  <script src="xd.js"></script>
 ~~~
