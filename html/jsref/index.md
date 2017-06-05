@@ -1,5 +1,6 @@
 # html
+[html](..)
 
-## v0.0.2
-[v0.0.2](https://github.com/littleflute/blog/edit/master/html/jsref/index.md)
+## v0.0.3
+[edit](https://github.com/littleflute/blog/edit/master/html/jsref/index.md)
 
