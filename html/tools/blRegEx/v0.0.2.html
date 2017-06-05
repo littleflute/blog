@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html>
+<body>
+v0.0.2
+
+<textarea id = "text" style="width:500px;height:200px;">
+sales.xls
+sales1.xls
+orders3.xls
+sales2.xls
+sales3.xls
+apac1.xls
+europe2.xls
+na1.xls
+na2.xls
+sa1.xls
+</textarea>
+<br>
+
+<textarea id = "pp" style="width:500px;height:50px;"> 
+/xls/gi/
+</textarea>
+<br>
+
+<button onclick="myFunction()">Try it</button>
+ 
+<div id="demo">Mr Blue has a blue house and a blue car.</div>
+
+
+<script>
+function myFunction() {
+    var str = document.getElementById("text").value;  
+    var p = document.getElementById("pp").value; 
+    var s = p.split("/");
+    var s1 = s[1]; 
+    var s2 = s[2]; 
+    var p2 = new RegExp(s1,s2);
+ 
+    var res = str.replace(p2, 
+    	function f(x){
+        	var s = "<b style='color:red;'>" + x + "</b><br>";
+            return s; 
+        });
+ 
+	document.getElementById("demo").innerHTML = res; 
+}
+</script>
+
+</body>
+</html>
