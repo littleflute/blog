@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<body>
+v0.0.1
+
+<textarea id = "text" style="width:500px;height:200px;">
+sales.xls
+sales1.xls
+orders3.xls
+sales2.xls
+sales3.xls
+apac1.xls
+europe2.xls
+na1.xls
+na2.xls
+sa1.xls
+</textarea>
+
+
+<div id="demo">Mr Blue has a blue house and a blue car.</div>
+
+<button onclick="myFunction()">Try it</button>
+
+<script>
+function myFunction() {
+    var str = document.getElementById("text").value;  
+    var res = str.replace(/xls/gi, 
+    	function f(x){
+        	var s = "<b style='color:red;'>" + x + "</b><br>";
+            return s; 
+        });
+    document.getElementById("demo").innerHTML = res;
+}
+</script>
+
+</body>
+</html>
