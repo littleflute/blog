@@ -1,6 +1,8 @@
 [show me](https://littleflute.github.io/blog/html/tools/blp/)
 
-[index.md v0.1.3](https://github.com/littleflute/blog/edit/master/html/tools/blp/index.md)
+[index.md v0.1.4](https://github.com/littleflute/blog/edit/master/html/tools/blp/index.md)
+
+[v0.7.4](v0.7.4.html)
 
 [v0.7.2](v0.7.2.html)
 
