@@ -1,0 +1,94 @@
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote, th, td {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Oxygen",Arial,"Hiragino Sans GB","Microsoft YaHei","STHeiti","WenQuanYi Micro Hei",SimSun,sans-serif,宋体;
+    font-size: 14px;
+    color: #503e2c;
+    background-color: #ece5d8;
+}
+
+img {
+    display: block;
+    border: none;
+}
+
+.hidden {
+    display: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: 100%;
+    font-weight: normal;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+	color: #300;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+.header, .container, .nav, .banner {
+    width: 80%;
+    margin: 0 auto;
+}
+
+
+.container .col-left {
+    margin-right: 18px;
+    float: left;
+}
+
+.box {
+    margin: 15px 0;
+    background: #fff;
+}
+
+.side {
+    width: 250px;
+    background: #fff;
+    margin-bottom: 15px;
+}
+.col-left .box .contentbox {
+    line-height: 1.5em;
+    word-wrap: break-word;
+    padding: 20px;
+}
+
+.col-right .side .contentbox {
+    line-height: 1.6em;
+    word-wrap: break-word;
+    padding: 10px 20px;
+}
+
+.col-right .side .contentbox li {
+	border-bottom: 1px dotted #a78b6f;
+}
+
+.col-right .side .contentbox li a {
+	color: #9b8878;
+}
+
+.col-right .side .contentbox li a:hover {
+	color: #300;
+}
+
+.contentbox .title {
+    font-size: 36px;
+    line-height: 36px;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #a78b6f;
+}
+.content{
+    line-height:160%;
+    font-size:16px;
+}
