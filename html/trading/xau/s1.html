@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>xau test 1</h2>
+
+<button type="button" onclick="loadDoc()">Request data</button>
+
+<div id="d11"></div>
+ 
+<script>
+function blAjax(){ 
+  this.getData = function (oBoss,src)
+  { 
+     if(!oBoss){alert("boss error!");return;}
+     if(oBoss){
+        var xmlhttp;
+	if (window.XMLHttpRequest)
+	{//"code for IE7+, Firefox, Chrome, Opera, Safari"
+		xmlhttp = new XMLHttpRequest();
+	}
+	else
+	{// code for IE6, IE5
+		xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+	}
+	xmlhttp.boss = oBoss;
+	xmlhttp.src = src;
+	xmlhttp.parseData = function(txt) 
+	{
+            var d = document.getElementById("idParseData");
+            if(!d){ 
+		d = document.createElement("div");
+		d.id = "idParseData";
+	       	xmlhttp.boss.appendChild(d);
+		d.n = 0;
+		d.style.border = "red 1px solid";
+            }
+ 	    d.n++;
+	    d.innerHTML = d.n + "<br>" + txt;
+	 //   xmlhttp.boss.ajax.getData(xmlhttp.boss,xmlhttp.src);
+	}
+        xmlhttp.onreadystatechange=function()
+	{
+		if (xmlhttp.readyState==4 && xmlhttp.status==200)
+		{
+			xmlhttp.parseData(xmlhttp.responseText); 
+		}
+	}
+	xmlhttp.open("GET",src,true);
+	xmlhttp.send();
+    }
+  } 
+} 
+
+function loadDoc(){
+  var o = document.getElementById("d11");
+  if(o) {
+    o.ajax = new blAjax();
+    o.ajax.getData(o,"https://littleflute.github.io/blog/html/trading/xau/sample1.js");
+  }
+  else
+  {
+    alert("No div 'd11'!");
+  }
+
+}
+
+</script>
+
+</body>
+</html>
