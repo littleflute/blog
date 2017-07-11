@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<body>
+  
+<script>
+function getEventObject(W3CEvent) {//事件标准化函数
+ return W3CEvent || window.event;
+}
+function getPointerPosition(e) {//兼容浏览器的鼠标x,y获得函数
+ e = e || getEventObject(e);
+ var x = e.pageX || (e.clientX + (document.documentElement.scrollLeft || document.body.scrollLeft));
+ var y = e.pageY || (e.clientY + (document.documentElement.scrollTop || document.body.scrollTop));
+
+ return { 'x':x,'y':y };
+}
+function setOpacity(elem,level) {//兼容浏览器设置透明值
+ if(elem.filters) {
+  elem.style.filter = 'alpha(opacity=' + level * 100 + ')';
+ } else {
+  elem.style.opacity = level;
+ }
+}
+function css(elem,prop) { //css设置函数,可以方便设置css值,并且兼容设置透明值
+ for(var i in prop) {
+  if(i == 'opacity') {
+   setOpacity(elem,prop[i]);
+  } else {
+   elem.style[i] = prop[i];
+  }
+ }
+ return elem;
+}
+function blBtn(id,html){
+    var r = document.getElementById(id);
+    if(!r){
+        r = document.createElement("button");
+        r.id = id;
+    }
+    r.innerHTML = html;
+    r.onclick = function(){alert(id);}
+    document.body.appendChild(r);
+    return r;
+}
+var b1 = blBtn("b1","-"); 
+b1.onclick = function(){
+var oBoss = document.getElementById("test");
+
+if("+"==b1.innerHTML) {
+	oBoss.style.display= "block";
+    b1.innerHTML = "-";
+    }
+else {
+	b1.innerHTML = "+";
+    oBoss.style.display= "none";
+    }
+}
+function blDiv(oBssDiv,id,html){
+    var r = document.getElementById(id);
+    if(!r){
+        r = document.createElement("div");
+        r.id = id;
+        r.style.border = "1px solid #3d3d3d";
+		
+    }
+    r.innerHTML = html;
+    r.onclick = function(){alert(id);}
+    oBssDiv.appendChild(r);
+    return r;
+}
+var d1 = blDiv(document.body,"test","test");
+css(d1,{
+   'position' : 'absolute',
+   'width' : 100 + 'px',     
+   'height' : 100 + 'px',
+   'cursor':'crosshair'
+   })
+   
+d1.onmouseout = function(e){
+	dd1.style.display = 'none';
+}
+d1.onmousemove = function(e){
+   var pos = getPointerPosition(e); 
+   dd1.style.display = '';
+  css(dd1,{
+   'top' : pos.y + 'px',
+   'left' : pos.x + 'px'  
+   })
+   
+   var a = dd1;//document.getElementById("Browser");
+  css(a,{
+   'top' : Math.min(Math.max(pos.y - this.offsetTop - parseInt(a.style.height) / 2,0),this.clientHeight - this.getElementsByTagName('div')[0].offsetHeight) + 'px',
+   'left' : Math.min(Math.max(pos.x - this.offsetLeft - parseInt(a.style.width) / 2,0),this.clientWidth - a.offsetWidth) + 'px'   
+   })
+ 
+ }
+ 
+var dd1 = blDiv(d1,"dd1","dd1");
+css(dd1,{
+    'position':'absolute',
+    'width':'25px',
+    'height':'30px'
+    });
+</script>
+
+
+</body>
+</html> 
