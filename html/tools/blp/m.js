@@ -1,0 +1,12 @@
+var f = [];	
+f[0]	= "v0.0.4";
+f[1]	= "0-song1";		
+f[2]	= "BlABooks";		
+f[3]	= "BlBmp";		
+f[4]	= "CDsFrm360";		
+f[5]	= "github";		
+f[6]	= "Guitar";		
+f[7]	= "html";		
+f[8]	= "TMP";		
+f[9]	= "```";		
+f[10]	= "135a.mp3";		
