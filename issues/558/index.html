@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title></title>
+</head>
+<body>
+<script>
+function saveFile(T,content)
+{//保存
+  var filename=document.getElementById(T).value;
+  var win=window.open('','','top=10000,left=10000');
+  win.document.write(document.getElementById(content).innerHTML);
+  win.document.execCommand('SaveAs','',filename)
+  win.close();
+}
+</SCRIPT>
+<form name="saveas" action="" method="post">
+文件名称:<input type="text" id="title_1" value="123.html">
+<br>
+文件内容：<textarea id="content_1" style="height:150px;width:400px;">
+新兴网络 - http://www.newxing.com/
+</textarea>
+<br>
+<input type="button" value="保存文本" onClick=saveFile('title_1','content_1')>
+</form>
+</body>
+</html>
