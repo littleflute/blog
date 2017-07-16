@@ -1,0 +1,122 @@
+<SCRIPT src="/img/201009/drag_drop.js" type=text/javascript></SCRIPT>
+<STYLE type=text/css>LI {
+    MARGIN-BOTTOM: 10px
+}
+OL {
+    MARGIN-TOP: 5px
+}
+.DragContainer {
+    BORDER-RIGHT: #669999 2px solid; PADDING-RIGHT: 5px; BORDER-TOP: #669999 2px solid; PADDING-LEFT: 5px; FLOAT: left; PADDING-BOTTOM: 0px; MARGIN: 3px; BORDER-LEFT: #669999 2px solid; WIDTH: 100px; PADDING-TOP: 5px; BORDER-BOTTOM: #669999 2px solid
+}
+.OverDragContainer {
+    BORDER-RIGHT: #669999 2px solid; PADDING-RIGHT: 5px; BORDER-TOP: #669999 2px solid; PADDING-LEFT: 5px; FLOAT: left; PADDING-BOTTOM: 0px; MARGIN: 3px; BORDER-LEFT: #669999 2px solid; WIDTH: 100px; PADDING-TOP: 5px; BORDER-BOTTOM: #669999 2px solid
+}
+.OverDragContainer {
+    BACKGROUND-COLOR: #eee
+}
+.DragBox {
+    BORDER-RIGHT: #000 1px solid; PADDING-RIGHT: 2px; BORDER-TOP: #000 1px solid; PADDING-LEFT: 2px; FONT-SIZE: 10px; MARGIN-BOTTOM: 5px; PADDING-BOTTOM: 2px; BORDER-LEFT: #000 1px solid; WIDTH: 94px; CURSOR: pointer; PADDING-TOP: 2px; BORDER-BOTTOM: #000 1px solid; FONT-FAMILY: verdana, tahoma, arial; BACKGROUND-COLOR: #eee
+}
+.OverDragBox {
+    BORDER-RIGHT: #000 1px solid; PADDING-RIGHT: 2px; BORDER-TOP: #000 1px solid; PADDING-LEFT: 2px; FONT-SIZE: 10px; MARGIN-BOTTOM: 5px; PADDING-BOTTOM: 2px; BORDER-LEFT: #000 1px solid; WIDTH: 94px; CURSOR: pointer; PADDING-TOP: 2px; BORDER-BOTTOM: #000 1px solid; FONT-FAMILY: verdana, tahoma, arial; BACKGROUND-COLOR: #eee
+}
+.DragDragBox {
+    BORDER-RIGHT: #000 1px solid; PADDING-RIGHT: 2px; BORDER-TOP: #000 1px solid; PADDING-LEFT: 2px; FONT-SIZE: 10px; MARGIN-BOTTOM: 5px; PADDING-BOTTOM: 2px; BORDER-LEFT: #000 1px solid; WIDTH: 94px; CURSOR: pointer; PADDING-TOP: 2px; BORDER-BOTTOM: #000 1px solid; FONT-FAMILY: verdana, tahoma, arial; BACKGROUND-COLOR: #eee
+}
+.miniDragBox {
+    BORDER-RIGHT: #000 1px solid; PADDING-RIGHT: 2px; BORDER-TOP: #000 1px solid; PADDING-LEFT: 2px; FONT-SIZE: 10px; MARGIN-BOTTOM: 5px; PADDING-BOTTOM: 2px; BORDER-LEFT: #000 1px solid; WIDTH: 94px; CURSOR: pointer; PADDING-TOP: 2px; BORDER-BOTTOM: #000 1px solid; FONT-FAMILY: verdana, tahoma, arial; BACKGROUND-COLOR: #eee
+}
+.OverDragBox {
+    BACKGROUND-COLOR: #ffff99
+}
+.DragDragBox {
+    BACKGROUND-COLOR: #ffff99
+}
+.DragDragBox {
+    FILTER: alpha(opacity=50); BACKGROUND-COLOR: #ff99cc
+}
+LEGEND {
+    FONT-WEIGHT: bold; FONT-SIZE: 12px; COLOR: #666699; FONT-FAMILY: verdana, tahoma, arial
+}
+FIELDSET {
+    PADDING-RIGHT: 3px; PADDING-LEFT: 3px; PADDING-BOTTOM: 3px; PADDING-TOP: 3px
+}
+.History {
+    FONT-SIZE: 10px; OVERFLOW: auto; WIDTH: 100%; FONT-FAMILY: verdana, tahoma, arial; HEIGHT: 82px
+}
+#DragContainer8 {
+    BORDER-RIGHT: #669999 1px solid; PADDING-RIGHT: 0px; BORDER-TOP: #669999 1px solid; PADDING-LEFT: 5px; PADDING-BOTTOM: 0px; BORDER-LEFT: #669999 1px solid; WIDTH: 110px; PADDING-TOP: 5px; BORDER-BOTTOM: #669999 1px solid; HEIGHT: 110px
+}
+.miniDragBox {
+    FLOAT: left; MARGIN: 0px 5px 5px 0px; WIDTH: 20px; HEIGHT: 20px
+}
+PRE {
+    BORDER-RIGHT: #ccc 1px solid; PADDING-RIGHT: 10px; BORDER-TOP: #ccc 1px solid; PADDING-LEFT: 10px; PADDING-BOTTOM: 10px; BORDER-LEFT: #ccc 1px solid; PADDING-TOP: 10px; BORDER-BOTTOM: #ccc 1px solid; BACKGROUND-COLOR: #f8f8f0
+}
+</style>
+<body>
+      <FIELDSET id=Demo0>
+      <H3>Demo - Drag and Drop any item</H3>
+      <DIV>
+      <DIV class=DragContainer id=DragContainer1 overclass="OverDragContainer"
+      history="History1">
+      <DIV class=DragBox id=Item1 overclass="OverDragBox"
+      dragclass="DragDragBox">Item #1</DIV>
+      <DIV class=DragBox id=Item2 overclass="OverDragBox"
+      dragclass="DragDragBox">Item #2</DIV>
+      <DIV class=DragBox id=Item3 overclass="OverDragBox"
+      dragclass="DragDragBox">Item #3</DIV>
+      <DIV class=DragBox id=Item4 overclass="OverDragBox"
+      dragclass="DragDragBox">Item #4</DIV></DIV>
+      <DIV class=DragContainer id=DragContainer2 overclass="OverDragContainer"
+      history="History1">
+      <DIV class=DragBox id=Item5 overclass="OverDragBox"
+      dragclass="DragDragBox">Item #5</DIV>
+      <DIV class=DragBox id=Item6 overclass="OverDragBox"
+      dragclass="DragDragBox">Item #6</DIV>
+      <DIV class=DragBox id=Item7 overclass="OverDragBox"
+      dragclass="DragDragBox">Item #7</DIV>
+      <DIV class=DragBox id=Item8 overclass="OverDragBox"
+      dragclass="DragDragBox">Item #8</DIV></DIV>
+      <DIV class=DragContainer id=DragContainer3 overclass="OverDragContainer"
+      history="History1">
+      <DIV class=DragBox id=Item9 overclass="OverDragBox"
+      dragclass="DragDragBox">Item #9</DIV>
+      <DIV class=DragBox id=Item10 overclass="OverDragBox"
+      dragclass="DragDragBox">Item #10</DIV>
+      <DIV class=DragBox id=Item11 overclass="OverDragBox"
+      dragclass="DragDragBox">Item #11</DIV>
+      <DIV class=DragBox id=Item12 overclass="OverDragBox"
+      dragclass="DragDragBox">Item #12</DIV></DIV>
+      <FIELDSET><LEGEND>History</LEGEND>
+      <DIV class=History id=History1></DIV></FIELDSET> </DIV></FIELDSET>
+      <FIELDSET id=Demo7><LEGEND>Demo - Drag and Drop any item</LEGEND>
+      <DIV>
+      <OL id=DragContainer7 history="History1">
+        <LI id=ListItem1>Item #1
+        <LI id=ListItem2>Item #2
+        <LI id=ListItem3>Item #3
+        <LI id=ListItem4>Item #4
+        <LI id=ListItem5>Item #5 </LI></OL></DIV></FIELDSET>
+      <FIELDSET id=Demo8>
+      <H3>Demo - Drag and Drop any item</H3>
+      <DIV id=DragContainer8 history="History1">
+      <DIV class=miniDragBox id=MiniBox1>1</DIV>
+      <DIV class=miniDragBox id=MiniBox2>2</DIV>
+      <DIV class=miniDragBox id=MiniBox3>3</DIV>
+      <DIV class=miniDragBox id=MiniBox4>4</DIV>
+      <DIV class=miniDragBox id=MiniBox5>5</DIV>
+      <DIV class=miniDragBox id=MiniBox6>6</DIV>
+      <DIV class=miniDragBox id=MiniBox7>7</DIV>
+      <DIV class=miniDragBox id=MiniBox8>8</DIV>
+      <DIV class=miniDragBox id=MiniBox9>9</DIV>
+      <DIV class=miniDragBox id=MiniBox10>10</DIV>
+      <DIV class=miniDragBox id=MiniBox11>11</DIV>
+      <DIV class=miniDragBox id=MiniBox12>12</DIV>
+      <DIV class=miniDragBox id=MiniBox13>13</DIV>
+      <DIV class=miniDragBox id=MiniBox14>14</DIV>
+      <DIV class=miniDragBox id=MiniBox15>15</DIV>
+      <DIV class=miniDragBox id=MiniBox16>16</DIV></DIV></FIELDSET>
+      <DIV></DIV>
+</body>
+</html>
