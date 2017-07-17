@@ -1,4 +1,4 @@
-## Xd Zone [V0.0.7](https://github.com/littleflute/blog/edit/master/README.md)
+## Xd Zone [xd.js](https://github.com/littleflute/blog/blob/master/xd.js)
 <div id="debug"></div>
 <div id="demo">
 <h2>The XMLHttpRequest Object</h2>
