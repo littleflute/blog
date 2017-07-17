@@ -1,5 +1,6 @@
 
 
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -66,7 +67,7 @@ body {margin:0;}
 </div>
 
 <div style="padding-left:16px">
-  <h2>BeautifulLover Web View v0.0.3</h2>
+  <h2>BeautifulLover Web View v0.0.4</h2>
   <p>by LittleFlute.</p>
   
 </div>
@@ -80,47 +81,45 @@ function myFunction() {
         x.className = "topnav";
     }
 }
-function blBtn(id,html){
+function blBtn(oBoss,id,html){
     var r = document.getElementById(id);
     if(!r){
         r = document.createElement("button");
         r.id = id;
     	r.innerHTML = html; 
         r.style.backgroundColor="green";
-    	document.body.appendChild(r);
+    	if(oBoss!=null)oBoss.appendChild(r);
     }
     return r;
 }
-function blDiv(id,html){
+function blDiv(oBoss,id,html){
     var r = document.getElementById(id);
     if(!r){
         r = document.createElement("div");
         r.id = id;
         r.style.border = "1px solid #3d3d3d";
         r.style.position = "fixed";
+        r.style.top	=0;
         r.style.width = "100%";
         r.style.height = "100%";
         r.style.backgroundColor="rgb(0,100,120)";
         r.style.display = "none";
 
     	r.innerHTML = html; 
-    	document.body.appendChild(r);
+    	if(oBoss!=null) oBoss.appendChild(r);
     }
     return r;
 }
-var blTools = blBtn("BLTOOLS","BlTools+"); 
+var blTools = blBtn(document.body,"BLTOOLS","BlTools+"); 
 blTools.onclick = function(){
-	var divBlView = blDiv("BLVIEW","BlView_V0.0.2");
-    if(divBlView.style.display=="none"){
-    	divBlView.style.display="block";
-        this.style.backgroundColor="red";
-        this.innerHTML = "BlTools-";
-    }
-    else{
+	var divBlView = blDiv(document.body,"BLVIEW","BlView_V0.0.4");
+	var btnClose = blBtn(divBlView,"CloseBtn","close"); 
+    btnClose.onclick = function(){
     	divBlView.style.display="none";
-        this.style.backgroundColor="green";
-        this.innerHTML = "BlTools+";
     }
+    if(divBlView.style.display=="none"){
+    	divBlView.style.display="block"; 
+    } 
     
 }
 
