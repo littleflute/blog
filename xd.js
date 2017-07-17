@@ -1,9 +1,11 @@
 var x = document.getElementsByTagName("h1")[0];
-x.innerHTML = "LittleFlute's Blog V0.4.0";
+x.innerHTML = "LittleFlute's Blog V0.4.1";
 var b	= document.getElementById("banner");
 var s = b.innerHTML;
 s += "<a href='docs' class='button downloads'>docs</a>";
 s += "<a href='html' class='button downloads'>html</a>";
+s += "<a href='html/BlShowWeb' class='button downloads'>BlView</a>";
+s += "<a href='http://www.beautifullover.org' class='button downloads'>BeautifulLover</a>";
 b.innerHTML = s;
 
 
