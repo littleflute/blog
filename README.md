@@ -10,11 +10,12 @@
 
 ## [Home](https://littleflute.github.io/blog/) 
 
-##[docs](https://littleflute.github.io/blog/docs)
+## [docs](docs)
+## [trading](trading)
 
 
 
-
+### [v0.0.2](https://github.com/littleflute/blog/edit/master/README.md)
  
 ## Welcome to GitHub Pages
 
