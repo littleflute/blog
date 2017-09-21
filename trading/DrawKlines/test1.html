@@ -5,6 +5,14 @@
 <!DOCTYPE html>
 <html>
 <style>
+.moveDiv {
+    position: absolute;
+    z-index: 9;
+    background-color: #f1f1f1;
+    text-align: center;
+    border: 1px solid #d3d3d3;
+}
+
 #mydiv {
     position: absolute;
     z-index: 9;
@@ -30,7 +38,7 @@
 <div id="mydiv">
   <div id="mydivheader">Click here to move</div>
   <p>
-      <a href="https://github.com/littleflute/blog/edit/master/trading/DrawKlines/test1.html">v0.0.8</a>
+      <a href="https://github.com/littleflute/blog/edit/master/trading/DrawKlines/test1.html">v0.0.9</a>
     </p>
   <p>
       <a target="_blank" href="https://www.w3schools.com/howto/howto_js_draggable.asp">ref</a>
@@ -43,7 +51,7 @@
     </p> 
 </div>
     
-<div id="DivTest1">
+<div id="DivTest1" class="moveDiv">
   <div id="mydivheader">DivTest1</div>
   
   <div id="DivTestContend">DivTestContend</div>
