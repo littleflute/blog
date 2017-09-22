@@ -31,7 +31,7 @@ ul.breadcrumb li a:hover {
   width: 400px;
   height: 400px;
   position: relative;
-  background: black;
+  background: yellow;
 }
 #myAnimation {
   width: 50px;
@@ -74,7 +74,7 @@ ul.breadcrumb li a:hover {
 <ul class="breadcrumb">
   <li><a href="..">[..]</a></li>
   <li><a href=".">[.]</a></li>
-  <li><a target="_blank" href="https://github.com/littleflute/blog/edit/master/trading/DrawKlines/test4.html">v0.3.6</a></li>
+  <li><a target="_blank" href="https://github.com/littleflute/blog/edit/master/trading/DrawKlines/test4.html">v0.4.2</a></li>
   <li><a href="https://www.w3schools.com/howto/howto_css_breadcrumbs.asp">ref1</a></li>
   <li><a href="https://www.w3schools.com/howto/howto_js_animate.asp">ref2</a></li>
   <li>test4</li>
@@ -114,6 +114,31 @@ function myAnimationMoveTo(pos) {
     elem.style.top = pos + 'px'; 
     elem.style.left = pos + 'px';  
 }
+function blDivKline1(oBoss,id,html,x,y){
+    var r = document.getElementById(id);
+    if(!r){
+        r = document.createElement("div");
+        r.id = id;
+        r.style.border = "2px solid #3d3d3d";
+        r.style.position = "relative";
+        r.style.top	= y + "px";
+        r.style.left = x + "px";
+        r.style.width = "50%";
+        r.style.height = "50%";
+        r.style.backgroundColor="rgb(220,100,120)";
+        r.style.display = "block";
+
+    	r.innerHTML = html; 
+    	if(oBoss!=null) oBoss.appendChild(r);
+    }
+    return r;
+}
+function myLoad() {   
+    var c = document.getElementById("myContainer");   
+    var e = blDivKline1(c,"jsKline1","jsKline1_V0.0.2",150,50);  
+ 
+}
+myLoad();
 </script>
 
 </body>
