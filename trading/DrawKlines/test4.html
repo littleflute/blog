@@ -75,10 +75,11 @@ ul.breadcrumb li a:hover {
 <ul class="breadcrumb">
   <li><a href="..">[..]</a></li>
   <li><a href=".">[.]</a></li>
-  <li><a target="_blank" href="https://github.com/littleflute/blog/edit/master/trading/DrawKlines/test4.html">v0.4.5</a></li>
+  <li><a target="_blank" href="https://github.com/littleflute/blog/edit/master/trading/DrawKlines/test4.html">v0.4.8</a></li>
   <li><a target="_blank" href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_default">dev1</a></li>
   <li><a href="https://www.w3schools.com/howto/howto_css_breadcrumbs.asp">ref1</a></li>
   <li><a href="https://www.w3schools.com/howto/howto_js_animate.asp">ref2</a></li>
+  <li><a href="https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_event_mouse_clientxy2">ref3</a></li>
   <li>test4</li>
 </ul>
 
@@ -158,10 +159,31 @@ function blKline1(contaniner,t,o,h,l,c) {
     var yMax	= 500;
     var hMin	= 1200;
     var hMax	= 1400;
-  
+ 
+ function showCoords(e) {
+    e = e || window.event;
+    var x = e.clientX;
+    var y = e.clientY;
+    var coor = "X coords: " + x + ", Y coords: " + y;
+    document.getElementById("div_Msg").innerHTML = coor;
+}
+
+function clearCoords() {
+    document.getElementById("div_Msg").innerHTML = "";
+}
 function initDrawing(contaniner) { 
 	var div_hMin = blDiv(contaniner,"div_hMin",hMin,400,0,111,22,"gray");
 	var div_hMax = blDiv(contaniner,"div_hMax",hMax,400,400-24,111,22,"gray");
+	var div_Msg = blDiv(contaniner,"div_Msg","",400,122,311,22,"yellow");
+    contaniner.onmousemove = showCoords;
+    contaniner.onmouseout = clearCoords;
+    
+    function elementDrag(e) {
+     
+    pos3 = e.clientX;
+    pos4 = e.clientY; 
+  }
+
 }  
 function myLoad() {   
     var c = document.getElementById("myContainer"); 
