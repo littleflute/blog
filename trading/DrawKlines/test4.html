@@ -1,6 +1,31 @@
+
 <!DOCTYPE html>
 <html>
+<head>
 <style>
+ul.breadcrumb {
+    padding: 10px 16px;
+    list-style: none;
+    background-color: #eee;
+}
+ul.breadcrumb li {
+    display: inline;
+    font-size: 18px;
+}
+ul.breadcrumb li+li:before {
+    padding: 8px;
+    color: black;
+    content: "/\00a0";
+}
+ul.breadcrumb li a {
+    color: #0275d8;
+    text-decoration: none;
+}
+ul.breadcrumb li a:hover {
+    color: #01447e;
+    text-decoration: underline;
+}
+
 #myContainer {
   width: 400px;
   height: 400px;
@@ -13,8 +38,21 @@
   position: absolute;
   background-color: red;
 }
+
 </style>
+</head>
 <body>
+
+<h2>Breadcrumb Pagination</h2>
+<ul class="breadcrumb">
+  <li><a href="..">[..]</a></li>
+  <li><a href=".">[.]</a></li>
+  <li><a target="_blank" href="https://github.com/littleflute/blog/edit/master/trading/DrawKlines/test4.html">v0.0.5</a></li>
+  <li><a href="https://www.w3schools.com/howto/howto_css_breadcrumbs.asp">ref</a></li>
+  <li>test4</li>
+</ul>
+
+
 
 <p>
 <button onclick="myMove()">Click Me</button> 
@@ -25,11 +63,11 @@
 </div>
 
 <script>
-function myMove() {
-  var elem = document.getElementById("myAnimation");   
+function myMove() {  
   var pos = 0;
   var id = setInterval(frame, 10);
   function frame() {
+    var elem = document.getElementById("myAnimation"); 
     if (pos == 350) {
       clearInterval(id);
     } else {
@@ -43,3 +81,4 @@ function myMove() {
 
 </body>
 </html>
+
