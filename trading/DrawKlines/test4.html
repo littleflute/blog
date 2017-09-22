@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -36,7 +37,7 @@ ul.breadcrumb li a:hover {
   width: 50px;
   height: 50px;
   position: absolute;
-  background-color: red;
+  background-color: blue;
 }
 
 </style>
@@ -47,7 +48,7 @@ ul.breadcrumb li a:hover {
 <ul class="breadcrumb">
   <li><a href="..">[..]</a></li>
   <li><a href=".">[.]</a></li>
-  <li><a target="_blank" href="https://github.com/littleflute/blog/edit/master/trading/DrawKlines/test4.html">v0.0.6</a></li>
+  <li><a target="_blank" href="https://github.com/littleflute/blog/edit/master/trading/DrawKlines/test4.html">v0.0.8</a></li>
   <li><a href="https://www.w3schools.com/howto/howto_css_breadcrumbs.asp">ref</a></li>
   <li>test4</li>
 </ul>
@@ -67,15 +68,19 @@ function myMove() {
   var pos = 0;
   var id = setInterval(frame, 10);
   function frame() {
-    var elem = document.getElementById("myAnimation"); 
     if (pos == 350) {
       clearInterval(id);
     } else {
       pos++; 
-      elem.style.top = pos + 'px'; 
-      elem.style.left = pos + 'px'; 
+      myAnimationMoveTo(pos); 
     }
   }
+}
+
+function myAnimationMoveTo(pos) {   
+    var elem = document.getElementById("myAnimation");  
+    elem.style.top = pos + 'px'; 
+    elem.style.left = pos + 'px';  
 }
 </script>
 
