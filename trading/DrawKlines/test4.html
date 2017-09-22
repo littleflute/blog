@@ -1,5 +1,6 @@
 
 
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -31,7 +32,7 @@ ul.breadcrumb li a:hover {
   width: 400px;
   height: 400px;
   position: relative;
-  background: yellow;
+  background: black;
 }
 #myAnimation {
   width: 50px;
@@ -115,29 +116,58 @@ function myAnimationMoveTo(pos) {
     elem.style.top = pos + 'px'; 
     elem.style.left = pos + 'px';  
 }
-function blDivKline1(oBoss,id,html,x,y){
+function blDiv(oBoss,id,html,x,y,w,h,color){
     var r = document.getElementById(id);
     if(!r){
         r = document.createElement("div");
         r.id = id;
-        r.style.border = "2px solid #3d3d3d";
-        r.style.position = "relative";
+        r.style.border = "1px solid #3d3d3d";
+        r.style.position = "absolute";
         r.style.top	= y + "px";
         r.style.left = x + "px";
-        r.style.width = "50%";
-        r.style.height = "50%";
-        r.style.backgroundColor="rgb(220,100,120)";
+        r.style.width = w +"px";
+        r.style.height = h + "px";
+        r.style.backgroundColor = color;
         r.style.display = "block";
 
-    	r.innerHTML = html; 
+    	r.innerHTML = html;  
     	if(oBoss!=null) oBoss.appendChild(r);
     }
     return r;
 }
-function myLoad() {   
-    var c = document.getElementById("myContainer");   
-    var e = blDivKline1(c,"jsKline1","jsKline1_V0.0.2",150,50);  
+function blKline1(contaniner,t,o,h,l,c) {     
+    
+    var kID 	= t;
+    var x 		= xMin + t*xD;
+    var yH		= yMin + (yMax-yMin)/(hMin-hMax)*(h-hMax); 
+    var yL		= yMin + (yMax-yMin)/(hMin-hMax)*(l-hMax); 
+    var yO		= yMin + (yMax-yMin)/(hMin-hMax)*(o-hMax); 
+    var yC		= yMin + (yMax-yMin)/(hMin-hMax)*(c-hMax); 
+    var k = blDiv(contaniner,kID,"k",x,yH,xD-10,yL-yH,"white");
+   //*
+   var kOCID = kID + "oc";
+    var oc1 = blDiv(k,kOCID,"",x+2,yO,xD-12,yC-yO,"red"); 
+    var kHLID = kID + "hl";
+    var hl1 = blDiv(k,kHLID,"",x+xD/2,yH,1,yL-yH,"green"); 
+    // */    
  
+}
+	var xMin	= 100;
+    var xD		= 24;
+    var yMin	= 100;
+    var yMax	= 500;
+    var hMin	= 1200;
+    var hMax	= 1400;
+  
+function initDrawing(contaniner) { 
+	var div_hMin = blDiv(contaniner,"div_hMin",hMin,400,0,111,22,"gray");
+	var div_hMax = blDiv(contaniner,"div_hMax",hMax,400,400-24,111,22,"gray");
+}  
+function myLoad() {   
+    var c = document.getElementById("myContainer"); 
+    initDrawing(c);
+    blKline1(c,1,1300,1350,1290,1320); 
+    blKline1(c,2,1325,1370,1280,1304); 
 }
 myLoad();
 </script>
