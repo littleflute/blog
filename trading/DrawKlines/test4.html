@@ -76,7 +76,7 @@ ul.breadcrumb li a:hover {
 <ul class="breadcrumb">
   <li><a href="..">[..]</a></li>
   <li><a href=".">[.]</a></li>
-  <li><a target="_blank" href="https://github.com/littleflute/blog/edit/master/trading/DrawKlines/test4.html">v0.4.9</a></li>
+  <li><a target="_blank" href="https://github.com/littleflute/blog/edit/master/trading/DrawKlines/test4.html">v0.5.1</a></li>
   <li><a target="_blank" href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_default">dev1</a></li>
   <li><a href="https://www.w3schools.com/howto/howto_css_breadcrumbs.asp">ref1</a></li>
   <li><a href="https://www.w3schools.com/howto/howto_js_animate.asp">ref2</a></li>
@@ -123,18 +123,19 @@ function blDiv(oBoss,id,html,x,y,w,h,color){
     if(!r){
         r = document.createElement("div");
         r.id = id;
-        r.style.border = "1px solid #3d3d3d";
-        r.style.position = "absolute";
-        r.style.top	= y + "px";
-        r.style.left = x + "px";
-        r.style.width = w +"px";
-        r.style.height = h + "px";
-        r.style.backgroundColor = color;
-        r.style.display = "block";
-
-    	r.innerHTML = html;  
     	if(oBoss!=null) oBoss.appendChild(r);
     }
+    var s = r.style;
+    s.border = "1px solid #3d3d3d";
+    s.position = "absolute";
+    s.top	= y + "px";
+    s.left = x + "px";
+    s.width = w +"px";
+    s.height = h + "px";
+    s.backgroundColor = color;
+    s.display = "block";
+
+    r.innerHTML = html;  
     return r;
 }
 function blKline1(contaniner,t,o,h,l,c) {     
@@ -156,26 +157,45 @@ function blKline1(contaniner,t,o,h,l,c) {
 }
 	var xMin	= 100;
     var xD		= 24;
-    var yMin	= 100;
-    var yMax	= 500;
+    var yMin	= 0;
+    var yMax	= 400;
     var hMin	= 1200;
     var hMax	= 1400;
  
- function showCoords(e) {
+function showMouse(x,y) { 
+ 	var c = document.getElementById("myContainer"); 
+	var div_Mouse = blDiv(c,"div_mouse","",0,y,400,1,"red"); 
+   // /*
+    if(x>0&&x<400&&y>0&&y<400)
+    {
+    	div_Mouse.style.display = "block";
+    }
+    else
+    {
+    	div_Mouse.style.display = "none";
+    }
+    //*/
+}
+function showCoords(e) {
     e = e || window.event;
     var x = e.clientX - this.offsetLeft;
     var y = e.clientY - this.offsetTop;
-    var coor =   "X coords: " + x + ", Y coords: " + y;
-    
+    //*
+    var kVal = hMax + (hMin-hMax)/(yMax-yMin)*(y-yMin); 
+    var coor =   "X coords: " + x + ", Y coords: " + y + ", kVal: " + kVal;
+//*/    
     document.getElementById("div_Msg").innerHTML = coor;
+    
+    showMouse(x,y);
 }
 
 function clearCoords() {
     document.getElementById("div_Msg").innerHTML = "";
+    showMouse(-11,-500);
 }
 function initDrawing(contaniner) { 
-	var div_hMin = blDiv(contaniner,"div_hMin",hMin,400,0,111,22,"gray");
-	var div_hMax = blDiv(contaniner,"div_hMax",hMax,400,400-24,111,22,"gray");
+	var div_hMin = blDiv(contaniner,"div_hMin",hMin,400,400-24,111,22,"red");
+	var div_hMax = blDiv(contaniner,"div_hMax",hMax,400,0,111,22,"green");
 	var div_Msg = blDiv(contaniner,"div_Msg","",400,122,311,22,"yellow");
     contaniner.onmousemove = showCoords;
     contaniner.onmouseout = clearCoords;
@@ -191,7 +211,7 @@ function myLoad() {
     var c = document.getElementById("myContainer"); 
     initDrawing(c);
     blKline1(c,1,1300,1350,1290,1320); 
-    blKline1(c,2,1325,1370,1280,1304); 
+  //  blKline1(c,2,1325,1370,1280,1304); 
 }
 myLoad();
 </script>
