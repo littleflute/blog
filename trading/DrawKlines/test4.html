@@ -76,7 +76,7 @@ ul.breadcrumb li a:hover {
 <ul class="breadcrumb">
   <li><a href="..">[..]</a></li>
   <li><a href=".">[.]</a></li>
-  <li><a target="_blank" href="https://github.com/littleflute/blog/edit/master/trading/DrawKlines/test4.html">v0.5.1</a></li>
+  <li><a target="_blank" href="https://github.com/littleflute/blog/edit/master/trading/DrawKlines/test4.html">v0.5.2</a></li>
   <li><a target="_blank" href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_default">dev1</a></li>
   <li><a href="https://www.w3schools.com/howto/howto_css_breadcrumbs.asp">ref1</a></li>
   <li><a href="https://www.w3schools.com/howto/howto_js_animate.asp">ref2</a></li>
@@ -148,10 +148,26 @@ function blKline1(contaniner,t,o,h,l,c) {
     var yC		= yMin + (yMax-yMin)/(hMin-hMax)*(c-hMax); 
     var k = blDiv(contaniner,kID,"k",x,yH,xD-10,yL-yH,"white");
    //*
+   var yOC 		= 0;
+   var HeighOC 	= 0;
+   var color	= "fff";
+   if(c>o) 
+   {
+   		HeighOC 	= yO -yC;
+        yOC 		= yC; 
+        color		= "red";
+	}
+    else
+    {
+   		HeighOC 	= yC -yO;
+        yOC 		= yO; 
+        color		= "green";
+    }
+   
    var kOCID = kID + "oc";
-    var oc1 = blDiv(k,kOCID,"",x+2,yO,xD-12,yC-yO,"red"); 
+    var oc1 = blDiv(contaniner,kOCID,"",x+2,yOC,xD-12,HeighOC,color); 
     var kHLID = kID + "hl";
-    var hl1 = blDiv(k,kHLID,"",x+xD/2,yH,1,yL-yH,"green"); 
+    var hl1 = blDiv(contaniner,kHLID,"",x+7,yH,1,yL-yH,color); 
     // */    
  
 }
@@ -211,7 +227,8 @@ function myLoad() {
     var c = document.getElementById("myContainer"); 
     initDrawing(c);
     blKline1(c,1,1300,1350,1290,1320); 
-  //  blKline1(c,2,1325,1370,1280,1304); 
+    blKline1(c,2,1325,1370,1280,1304); 
+    blKline1(c,3,1310,1370,1290,1314); 
 }
 myLoad();
 </script>
