@@ -15,7 +15,7 @@
 
 
 
-### [v0.0.6](https://github.com/littleflute/blog/edit/master/README.md)
+### [v0.0.7](https://github.com/littleflute/blog/edit/master/README.md)
  
 ## prj
 ### [cchess](https://littleflute.github.io/cchess) 
