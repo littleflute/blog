@@ -1,11 +1,18 @@
 
-var v_blDraggableDIV = "v0.0.8";
-var i2do  ="DraggableDIV";
-var s = v_blDraggableDIV;
-s += "\r\n";
-s += i2do;
  
-var myMoveDiv = {}; 
+var myMoveDiv = {};
+myMoveDiv.inf = function(){
+	var v_blDraggableDIV = "v0.1.0";
+	var i2do  ="DraggableDIV";
+	var s = v_blDraggableDIV;
+	s += "\r\n";
+	s += i2do;
+    var show = function()
+    {
+    	alert(s);
+    }
+    show();
+}; 
 myMoveDiv.blDiv = function (oBoss,id,html){
     var r = document.getElementById(id);
     if(!r){
@@ -28,34 +35,9 @@ myMoveDiv.blBtn = function (oBoss,id,html){
     oBoss.appendChild(r);
     return r;
 } 
-var main = myMoveDiv.blDiv(document.body,"moveDivBody","");
-var style ="position: absolute;";
-style += "z-index: 9;";
-style += "background-color: #f1f1f1;";
-style += "text-align: center;";
-style += "border: 1px solid #d3d3d3;";
-style += "left: 800px";
-main.style =style;
-var title = myMoveDiv.blDiv(main,"moveDivHeader","header");
-style ="padding: 10px;";
-style += "z-index: 10;";
-style += "cursor: move;";
-style += "text-align: center;";
-style += "border: 1px solid #fff;";
-style += "background-color: #2196F3;";
-title.style =style;
-var d1 = myMoveDiv.blDiv(main,"d1","d1");
-var d2 = myMoveDiv.blDiv(main,"d2","d2");
-var btn1 = myMoveDiv.blBtn(d2,"btn1","btn1");
-btn1.onclick = function(){
-	alert("btn1");
-}
-dragElement(main);
-
-
 //Make the DIV element draggagle: 
 
-function dragElement(elmnt) {
+myMoveDiv.dragElement = function (elmnt) {
   var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
   if (document.getElementById(elmnt.id + "header")) {
     /* if present, the header is where you move the DIV from:*/
@@ -93,3 +75,31 @@ function dragElement(elmnt) {
     document.onmousemove = null;
   }
 }
+myMoveDiv.run = function()
+{
+	var win = myMoveDiv.blDiv(document.body,"win","win");
+	var main = myMoveDiv.blDiv(win,"moveDivBody","");
+	var style ="position: absolute;";
+	style += "z-index: 9;";
+	style += "background-color: #f1f1f1;";
+	style += "text-align: center;";
+	style += "border: 1px solid #d3d3d3;";
+	style += "left: 400px";
+	main.style =style;
+	var title = myMoveDiv.blDiv(main,"moveDivHeader","header");
+	style ="padding: 10px;";
+	style += "z-index: 10;";
+	style += "cursor: move;";
+	style += "text-align: center;";
+	style += "border: 1px solid #fff;";
+	style += "background-color: #2196F3;";
+	title.style =style;
+	var d1 = myMoveDiv.blDiv(main,"d1","d1");
+	var d2 = myMoveDiv.blDiv(main,"d2","d2");
+	var btn1 = myMoveDiv.blBtn(d2,"btn1","about");
+	btn1.onclick = function(){ 
+    	myMoveDiv.inf();
+	}
+    myMoveDiv.dragElement(main);
+}
+myMoveDiv.run();
