@@ -1,4 +1,4 @@
-var v_blDraggableDIV = "v0.0.6";
+var v_blDraggableDIV = "v0.0.7";
 var i2do  ="DraggableDIV";
 var s = v_blDraggableDIV;
 s += "\r\n";
@@ -22,6 +22,7 @@ style += "z-index: 9;";
 style += "background-color: #f1f1f1;";
 style += "text-align: center;";
 style += "border: 1px solid #d3d3d3;";
+style += "left: 800px";
 main.style =style;
 var title = myMoveDiv.blDiv(main,"moveDivHeader","header");
 style ="padding: 10px;";
