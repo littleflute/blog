@@ -1,10 +1,9 @@
-var v_blDraggableDIV = "v0.0.5";
+var v_blDraggableDIV = "v0.0.6";
 var i2do  ="DraggableDIV";
 var s = v_blDraggableDIV;
 s += "\r\n";
 s += i2do;
-
-alert(s);
+ 
 var myMoveDiv = {}; 
 myMoveDiv.blDiv = function (oBoss,id,html){
     var r = document.getElementById(id);
