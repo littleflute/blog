@@ -1,4 +1,5 @@
-var v_blDraggableDIV = "v0.0.7";
+
+var v_blDraggableDIV = "v0.0.8";
 var i2do  ="DraggableDIV";
 var s = v_blDraggableDIV;
 s += "\r\n";
@@ -9,6 +10,17 @@ myMoveDiv.blDiv = function (oBoss,id,html){
     var r = document.getElementById(id);
     if(!r){
         r = document.createElement("div");
+        r.id = id; 
+    }
+    r.innerHTML = html; 
+     
+    oBoss.appendChild(r);
+    return r;
+} 
+myMoveDiv.blBtn = function (oBoss,id,html){
+    var r = document.getElementById(id);
+    if(!r){
+        r = document.createElement("button");
         r.id = id; 
     }
     r.innerHTML = html; 
@@ -34,6 +46,10 @@ style += "background-color: #2196F3;";
 title.style =style;
 var d1 = myMoveDiv.blDiv(main,"d1","d1");
 var d2 = myMoveDiv.blDiv(main,"d2","d2");
+var btn1 = myMoveDiv.blBtn(d2,"btn1","btn1");
+btn1.onclick = function(){
+	alert("btn1");
+}
 dragElement(main);
 
 
