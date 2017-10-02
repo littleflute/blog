@@ -1,0 +1,77 @@
+<html>
+<head>
+<script type="text/javascript">
+var blObj = {};
+ 
+blObj.blDiv = function (oBoss,id,html,bkClr){
+    var r = document.getElementById(id);
+    if(!r){
+        r = document.createElement("div");
+        r.id = id;
+    	r.innerHTML = html; 
+        r.style.backgroundColor=bkClr?bkClr:"gray";
+    	if(oBoss!=null)oBoss.appendChild(r);
+    }
+    return r;
+}
+blObj.blBtn = function (oBoss,id,html,bkClr){
+    var r = document.getElementById(id);
+    if(!r){
+        r = document.createElement("button");
+        r.id = id;
+    	r.innerHTML = html; 
+        r.style.backgroundColor=bkClr?bkClr:"green";
+    	if(oBoss!=null)oBoss.appendChild(r);
+    }
+    return r;
+}
+blObj.run = function()
+{
+    var t = this;
+    var d1 = t.blDiv(document.body,"d1","v0.1.0","white");
+    var b1 = t.blBtn(d1,"b1","b1","red");
+    var myData = {};
+    myData.nClickTimes = 0;
+    myData.ajxLoad = function(href)
+    {
+        var xmlhttp;
+        if (window.XMLHttpRequest)
+        {// code for IE7+, Firefox, Chrome, Opera, Safari
+            xmlhttp=new XMLHttpRequest();
+        }
+        else
+        {// code for IE6, IE5
+            xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        xmlhttp.onreadystatechange=function()
+        {
+            if (xmlhttp.readyState==4 && xmlhttp.status==200)
+            {
+               myData._2do(xmlhttp.responseText);
+            }
+        }
+        xmlhttp.open("GET",href,true);
+        xmlhttp.send();
+    }
+    myData._2do = function(s)
+    {document.getElementById("myDiv").innerHTML=s;}
+    b1.onclick = function()
+    {
+        myData.ajxLoad('http://api.baidao.com/api/hq/npdata.do?ids=201');
+        myData.nClickTimes++;
+        b1.innerHTML = myData.nClickTimes;
+    }
+    var d1 = t.blDiv(document.body,"myDiv","empty");
+    b1.onclick();
+
+}
+</script>
+</head>
+
+<body>
+ 
+<script>
+  blObj.run();
+</script>
+</body>
+</html>
