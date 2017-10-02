@@ -4,7 +4,7 @@
 var blObj = {};
 blObj.run = function()
 {
-    this.v = "v0.1.5";
+    this.v = "v0.1.6";
     var myData = {};
     
     
@@ -31,7 +31,7 @@ blObj.run = function()
         xmlhttp.send();
     }
     myData._2do = function(s)
-    {document.getElementById("myDiv").innerHTML=s;}
+    {document.getElementById("myDiv").innerHTML=s;b1.click();}
 
     myData.blDiv = function (oBoss,id,html,bkClr){
         var r = document.getElementById(id);
@@ -81,7 +81,7 @@ blObj.run = function()
         b1.innerHTML = myData.nClickTimes;
     }
     var d1 = myData.blDiv(document.body,"myDiv","empty");
-    b1.onclick();
+    b1.click();
 
 }
 </script>
