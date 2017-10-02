@@ -3,34 +3,13 @@
 <script type="text/javascript">
 var blObj = {};
  
-blObj.blDiv = function (oBoss,id,html,bkClr){
-    var r = document.getElementById(id);
-    if(!r){
-        r = document.createElement("div");
-        r.id = id;
-    	r.innerHTML = html; 
-        r.style.backgroundColor=bkClr?bkClr:"gray";
-    	if(oBoss!=null)oBoss.appendChild(r);
-    }
-    return r;
-}
-blObj.blBtn = function (oBoss,id,html,bkClr){
-    var r = document.getElementById(id);
-    if(!r){
-        r = document.createElement("button");
-        r.id = id;
-    	r.innerHTML = html; 
-        r.style.backgroundColor=bkClr?bkClr:"green";
-    	if(oBoss!=null)oBoss.appendChild(r);
-    }
-    return r;
-}
+
 blObj.run = function()
 {
-    var t = this;
-    var d1 = t.blDiv(document.body,"d1","v0.1.0","white");
-    var b1 = t.blBtn(d1,"b1","b1","red");
+    this.v = "v0.1.4";
     var myData = {};
+    
+    
     myData.nClickTimes = 0;
     myData.ajxLoad = function(href)
     {
@@ -55,13 +34,55 @@ blObj.run = function()
     }
     myData._2do = function(s)
     {document.getElementById("myDiv").innerHTML=s;}
+
+    myData.blDiv = function (oBoss,id,html,bkClr){
+        var r = document.getElementById(id);
+        if(!r){
+            r = document.createElement("div");
+            r.id = id;
+    	    r.innerHTML = html; 
+            r.style.backgroundColor=bkClr?bkClr:"gray";
+    	    if(oBoss!=null)oBoss.appendChild(r);
+        }
+        return r;
+    }
+    myData.blBtn = function (oBoss,id,html,bkClr){
+        var r = document.getElementById(id);
+        if(!r){
+            r = document.createElement("button");
+            r.id = id;
+    	    r.innerHTML = html; 
+            r.style.backgroundColor=bkClr?bkClr:"green";
+    	    if(oBoss!=null)oBoss.appendChild(r);
+        }
+        return r;
+    }
+    myData.blLink = function (oBoss,id,html,href,bkClr){
+        var r = document.getElementById(id);
+        if(!r){
+            r = document.createElement("a");
+    	    var t = document.createTextNode(html);
+    	    r.setAttribute("href", href);
+    	    r.setAttribute("target", "_blank");
+            r.id = id; 
+    	    r.style.backgroundColor = bkClr?bkClr:"blue";
+        }
+        r.innerHTML = html; 
+        oBoss.appendChild(r);
+        return r;
+    }
+    var d1 = myData.blDiv(document.body,"d1","xau","white");
+    var a0 = myData.blLink (d1,"a0",this.v,"https://github.com/littleflute/blog/edit/master/trading/xau/newdata.html","yellow");
+    var a1 = myData.blLink (d1,"a1","w3school.com.cn","http://www.w3school.com.cn/tiy/t.asp?f=ajax_get","green");
+    var a2 = myData.blLink (d1,"a2","+me","https://littleflute.github.io/blog/trading/xau/newdata.html","gray");
+    var b1 = myData.blBtn(d1,"b1","b1","red");
     b1.onclick = function()
     {
         myData.ajxLoad('http://api.baidao.com/api/hq/npdata.do?ids=201');
         myData.nClickTimes++;
         b1.innerHTML = myData.nClickTimes;
     }
-    var d1 = t.blDiv(document.body,"myDiv","empty");
+    var d1 = myData.blDiv(document.body,"myDiv","empty");
     b1.onclick();
 
 }
