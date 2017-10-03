@@ -1,8 +1,4 @@
 
-
-
-
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -77,7 +73,7 @@ ul.breadcrumb li a:hover {
 <ul class="breadcrumb">
   <li><a href="..">[..]</a></li>
   <li><a href=".">[.]</a></li>
-  <li><a target="_blank" href="https://github.com/littleflute/blog/edit/master/trading/DrawKlines/test4.html">v0.5.3</a></li>
+  <li><a target="_blank" href="https://github.com/littleflute/blog/edit/master/trading/DrawKlines/test4.html">v0.5.4</a></li>
   <li><a target="_blank" href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_default">dev1</a></li>
   <li><a href="https://www.w3schools.com/howto/howto_css_breadcrumbs.asp">ref1</a></li>
   <li><a href="https://www.w3schools.com/howto/howto_js_animate.asp">ref2</a></li>
@@ -100,7 +96,134 @@ ul.breadcrumb li a:hover {
   </div>
 </div>
 
-<script>
+<script>function blClass ()
+{ 
+    this.blAjx = function(worker,href)
+    {
+        var xmlhttp;
+        if (window.XMLHttpRequest)
+        {// code for IE7+, Firefox, Chrome, Opera, Safari
+            xmlhttp=new XMLHttpRequest();
+        }
+        else
+        {// code for IE6, IE5
+            xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        xmlhttp.onreadystatechange=function()
+        {
+            if (xmlhttp.readyState==4 && xmlhttp.status==200)
+            {
+               worker._2do(xmlhttp.responseText);
+            }
+        }
+        xmlhttp.open("GET",href,true);
+        xmlhttp.send();
+    }
+
+    this.blDiv = function (oBoss,id,html,bkClr){
+        var r = document.getElementById(id);
+        if(!r){
+            r = document.createElement("div");
+            r.id = id;
+    	    r.innerHTML = html; 
+            r.style.backgroundColor=bkClr?bkClr:"gray";
+    	    if(oBoss!=null)oBoss.appendChild(r);
+        }
+        return r;
+    }
+    this.blBtn = function (oBoss,id,html,bkClr){
+        var r = document.getElementById(id);
+        if(!r){
+            r = document.createElement("button");
+            r.id = id;
+    	    r.innerHTML = html; 
+            r.style.backgroundColor=bkClr?bkClr:"green";
+    	    if(oBoss!=null)oBoss.appendChild(r);
+        }
+        return r;
+    }
+    this.blLink = function (oBoss,id,html,href,bkClr){
+        var r = document.getElementById(id);
+        if(!r){
+            r = document.createElement("a");
+    	    var t = document.createTextNode(html);
+    	    r.setAttribute("href", href);
+    	    r.setAttribute("target", "_blank");
+            r.id = id; 
+    	    r.style.backgroundColor = bkClr?bkClr:"blue";
+        }
+        r.innerHTML = html; 
+        oBoss.appendChild(r);
+        return r;
+    }
+
+    this.blShowObj2Div = function (oDivBoss,obj)
+    {
+        
+        var oBoss = oDivBoss;
+        if(!oBoss) {
+           oBoss = document.createElement("div");
+           oBoss.id = "divBlShowObj";
+           oBoss.style.border = "green 1px solid";
+           document.body.appendChild(oBoss);
+        } 
+        if(!oBoss){
+            alert("boss error!");return;
+        }
+        oBoss.innerHTML = "";
+        for(i in obj)
+        {
+          var b = document.createElement("button");
+          b.id = b.innerHTML = i;
+          if(i[0]=="b"&&i[1]=="l") b.style.backgroundColor = "yellow";
+          oBoss.appendChild(b);
+          var d = document.createElement("div");
+          d.innerHTML = obj[i];
+          d.style.border = "blue 1px solid";
+          d.style.backgroundColor = "green";
+          d.style.color = "yellow";
+          oBoss.appendChild(d);
+        }
+    }    
+}
+var blObj = {};
+blObj.run = function()
+{
+    this.v = "v0.2.3";
+    var myData = new blClass;   
+    myData.nClickTimes = 0;        
+    
+    myData._2do = function(s)
+    {
+        var myDiv = document.getElementById("myDiv");
+        myDiv.innerHTML=s;
+        var kObj= eval ("(" + s+ ")");
+       // var kObj = JSON.parse(s);
+        myData.blShowObj2Div(myDiv,kObj[0] );
+        b1.click();
+    }   
+
+	var dm = myData.blDiv(document.body,"moveDivBody","xd");
+
+    var d1 = myData.blDiv(document.body,"d1","xau","white");
+    var a0 = myData.blLink (d1,"a0",this.v,"https://github.com/littleflute/blog/edit/master/trading/xau/newdata.html","yellow");
+    var aIssue = myData.blLink (d1,"aIssue ","Issue","https://github.com/littleflute/blog/issues/690","Cyan");
+
+
+    var a1 = myData.blLink (d1,"a1","w3school.com.cn","http://www.w3school.com.cn/tiy/t.asp?f=ajax_get","green");
+    var a2 = myData.blLink (d1,"a2","+me","https://littleflute.github.io/blog/trading/xau/newdata.html","gray");
+    var b1 = myData.blBtn(d1,"b1","b1","red");
+    b1.onclick = function()
+    {
+        myData.blAjx (myData,'http://api.baidao.com/api/hq/npdata.do?ids=201');
+        myData.nClickTimes++;
+        b1.innerHTML = myData.nClickTimes;
+    }
+    var d1 = myData.blDiv(document.body,"myDiv","empty");
+    var d2= myData.blDiv(document.body,"d2","empty","blue");
+    b1.click();
+    myData.blShowObj2Div (d2,myData); 
+}
 function myMove() {  
   var pos = 0;
   var id = setInterval(frame, 10);
@@ -172,8 +295,8 @@ function blKline1(contaniner,t,o,h,l,c) {
     // */    
  
 }
-	var xMin	= 100;
-    var xD		= 24;
+    var xMin	= 100;
+    var xD	= 24;
     var yMin	= 0;
     var yMax	= 400;
     var hMin	= 1200;
@@ -230,6 +353,9 @@ function myLoad() {
     blKline1(c,1,1300,1350,1290,1320); 
     blKline1(c,2,1325,1370,1280,1304); 
     blKline1(c,3,1310,1370,1290,1314); 
+
+    blObj.run();
+
 }
 myLoad();
 </script>
