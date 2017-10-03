@@ -2,15 +2,9 @@
 <html>
 <head>
 <script type="text/javascript">
-var blObj = {};
-blObj.run = function()
-{
-    this.v = "v0.2.2";
-    var myData = {};
-    
-    
-    myData.nClickTimes = 0;
-    myData.ajxLoad = function(href)
+function blClass ()
+{ 
+    this.blAjx = function(worker,href)
     {
         var xmlhttp;
         if (window.XMLHttpRequest)
@@ -25,23 +19,14 @@ blObj.run = function()
         {
             if (xmlhttp.readyState==4 && xmlhttp.status==200)
             {
-               myData._2do(xmlhttp.responseText);
+               worker._2do(xmlhttp.responseText);
             }
         }
         xmlhttp.open("GET",href,true);
         xmlhttp.send();
     }
-    myData._2do = function(s)
-    {
-        var myDiv = document.getElementById("myDiv");
-        myDiv.innerHTML=s;
-        var kObj= eval ("(" + s+ ")");
-       // var kObj = JSON.parse(s);
-        myData.showObj2Div(myDiv,kObj[0] );
-        b1.click();
-    }
 
-    myData.blDiv = function (oBoss,id,html,bkClr){
+    this.blDiv = function (oBoss,id,html,bkClr){
         var r = document.getElementById(id);
         if(!r){
             r = document.createElement("div");
@@ -52,7 +37,7 @@ blObj.run = function()
         }
         return r;
     }
-    myData.blBtn = function (oBoss,id,html,bkClr){
+    this.blBtn = function (oBoss,id,html,bkClr){
         var r = document.getElementById(id);
         if(!r){
             r = document.createElement("button");
@@ -63,7 +48,7 @@ blObj.run = function()
         }
         return r;
     }
-    myData.blLink = function (oBoss,id,html,href,bkClr){
+    this.blLink = function (oBoss,id,html,href,bkClr){
         var r = document.getElementById(id);
         if(!r){
             r = document.createElement("a");
@@ -78,7 +63,7 @@ blObj.run = function()
         return r;
     }
 
-    myData.showObj2Div = function (oDivBoss,obj)
+    this.blShowObj2Div = function (oDivBoss,obj)
     {
         
         var oBoss = oDivBoss;
@@ -105,11 +90,29 @@ blObj.run = function()
           d.style.color = "yellow";
           oBoss.appendChild(d);
         }
-    }  
+    }    
+}
+var blObj = {};
+blObj.run = function()
+{
+    this.v = "v0.2.3";
+    var myData = new blClass;   
+    myData.nClickTimes = 0;        
+    
+    myData._2do = function(s)
+    {
+        var myDiv = document.getElementById("myDiv");
+        myDiv.innerHTML=s;
+        var kObj= eval ("(" + s+ ")");
+       // var kObj = JSON.parse(s);
+        myData.blShowObj2Div(myDiv,kObj[0] );
+        b1.click();
+    }   
+
+	var dm = myData.blDiv(document.body,"moveDivBody","xd");
 
     var d1 = myData.blDiv(document.body,"d1","xau","white");
     var a0 = myData.blLink (d1,"a0",this.v,"https://github.com/littleflute/blog/edit/master/trading/xau/newdata.html","yellow");
-    var ap = myData.blLink (d1,"ap","[..]","..","gray");
     var aIssue = myData.blLink (d1,"aIssue ","Issue","https://github.com/littleflute/blog/issues/690","Cyan");
 
 
@@ -118,14 +121,14 @@ blObj.run = function()
     var b1 = myData.blBtn(d1,"b1","b1","red");
     b1.onclick = function()
     {
-        myData.ajxLoad('http://api.baidao.com/api/hq/npdata.do?ids=201');
+        myData.blAjx (myData,'http://api.baidao.com/api/hq/npdata.do?ids=201');
         myData.nClickTimes++;
         b1.innerHTML = myData.nClickTimes;
     }
     var d1 = myData.blDiv(document.body,"myDiv","empty");
     var d2= myData.blDiv(document.body,"d2","empty","blue");
     b1.click();
-    myData.showObj2Div (d2,blObj);
+    myData.blShowObj2Div (d2,myData); 
 
 }
 </script>
