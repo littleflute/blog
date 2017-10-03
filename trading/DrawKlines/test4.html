@@ -37,34 +37,7 @@ ul.breadcrumb li a:hover {
   height: 50px;
   position: absolute;
   background-color: blue;
-}
-#myKline1{
-  width: 14px;
-  height: 150px;
-  left:50px;
-  top:200px;
-  position: absolute;
-  background-color: white;
-
-}
-#myKline1-oc{
-  width: 10px;
-  height: 10px;
-  left:2px;
-  top:50px;
-  position: relative;
-  background-color: red;
-
-}
-#myKline1-hl{
-  width: 2px;
-  height: 100px;
-  left:4px;
-  top:-10px;
-  position: relative;
-  background-color: green;
-
-}
+} 
 </style>
 </head>
 <body>
@@ -73,7 +46,7 @@ ul.breadcrumb li a:hover {
 <ul class="breadcrumb">
   <li><a href="..">[..]</a></li>
   <li><a href=".">[.]</a></li>
-  <li><a target="_blank" href="https://github.com/littleflute/blog/edit/master/trading/DrawKlines/test4.html">v0.6.0</a></li>
+  <li><a target="_blank" href="https://github.com/littleflute/blog/edit/master/trading/DrawKlines/test4.html">v0.6.1</a></li>
   <li><a target="_blank" href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_default">dev1</a></li>
   <li><a href="https://www.w3schools.com/howto/howto_css_breadcrumbs.asp">ref1</a></li>
   <li><a href="https://www.w3schools.com/howto/howto_js_animate.asp">ref2</a></li>
@@ -89,11 +62,7 @@ ul.breadcrumb li a:hover {
 
 <div id ="myContainer">
   <div id ="myAnimation">
-  </div>
-  <div id ="myKline1">
-    <div id ="myKline1-oc"><div id ="myKline1-hl"></div></div>
-    
-  </div>
+  </div> 
 </div>
 
 <script>
@@ -349,13 +318,13 @@ function blKline1(contaniner,t,o,h,l,c) {
    var color	= "fff";
    if(c>o) 
    {
-   		HeighOC 	= yO -yC;
+   	HeighOC 	= yO -yC;
         yOC 		= yC; 
         color		= "red";
-	}
+    }
     else
     {
-   		HeighOC 	= yC -yO;
+   	HeighOC 	= yC -yO;
         yOC 		= yO; 
         color		= "green";
     }
@@ -406,17 +375,16 @@ function clearCoords() {
     showMouse(-11,-500);
 }
 function initDrawing(contaniner) { 
-	var div_hMin = blDiv(contaniner,"div_hMin",hMin,400,400-24,111,22,"red","absolute");
-	var div_hMax = blDiv(contaniner,"div_hMax",hMax,400,0,111,22,"green","absolute");
-	var div_Msg = blDiv(contaniner,"div_Msg","",400,122,311,22,"yellow","absolute");
+    var div_hMin = blDiv(contaniner,"div_hMin",hMin,400,400-24,111,22,"red","absolute");
+    var div_hMax = blDiv(contaniner,"div_hMax",hMax,400,0,111,22,"green","absolute");
+    var div_Msg = blDiv(contaniner,"div_Msg","",400,122,311,22,"yellow","absolute");
     contaniner.onmousemove = showCoords;
     contaniner.onmouseout = clearCoords;
     
     function elementDrag(e) {
-     
-    pos3 = e.clientX;
-    pos4 = e.clientY; 
-  }
+        pos3 = e.clientX;
+        pos4 = e.clientY; 
+    }
 
 }  
 function myLoad() {   
