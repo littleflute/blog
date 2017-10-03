@@ -73,7 +73,7 @@ ul.breadcrumb li a:hover {
 <ul class="breadcrumb">
   <li><a href="..">[..]</a></li>
   <li><a href=".">[.]</a></li>
-  <li><a target="_blank" href="https://github.com/littleflute/blog/edit/master/trading/DrawKlines/test4.html">v0.5.4</a></li>
+  <li><a target="_blank" href="https://github.com/littleflute/blog/edit/master/trading/DrawKlines/test4.html">v0.5.6</a></li>
   <li><a target="_blank" href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_default">dev1</a></li>
   <li><a href="https://www.w3schools.com/howto/howto_css_breadcrumbs.asp">ref1</a></li>
   <li><a href="https://www.w3schools.com/howto/howto_js_animate.asp">ref2</a></li>
@@ -96,7 +96,9 @@ ul.breadcrumb li a:hover {
   </div>
 </div>
 
-<script>function blClass ()
+<script>
+
+function blClass ()
 { 
     this.blAjx = function(worker,href)
     {
@@ -185,11 +187,49 @@ ul.breadcrumb li a:hover {
           oBoss.appendChild(d);
         }
     }    
+    this.blMakeDivMovable = function (elmnt) {
+      var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+      if (document.getElementById(elmnt.id + "header")) {
+        /* if present, the header is where you move the DIV from:*/
+        document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
+      } else {
+        /* otherwise, move the DIV from anywhere inside the DIV:*/
+        elmnt.onmousedown = dragMouseDown;
+      }
+
+      function dragMouseDown(e) {
+        e = e || window.event;
+        // get the mouse cursor position at startup:
+        pos3 = e.clientX;
+        pos4 = e.clientY;
+        document.onmouseup = closeDragElement;
+        // call a function whenever the cursor moves:
+        document.onmousemove = elementDrag;
+      }
+
+      function elementDrag(e) {
+        e = e || window.event;
+        // calculate the new cursor position:
+        pos1 = pos3 - e.clientX;
+        pos2 = pos4 - e.clientY;
+        pos3 = e.clientX;
+        pos4 = e.clientY;
+        // set the element's new position:
+        elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+        elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+      }
+
+      function closeDragElement() {
+        /* stop moving when mouse button is released:*/
+        document.onmouseup = null;
+        document.onmousemove = null;
+      }
+    }
 }
 var blObj = {};
 blObj.run = function()
 {
-    this.v = "v0.2.3";
+    this.v = "v0.3.1";
     var myData = new blClass;   
     myData.nClickTimes = 0;        
     
@@ -202,8 +242,10 @@ blObj.run = function()
         myData.blShowObj2Div(myDiv,kObj[0] );
         b1.click();
     }   
+ 
 
-	var dm = myData.blDiv(document.body,"moveDivBody","xd");
+    var myMoveDiv = myData;
+    var main = myMoveDiv.blDiv(document.body,"moveDivBody","");
 
     var d1 = myData.blDiv(document.body,"d1","xau","white");
     var a0 = myData.blLink (d1,"a0",this.v,"https://github.com/littleflute/blog/edit/master/trading/xau/newdata.html","yellow");
@@ -223,6 +265,35 @@ blObj.run = function()
     var d2= myData.blDiv(document.body,"d2","empty","blue");
     b1.click();
     myData.blShowObj2Div (d2,myData); 
+
+
+
+
+
+var style ="position: absolute;";
+	style += "z-index: 9;";
+	style += "background-color: #f1f1f1;";
+	style += "text-align: center;";
+	style += "border: 1px solid #d3d3d3;";
+	style += "left: 400px";
+	style += "top: 140px";
+	main.style =style;
+	var title = myMoveDiv.blDiv(main,"moveDivHeader","header");
+	style ="padding: 10px;";
+	style += "z-index: 10;";
+	style += "cursor: move;";
+	style += "text-align: center;";
+	style += "border: 1px solid #fff;";
+	style += "background-color: #2196F3;";
+	title.style =style;
+	var mi1 = myMoveDiv.blDiv(main,"mi1","mi1");
+	var mi2 = myMoveDiv.blDiv(main,"mi2","mi2");
+	var btn1 = myMoveDiv.blBtn(mi2,"btn1","about","#f12");
+	btn1.onclick = function(){ 
+    	myMoveDiv.inf();
+	}
+    myMoveDiv.blMakeDivMovable(main);
+
 }
 function myMove() {  
   var pos = 0;
