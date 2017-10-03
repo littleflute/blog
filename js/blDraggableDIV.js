@@ -1,5 +1,3 @@
-
- 
 var myMoveDiv = {};
 myMoveDiv.inf = function(){
 	var v_blDraggableDIV = "v0.1.0";
@@ -34,7 +32,49 @@ myMoveDiv.blBtn = function (oBoss,id,html){
      
     oBoss.appendChild(r);
     return r;
-} 
+}
+myMoveDiv.blLink = function (oBoss,id,html,href,bkClr){
+        var r = document.getElementById(id);
+        if(!r){
+            r = document.createElement("a");
+    	    var t = document.createTextNode(html);
+    	    r.setAttribute("href", href);
+    	    r.setAttribute("target", "_blank");
+            r.id = id; 
+    	    r.style.backgroundColor = bkClr?bkClr:"blue";
+        }
+        r.innerHTML = html; 
+        oBoss.appendChild(r);
+        return r;
+    }
+myMoveDiv.showObj2Div = function (oDivBoss,obj)
+    {
+        
+        var oBoss = oDivBoss;
+        if(!oBoss) {
+           oBoss = document.createElement("div");
+           oBoss.id = "divBlShowObj";
+           oBoss.style.border = "green 1px solid";
+           document.body.appendChild(oBoss);
+        } 
+        if(!oBoss){
+            alert("boss error!");return;
+        }
+      //  oBoss.innerHTML = "";
+        for(i in obj)
+        {
+          var b = document.createElement("button");
+          b.id = b.innerHTML = i;
+          if(i[0]=="b"&&i[1]=="l") b.style.backgroundColor = "yellow";
+          oBoss.appendChild(b);
+          var d = document.createElement("div");
+          d.innerHTML = obj[i];
+          d.style.border = "blue 1px solid";
+          d.style.backgroundColor = "green";
+          d.style.color = "yellow";
+          oBoss.appendChild(d);
+        }
+    }  
 //Make the DIV element draggagle: 
 
 myMoveDiv.dragElement = function (elmnt) {
@@ -77,14 +117,21 @@ myMoveDiv.dragElement = function (elmnt) {
 }
 myMoveDiv.run = function()
 {
-	var win = myMoveDiv.blDiv(document.body,"win","win");
-	var main = myMoveDiv.blDiv(win,"moveDivBody","");
+	var main = myMoveDiv.blDiv(document.body,"moveDivBody","");
+	var win = myMoveDiv.blDiv(document.body,"win","myMoveDiv");
+    
+	var av = myMoveDiv.blLink (win,"av","v0.0.5","https://github.com/littleflute/blog/edit/master/js/blDraggableDIV.js","#fb3"); 
+	var a1 = myMoveDiv.blLink (win,"a1","dev1","http://www.w3school.com.cn/tiy/t.asp?f=ajax_get","#abc");
+	var a2 = myMoveDiv.blLink (win,"a2","dev2","http://www.w3school.com.cn/tiy/t.asp?f=ajax_get","#fab");
+myMoveDiv.showObj2Div(win,this);
+
 	var style ="position: absolute;";
 	style += "z-index: 9;";
 	style += "background-color: #f1f1f1;";
 	style += "text-align: center;";
 	style += "border: 1px solid #d3d3d3;";
 	style += "left: 400px";
+	style += "top: 140px";
 	main.style =style;
 	var title = myMoveDiv.blDiv(main,"moveDivHeader","header");
 	style ="padding: 10px;";
