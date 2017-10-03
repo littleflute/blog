@@ -1,6 +1,6 @@
 var myMoveDiv = {};
 myMoveDiv.inf = function(){
-	var v_blDraggableDIV = "v0.1.1";
+	var v_blDraggableDIV = "v0.1.2";
 	var i2do  ="DraggableDIV";
 	var s = v_blDraggableDIV;
 	s += "\r\n";
@@ -120,8 +120,9 @@ myMoveDiv.run = function()
 	var main = myMoveDiv.blDiv(document.body,"moveDivBody","");
 	var win = myMoveDiv.blDiv(document.body,"win","myMoveDiv");
     
-	var av = myMoveDiv.blLink (win,"av","v0.0.6","https://github.com/littleflute/blog/edit/master/js/blDraggableDIV.js","#fb3"); 
+	var av = myMoveDiv.blLink (win,"av","v0.0.7","https://github.com/littleflute/blog/edit/master/js/blDraggableDIV.js","#fb3"); 
 	var at = myMoveDiv.blLink(win,"at","test","https://littleflute.github.io/blog/html/tools/blDraggableDIV.html","green");
+	var ai = myMoveDiv.blLink(win,"ai","issue","https://github.com/littleflute/blog/issues/686","#1fa");
 	var a1 = myMoveDiv.blLink (win,"a1","dev1","http://www.w3school.com.cn/tiy/t.asp?f=ajax_get","#abc");
 	var a2 = myMoveDiv.blLink (win,"a2","dev2","http://www.w3school.com.cn/tiy/t.asp?f=ajax_get","#fab");
 myMoveDiv.showObj2Div(win,this);
