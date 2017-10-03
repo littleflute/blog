@@ -1,10 +1,11 @@
+
 <html>
 <head>
 <script type="text/javascript">
 var blObj = {};
 blObj.run = function()
 {
-    this.v = "v0.1.8";
+    this.v = "v0.1.9";
     var myData = {};
     
     
@@ -31,7 +32,10 @@ blObj.run = function()
         xmlhttp.send();
     }
     myData._2do = function(s)
-    {document.getElementById("myDiv").innerHTML=s;b1.click();}
+    {
+        document.getElementById("myDiv").innerHTML=s;
+        b1.click();
+    }
 
     myData.blDiv = function (oBoss,id,html,bkClr){
         var r = document.getElementById(id);
@@ -69,6 +73,36 @@ blObj.run = function()
         oBoss.appendChild(r);
         return r;
     }
+
+    myData.showObj2Div = function (oDivBoss,obj)
+    {
+        
+        var oBoss = oDivBoss;
+        if(!oBoss) {
+           oBoss = document.createElement("div");
+           oBoss.id = "divBlShowObj";
+           oBoss.style.border = "green 1px solid";
+           document.body.appendChild(oBoss);
+        } 
+        if(!oBoss){
+            alert("boss error!");return;
+        }
+        oBoss.innerHTML = "";
+        for(i in obj)
+        {
+          var b = document.createElement("button");
+          b.id = b.innerHTML = i;
+          if(i[0]=="b"&&i[1]=="l") b.style.backgroundColor = "yellow";
+          oBoss.appendChild(b);
+          var d = document.createElement("div");
+          d.innerHTML = obj[i];
+          d.style.border = "blue 1px solid";
+          d.style.backgroundColor = "green";
+          d.style.color = "yellow";
+          oBoss.appendChild(d);
+        }
+    }  
+
     var d1 = myData.blDiv(document.body,"d1","xau","white");
     var a0 = myData.blLink (d1,"a0",this.v,"https://github.com/littleflute/blog/edit/master/trading/xau/newdata.html","yellow");
     var aIssue = myData.blLink (d1,"aIssue ","Issue","https://github.com/littleflute/blog/issues/690","Cyan");
@@ -84,7 +118,9 @@ blObj.run = function()
         b1.innerHTML = myData.nClickTimes;
     }
     var d1 = myData.blDiv(document.body,"myDiv","empty");
+    var d2= myData.blDiv(document.body,"d2","empty","blue");
     b1.click();
+    myData.showObj2Div (d2,blObj);
 
 }
 </script>
