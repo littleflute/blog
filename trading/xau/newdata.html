@@ -5,7 +5,7 @@
 var blObj = {};
 blObj.run = function()
 {
-    this.v = "v0.1.9";
+    this.v = "v0.2.0";
     var myData = {};
     
     
@@ -33,7 +33,11 @@ blObj.run = function()
     }
     myData._2do = function(s)
     {
-        document.getElementById("myDiv").innerHTML=s;
+        var myDiv = document.getElementById("myDiv");
+        myDiv.innerHTML=s;
+        var kObj= eval ("(" + s+ ")");
+       // var kObj = JSON.parse(s);
+        myData.showObj2Div(myDiv,kObj[0] );
         b1.click();
     }
 
