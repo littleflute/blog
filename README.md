@@ -15,9 +15,10 @@
 
 
 
-### [v0.0.8](https://github.com/littleflute/blog/edit/master/README.md)
+### [v0.0.9](https://github.com/littleflute/blog/edit/master/README.md)
  
 ## prj
+### [vc6](https://littleflute.github.io/vc6/)
 ### [xau](https://littleflute.github.io/xau/)
 ### [cchess](https://littleflute.github.io/cchess) 
 ### [englishtyping](https://shanuan.github.io/englishtyping) 
