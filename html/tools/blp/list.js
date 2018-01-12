@@ -1,6 +1,6 @@
  
 function _listClass(){
- this.v = "v0.0.33";
+ this.v = "v0.0.34";
  var ls = [];
  ls.push("https://littleflute.github.io/bible/ABibleExperience/NewTestament/list1.js");
  ls.push("https://littleflute.github.io/bible/ABibleExperience/NewTestament/list2.js");
