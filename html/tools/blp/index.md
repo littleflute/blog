@@ -32,3 +32,4 @@
 
 [v0.3.5](v0.3.5.html)
  
+ <script src="blp.js"></script>
