@@ -1,4 +1,4 @@
-var v = "v0.0.15"; 
+var v = "v0.0.21"; 
 function _listClass(){
  var ls = [];
  ls.push("https://littleflute.github.io/bible/ABibleExperience/NewTestament/list1.js");
