@@ -1,10 +1,10 @@
 ### [show me](https://littleflute.github.io/blog/html/tools/blp/)
-### [index.md v0.2.2](https://github.com/littleflute/blog/edit/master/html/tools/blp/index.md)
+### [index.md v0.2.3](https://github.com/littleflute/blog/edit/master/html/tools/blp/index.md)
+## [blp.js](blp.js) ###[blp.js*](https://github.com/littleflute/blog/edit/master/html/tools/blp/blp.js)
 ### [v1.2.2](v1.2.2.html)
 ### [v1.1.4](v1.1.4.html)
 ### [v0.9.8](v0.9.8.html)
-
-[v0.9.6](v0.9.6.html)
+### [v0.9.6](v0.9.6.html)
 
 [v0.9.1](v0.9.1.html)
 
@@ -32,4 +32,5 @@
 
 [v0.3.5](v0.3.5.html)
  
+ <script src="https://littleflute.github.io/vc6/XdHtml/blclass.js"></script>
  <script src="blp.js"></script>
