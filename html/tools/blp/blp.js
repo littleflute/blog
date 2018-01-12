@@ -1,4 +1,4 @@
-var v = "v0.0.32" 
+var v = "v0.0.33" 
 var s0 = '<div id="id_div_toolbar">';
   s0 += '<a target="_blank" href="blp.js">' + v + '</a>-';
   s0 += '<a target="_blank" href="https://github.com/littleflute/blog/edit/master/html/tools/blp/blp.js">' + v + '*</a>';
@@ -16,7 +16,7 @@ dUI.d1.btnRun.onclick = function(){
 }
       
 
-dUI.d1.btnLoadList = blo0.blBtn(dUI.d1,"id_btn_LoadList","run","gray");
+dUI.d1.btnLoadList = blo0.blBtn(dUI.d1,"id_btn_LoadList","LoadList","gray");
 dUI.d1.btnLoadList.onclick = function(){
   dUI.d1.ta.value = 'blo0.blScript("id_script_list","list.js")';
   eval(dUI.d1.ta.value);
