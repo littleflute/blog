@@ -1,8 +1,23 @@
-var v = "v0.0.6"; 
+var v = "v0.0.12"; 
 function _listClass(){
- this.v = "v0.0.2";
+ var ls = [];
+ ls.push("https://littleflute.github.io/bible/ABibleExperience/NewTestament/list.js");
+ ls.push("https://littleflute.github.io/bible/ABibleExperience/NewTestament/list.js");
+ this.v = "v0.0.3";
  this.blr_List1 = function(b,d){
-  d.innerHTML = "https://littleflute.github.io/bible/ABibleExperience/NewTestament/list.js";
+  d.innerHTML = ;
+  if(!d.view){
+    d.tb = blo0.blDiv(listUI,listUI.id+"tb","tb:",blColor[4]);
+    d.view = blo0.blDiv(listUI,listUI.id+"view","view:",blColor[4]);
+    for(i in ls){
+       var b = blo0.blBtn(d.tb,d.tb.id+"btn_"+i,"list"+i,blGrey[0]);
+       b.onclick = function(_s){
+            return function(){
+                d.view.innerHTML = _s;
+            }
+       }(ls[i]);
+    }
+  }
   _on_off_div(b,d);
  }
 }
