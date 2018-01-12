@@ -1,6 +1,6 @@
  
 function _listClass(){
- this.v = "v0.0.32";
+ this.v = "v0.0.33";
  var ls = [];
  ls.push("https://littleflute.github.io/bible/ABibleExperience/NewTestament/list1.js");
  ls.push("https://littleflute.github.io/bible/ABibleExperience/NewTestament/list2.js");
@@ -33,6 +33,8 @@ var listUI= blo0.blMDiv(document.body,"id_mdiv_list5",s0,50,200,500,800,blColor[
 listUI.view = blo0.blDiv(listUI,listUI.id+"view","view:",blColor[6]);
 listUI.tb = bl$('id_div_list_toolbar');
 listUI.tb.b1 = blo0.blBtn(listUI.tb,listUI.tb.id+"b1","b1","grey"); 
-listUI.tb.b1.onclick = function(){
-    blo0.blShowObj2Div(listUI.view,l);
-}
+listUI.tb.b1.onclick = function(v_){
+    return function(){
+     blo0.blShowObj2Div(v_,l);
+    }
+}(listUI.view);
