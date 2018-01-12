@@ -1,6 +1,10 @@
-var v = "v0.0.5"; 
+var v = "v0.0.6"; 
 function _listClass(){
- this.v = "v0.0.1";
+ this.v = "v0.0.2";
+ this.blr_List1 = function(b,d){
+  d.innerHTML = "https://littleflute.github.io/bible/ABibleExperience/NewTestament/list.js";
+  _on_off_div(b,d);
+ }
 }
 var l = new _listClass;
 
@@ -14,5 +18,5 @@ listUI.view = blo0.blDiv(listUI,listUI.id+"view","view:",blColor[4]);
 listUI.tb = bl$('id_div_list_toolbar');
 listUI.tb.b1 = blo0.blBtn(listUI.tb,listUI.tb.id+"b1","b1","grey"); 
 listUI.tb.b1.onclick = function(){
-    blo0.ShowObj2Div(listUI.view,l);
+    blo0.blShowObj2Div(listUI.view,l);
 }
