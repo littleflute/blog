@@ -62,12 +62,12 @@ body {margin:0;}
 <div class="topnav" id="myTopnav">
   <a href="https://littleflute.github.io/blog">Home</a>
   <a href="https://github.com/littleflute/blog/issues/576">Issues</a> 
-  <a href="https://github.com/littleflute/blog/edit/master/html/BlShowWeb/index.html">Edit</a>
+  <a target="_blank" href="https://github.com/littleflute/blog/edit/master/html/BlShowWeb/index.html">v0.0.2 *</a>
   <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
 </div>
 
 <div style="padding-left:16px">
-  <h2>BeautifulLover Web View v0.0.4</h2>
+  <h2>BeautifulLover Web View</h2>
   <p>by LittleFlute.</p>
   
 </div>
@@ -124,6 +124,44 @@ blTools.onclick = function(){
 }
 
 </script>
+<script src="https://littleflute.github.io/vc6/XdHtml/blclass.js"></script> 
 
+<script>  
+
+function CXdMainFrame()
+{
+	this.v		= "v0.0.145 ";  
+	var s = this.v;
+		s += "<a target='_blank' href='https://github.com/littleflute/vc6/edit/master/XdHtml/2.html'"
+		s += " style='color:lightblue;'";
+		s +=">";
+		s += " 2.html*  ";
+		s += "</a>"; 
+		s += "<a href='2.html'";
+		s += " style='color:yellow;'";
+		s +=">";
+		s += " 2.html ";
+		s += "</a>"; 
+		s += "<a href='index.html'";
+		s += " style='color:green;'";
+		s +=">";
+		s += " index.html ";
+		s += "</a>"; 
+	var d 	= blo0.blMDiv(document.body,"id_div_CXdMainFrame_ui",s,0,0,800,100,blColor[1]);
+	d.d1	= blo0.blDiv(d,d.id+"d1","d1",blColor[0]);	blo0.blhInitUI(d.d1); 	   
+	d.d2	= blo0.blDiv(d,d.id+"d2","d2",blColor[1]);	
+
+	_load_plx_btn(blo0,d.d2,"_xdPlxSpiter","https://littleflute.github.io/xd/js/plx/xdPlxSpiter.js","lightblue"); 
+	_load_plx_btn(blo0,d.d2,"_xdPlxSet","https://littleflute.github.io/xd/js/plx/xdPlxSet.js","lightblue"); 
+//	_load_plx_btn(blo0,d.d2,"_xdPlxSpiter","file:///C:/Users/13699/xd/js/plx/xdPlxSpiter.js","brown"); 
+
+}
+function CXdAPP()
+{
+	var _xdMF = new CXdMainFrame;   
+}
+var gApp = new CXdAPP; 
+
+</script>
 </body>
 </html>
