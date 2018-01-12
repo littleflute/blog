@@ -1,5 +1,5 @@
 ### [show me](https://littleflute.github.io/blog/html/tools/blp/)
-### [index.md v0.2.4](https://github.com/littleflute/blog/edit/master/html/tools/blp/index.md)
+### [index.md v0.2.5](https://github.com/littleflute/blog/edit/master/html/tools/blp/index.md)
 ## [blp.js](blp.js) ### [blp.js*](https://github.com/littleflute/blog/edit/master/html/tools/blp/blp.js)
 ### [v1.2.2](v1.2.2.html)
 ### [v1.1.4](v1.1.4.html)
