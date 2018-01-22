@@ -1,4 +1,4 @@
-var sTB = "<div id='id_div_toolBar'>v0.0.155";
+var sTB = "<div id='id_div_toolBar'>v0.0.212";
 sTB += "</div>";
 
 var md = blo0.blMDiv(document.body,"id_mdiv_4_vextab",sTB,50,50,900,200,blGrey[0]); 
@@ -10,7 +10,7 @@ md.tb.b1.onclick = function(){
 	if(!o.m1){
 		var sTB = "<div id='id_div_toolBar_4_b1'>";
 		sTB += "</div>";
-		o.m1 = blo0.blMDiv(o,o.id+"mdiv",sTB,110,1,110,10,blGrey[0]); 
+		o.m1 = blo0.blMDiv(o,o.id+"mdiv",sTB,95,1,110,10,blGrey[0]); 
 		o.m1.style.zIndex = 100;
 		o.m1.main.style.display = "none";
 		o.m1.handle.style.display = "none";
