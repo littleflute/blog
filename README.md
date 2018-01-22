@@ -1,5 +1,5 @@
 ## blog
-### [v0.0.14](https://github.com/littleflute/blog/edit/master/README.md)
+### [v0.0.15](https://github.com/littleflute/blog/edit/master/README.md)
 ## Xd Zone [xd.js](xd.js)
 <div id="debug"></div>
 <div id="demo">
@@ -28,7 +28,9 @@
 ~~~
  <script src="xd.js"></script>
 
+~~~html
 <div id= 'links'>
  <a target="_blank" href="https://cbcpubliclibrary.net/" >cbcpubliclibrary.net/</a>	
+ <a target="_blank" href="https://littleflute.github.io/xd/" >xd</a>	
 </div>
- 
+~~~
