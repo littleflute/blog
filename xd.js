@@ -1,13 +1,18 @@
 var x = document.getElementsByTagName("h1")[0];
-x.innerHTML = " <a target='_blank' href='https://github.com/littleflute/blog/edit/master/xd.js'>LittleFlute's Blog V0.4.3*</a>";
+x.innerHTML = " <a target='_blank' href='https://github.com/littleflute/blog/edit/master/xd.js'>LittleFlute's Blog V0.4.4*</a>";
 var b	= document.getElementById("banner");
 var s = b.innerHTML;
 s += "<a href='docs' class='button downloads'>docs</a>";
 s += "<a href='html' class='button downloads'>html</a>";
 s += "<a href='html/BlShowWeb' class='button downloads'>BlView</a>";
 s += "<a href='http://www.beautifullover.org' class='button downloads'>BeautifulLover</a>";
+s += "<a href='#' onclick='runJS()' class='button downloads'>runJS</a>";
 b.innerHTML = s;
 
+function runJS()
+{
+	alert("runJS");
+}
 
 var gN   = 0;
 var gStr = "";
