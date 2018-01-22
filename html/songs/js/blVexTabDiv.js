@@ -1,4 +1,4 @@
-var sTB = "<div id='id_div_toolBar'>v0.0.154";
+var sTB = "<div id='id_div_toolBar'>v0.0.155";
 sTB += "</div>";
 
 var md = blo0.blMDiv(document.body,"id_mdiv_4_vextab",sTB,50,50,900,200,blGrey[0]); 
@@ -21,7 +21,7 @@ md.tb.b1.onclick = function(){
 			_on_off_div(this,d.main);
 			_on_off_div(this,d.handle);		
 		}
-
+		o.m1.tb.b1.click();
 	}
 	_on_off_div(this,o.m1);	
 };
