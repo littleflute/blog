@@ -14,7 +14,7 @@
 <a href="../../index.html">[blog] </a>-》
 <a href="../index.html">[html] </a>-》
 <a href="index.html">[songs] </a>__
-<a href="https://github.com/littleflute/blog/edit/master/html/songs/tryit_s001.html" target="_blank">v0.3.25*</a>__
+<a href="https://github.com/littleflute/blog/edit/master/html/songs/tryit_s001.html" target="_blank">v0.3.31*</a>__
 <a href="https://littleflute.github.io/xd/w3schools/howto/tryit_asp.html" target="_blank">tryit_asp</a><br>   
 <div style="border:1px red solid;">
   <p id="Title1" style="background-color:green;text-align: center;color:yellow;font-size:24px;">一级</p>
@@ -46,7 +46,7 @@ text :w, .-0.5, |
   <script src="https://littleflute.github.io/blog/html/songs/js/vextab-div.js"></script>
   <script>
     VexTabDiv.Artist.DEBUG = false
-    //render
+    //
   </script>
 
   <script src="https://littleflute.github.io/vc6/XdHtml/blclass.js"></script>
@@ -69,9 +69,32 @@ var s1 = '<div id="div4Vextab" style="border:1px blue solid" class="vex-tabdiv" 
 d1.innerHTML = s + s1;
 
 bl$('div4Vextab').innerHTML = bl$('myID').innerHTML;
-  </script>
-  
 
+md.md1 =  blo0.blMDiv(md,md.id+"md1","md_v0.0.22",50,50,900,200,blColor[4]);
+
+blo0.blhInitUI(md.md1);
+  
+var d1 = md.md1;
+d1.ta = blo0.blTextarea(d1,d1.id+"ta","xd1",blColor[0]);
+d1.ta.value = VexTabDiv.Artist.prototype.render;
+var sta = d1.ta.value;
+d1.ta.value = sta.replace("vexflow.com","www.beautifullover.org");
+var sf = "blRender = " + d1.ta.value;
+eval(sf);
+VexTabDiv.Artist.render = function (renderder){
+	return sf(renderder);
+}
+
+md.md2 =  blo0.blMDiv(md,md.id+"md2","md_v0.0.5",50,80,900,200,blColor[4]);
+
+md.md2.d1 = blo0.blDiv(md.md2,md.md2.id+"d1","d1",blGrey[1]);
+s1 = s1.replace("div4Vextab","id_vextab2");
+
+md.md2.d1.innerHTML = s + s1;
+bl$('id_vextab2').innerHTML = bl$('myID').innerHTML;
+  </script>
+
+ 
 </body>
 
 </html>
