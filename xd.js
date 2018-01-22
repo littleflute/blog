@@ -1,5 +1,5 @@
 var x = document.getElementsByTagName("h1")[0];
-x.innerHTML = "LittleFlute's Blog V0.4.1";
+x.innerHTML = " <a target='_blank' href='https://github.com/littleflute/blog/edit/master/xd.js'>LittleFlute's Blog V0.4.2*</a>";
 var b	= document.getElementById("banner");
 var s = b.innerHTML;
 s += "<a href='docs' class='button downloads'>docs</a>";
