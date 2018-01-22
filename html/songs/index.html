@@ -1,2 +1,64 @@
-songs<br>
-<a href="byecam.htm">离开校园<a/><br>
+<!DOCTYPE html>
+<html>
+<title>index</title>
+<meta name="viewport" content="width=device-width, initial-scale=1"> 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">		 
+<link rel="stylesheet" href="https://littleflute.github.io/xd/w3schools/w3css/4/w3.css">				 
+<link rel="icon" href="https://littleflute.github.io/xd/favicon.png" type="image/x-icon">
+<body>
+
+<div class="w3-container">
+  <div class="w3-bar w3-light-grey">
+    <a href="?v=" class="w3-bar-item w3-button">v2.0.14</a>
+    <a target="_blank" href="https://www.w3schools.com/w3css/tryit.asp?filename=tryw3css_navbar_dropdown3" class="w3-bar-item w3-button">ref</a>
+    <div class="w3-dropdown-click">
+      <button class="w3-button" onclick="myFunction()">
+        More... <i class="fa fa-caret-down"></i>
+      </button>
+      <div id="demo" class="w3-dropdown-content w3-bar-block w3-card">
+
+        <a href="?v=" target="_blank" class="w3-bar-item w3-button">index.html</a> 
+        <a href="https://github.com/littleflute/blog/edit/master/html/songs/index.html" target="_blank" class="w3-bar-item w3-button">index.html*</a> 	
+        <a href="byecam.htm" target="_blank" class="w3-bar-item w3-button">byecam.htm</a>   
+        <a href="s001.html" target="_blank" class="w3-bar-item w3-button">s001.html</a>   
+        <a href="s002.html" target="_blank" class="w3-bar-item w3-button">s002.html</a>   
+      </div>
+    </div>
+	
+	<div class="w3-dropdown-hover">
+      <button class="w3-button" onclick="myFunction()">
+        shanuan <i class="fa fa-caret-down"></i>
+      </button>
+      <div id="demo" class="w3-dropdown-content w3-bar-block w3-card">
+        <a target="_blank" href="https://github.com/shanuan/blog" class="w3-bar-item w3-button w3-padding-large">blog</a> 
+      </div>
+    </div>
+	
+	<div class="w3-dropdown-hover">
+      <button class="w3-button" onclick="myFunction()">
+        littleflute <i class="fa fa-caret-down"></i>
+      </button>
+      <div id="demo" class="w3-dropdown-content w3-bar-block w3-card">							 	 
+		<a target="_blank" href="https://littleflute.github.io/xd/" class="w3-bar-item w3-button w3-padding-large">xd</a>	
+		<a target="_blank" href="https://littleflute.github.io/vc6/" class="w3-bar-item w3-button w3-padding-large">vc6</a>
+		<a target="_blank" href="https://littleflute.github.io/blog/" class="w3-bar-item w3-button w3-padding-large">blog</a> 
+      </div>
+    </div>
+
+
+  </div>
+</div>
+
+<script>
+function myFunction() {
+    var x = document.getElementById("demo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else { 
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+</script>
+
+</body>
+</html>
