@@ -19,7 +19,7 @@
   
 <a href = "https://littleflute.github.io/blog/docs/2017/04/11/">index.html</a>-
 <a href = "?v=">refresh</a>-
-<a href = "https://github.com/littleflute/blog/edit/master/docs/2017/04/11/1.html">v0.0.115*</a>
+<a href = "https://github.com/littleflute/blog/edit/master/docs/2017/04/11/1.html">v0.1.11*</a>
      
     <select style="position:absolute;top:200px;left:650px;width:100px;">
         <option>select测试</option>
@@ -48,9 +48,12 @@ function _fnMagShowImg(){
        mag : document.getElementById('mag'),
        scale : 3
        });
- 
-}
-	blo0.blScript("plx/blMagShowImg.js","plx/blMagShowImg.js");
 
 var d3 = blo0.blMDiv(document.body,"id_md3","md3",10,330,500,400,"green");
+d3.v = blo0.blDiv(d3,d3.id + "v","grey");
+blo0.blShowObj2Div(d3.v,magnifier);
+ 
+}
+	blo0.blScript("plx/blMagShowImg.js","https://littleflute.github.io/vc6/XdHtml/plx/blMagShowImg.js");
+
 </script> 
