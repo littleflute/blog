@@ -1,12 +1,7 @@
  
 <style type="text/css">
- 
-#img{
- width:342px;
- height:420px;
-}
-#Browser{ 
- z-index:100;
+  
+#Browser{  
  position:absolute;
  background:#555;
 }
@@ -19,23 +14,24 @@
   
 <a href = "https://littleflute.github.io/blog/docs/2017/04/11/">index.html</a>-
 <a href = "?v=">refresh</a>-
-<a href = "https://github.com/littleflute/blog/edit/master/docs/2017/04/11/1.html">v0.1.12*</a>
-     
-    <select style="position:absolute;top:200px;left:650px;width:100px;">
-        <option>select测试</option>
-        <option>是否能覆盖</option>
-    </select>
-
+<a href = "https://github.com/littleflute/blog/edit/master/docs/2017/04/11/1.html">v0.1.25*</a>
+      
 <script src="https://littleflute.github.io/vc6/XdHtml/blclass.js"></script>
 
 <script>
 var d1 = blo0.blMDiv(document.body,"id_md1","md1",0,33,500,400,"green");
-var s = '<img id="img" src="http://www.newxing.com/Tech/UploadPic/2010-4/20104162224613075.jpg"  />';
+var s = '<img id="img" src="https://raw.githubusercontent.com/littleflute/blog/master/pics/DSC_1655.JPG"  />';
 s += '<div id="Browser">        </div>';
 d1.v0 = blo0.blDiv(d1,"v0","v0","red");
 d1.v1 = blo0.blDiv(d1.v0,"magnifier",s,"red");
 d1.v1.style.width = "342px";
 d1.v1.style.height = "420px";
+
+var i = bl$("img");
+i.style.width = "342px";
+i.style.height = "420px";
+ 
+
 
 var s = '<img id="magnifierImg" />';
 var d2 = blo0.blMDiv(document.body,"id_md2","md2",650,0,500,400,"green");
