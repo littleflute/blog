@@ -1,5 +1,5 @@
 ## blog
-### [v0.0.15](https://github.com/littleflute/blog/edit/master/README.md)
+### [v0.0.21](https://github.com/littleflute/blog/edit/master/README.md)
 ## Xd Zone [xd.js](xd.js)
 <div id="debug"></div>
 <div id="demo">
@@ -34,3 +34,9 @@
  <a target="_blank" href="https://littleflute.github.io/xd/" >xd</a>	
 </div>
 ~~~
+
+
+<script src="https://www.w3schools.com/lib/w3.js"></script>
+<script src="https://littleflute.github.io/JavaScript/blclass.js" ></script>
+<script src="https://littleflute.github.io/JavaScript/blApp.js"></script>
+<script src="blAppPlx.js"></script>
