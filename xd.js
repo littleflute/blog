@@ -1,5 +1,5 @@
 var x = document.getElementsByTagName("h1")[0];
-x.innerHTML = " <a target='_blank' href='https://github.com/littleflute/blog/edit/master/xd.js'>LittleFlute's Blog V0.4.5*</a>";
+x.innerHTML = " <a target='_blank' href='https://github.com/littleflute/blog/edit/master/xd.js'>LittleFlute's Blog V0.4.11*</a>";
 var b	= document.getElementById("banner");
 var s = b.innerHTML;
 s += "<a href='docs' class='button downloads'>docs</a>";
@@ -11,7 +11,7 @@ b.innerHTML = s;
 
 function runJS()
 {
-	alert("runJS");
+	alert("runJS 11"); 
 }
 
 var gN   = 0;
