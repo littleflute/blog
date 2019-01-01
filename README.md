@@ -1,6 +1,6 @@
 ## blog
-### [v0.0.23](https://github.com/littleflute/blog/edit/master/README.md)
-## Xd Zone [xd.js](xd.js)
+### [v0.0.24](https://github.com/littleflute/blog/edit/master/README.md)
+## Xd Zone [xd.js](xd.js) [xd.js*](https://github.com/littleflute/blog/edit/master/xd.js)
 <div id="debug"></div>
 <div id="demo">
 <h2>The XMLHttpRequest Object</h2>
