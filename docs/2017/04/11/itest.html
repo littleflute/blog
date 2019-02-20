@@ -1,0 +1,60 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>JavaScript实现图片局部放大_放大镜效果</title>
+<style type="text/css">
+#magnifier{
+ width:342px;
+ height:420px;
+ position:absolute;
+ top:100px;
+ left:250px;
+ font-size:0;
+ border:1px solid #000;
+}
+#img{
+ width:342px;
+ height:420px;
+}
+#Browser{
+ border:1px solid #000;
+ z-index:100;
+ position:absolute;
+ background:#555;
+}
+#mag{
+ border:1px solid #000;
+ overflow:hidden;
+ z-index:100;
+}
+</style> 
+
+</head>
+<body>
+ <a href="https://github.com/littleflute/blog/edit/master/docs/2017/04/11/index.html">v0.0. 24 </a>-
+ <a href="1.html">1.html</a>
+ <button id = "id_btn_loadIssue" >loadIssue</button>
+
+<script src="https://littleflute.github.io/JavaScript/w3.js"></script>
+<script src="https://littleflute.github.io/JavaScript/blclass.js"></script>
+<script src="https://littleflute.github.io/JavaScript/blApp.js"></script>
+
+<script>
+var d = blo0.blMDiv(document.body,"id_mdiv_loadIssue11", "00", 100,100,500,400,blColor[1]);
+var sv = '<img src="http://www.newxing.com/Tech/UploadPic/2010-4/20104162224613075.jpg" id="img" /><div id="Browser"></div>';
+ d.v = blo0.blDiv(d, "magnifier" , sv , blGrey[0]);  
+
+
+var d2 = blo0.blMDiv(document.body, "id_mdiv_d2" , "00", 100,100,500,400,blColor[2]);
+ d2.v = blo0.blDiv(d, "mag" , '<img id="magnifierImg" />', blGrey[0]);  
+
+var btn = bl$( "id_btn_loadIssue" );
+btn.onclick = function(){  
+  function _loadIssue(o) {		eval(o.body); }
+  w3.getHttpObject("https://github.com/littleflute/JavaScript/issues/24", _loadIssue);	
+}
+</script>
+</body>
+</html>
