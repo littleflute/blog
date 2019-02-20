@@ -33,7 +33,7 @@
 
 </head>
 <body>
- <a href="https://github.com/littleflute/blog/edit/master/docs/2017/04/11/itest.html">v0.0. 31 </a>-
+ <a href="https://github.com/littleflute/blog/edit/master/docs/2017/04/11/itest.html">v0.0. 32 </a>-
  <a href="1.html">1.html</a>
  <button id = "id_btn_loadIssue" >loadIssue</button>
 
@@ -52,8 +52,9 @@ var d2 = blo0.blMDiv(document.body, "id_mdiv_d2" , "00", 100,100,500,400,blColor
 
 var btn = bl$( "id_btn_loadIssue" );
 btn.onclick = function(){  
-  function _loadIssue(o) {		eval(o.body); }
-  w3.getHttpObject("https://github.com/littleflute/JavaScript/issues/24", _loadIssue);	
+  function _loadIssue (o) {     eval(o.body);   }
+  var url = "https://api.github.com/repos/littleflute/JavaScript/issues/24";
+  w3.getHttpObject(url, _loadIssue ); 
 }
 </script>
 </body>
