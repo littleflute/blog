@@ -1,4 +1,3 @@
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -33,28 +32,24 @@
 
 </head>
 <body>
- <a href="https://github.com/littleflute/blog/edit/master/docs/2017/04/11/itest.html">v0.0. 32 </a>-
+ <a href="https://github.com/littleflute/blog/edit/master/docs/2017/04/11/itest.html">v0.0. 35 </a>-
  <a href="1.html">1.html</a>
- <button id = "id_btn_loadIssue" >loadIssue</button>
+ <button id = "id_btn_loadIssue" >loadIssue</button> <button id="id_btn_4_blApp">+</button>
 
 <script src="https://littleflute.github.io/JavaScript/w3.js"></script>
 <script src="https://littleflute.github.io/JavaScript/blclass.js"></script>
 <script src="https://littleflute.github.io/JavaScript/blApp.js"></script>
 
 <script>
-var d = blo0.blMDiv(document.body,"id_mdiv_loadIssue11", "00", 100,100,500,400,blColor[1]);
-var sv = '<img src="http://www.newxing.com/Tech/UploadPic/2010-4/20104162224613075.jpg" id="img" /><div id="Browser"></div>';
- d.v = blo0.blDiv(d, "magnifier" , sv , blGrey[0]);  
 
-
-var d2 = blo0.blMDiv(document.body, "id_mdiv_d2" , "00", 100,100,500,400,blColor[2]);
- d2.v = blo0.blDiv(d, "mag" , '<img id="magnifierImg" />', blGrey[0]);  
 
 var btn = bl$( "id_btn_loadIssue" );
 btn.onclick = function(){  
-  function _loadIssue (o) {     eval(o.body);   }
-  var url = "https://api.github.com/repos/littleflute/JavaScript/issues/24";
-  w3.getHttpObject(url, _loadIssue ); 
+  if(!this.bLoad){this.bLoad = true; this.style.background = "green";
+  	function _loadIssue (o) {     eval(o.body);   }
+	var url = "https://api.github.com/repos/littleflute/JavaScript/issues/24";
+	w3.getHttpObject(url, _loadIssue ); 
+  }
 }
 </script>
 </body>
