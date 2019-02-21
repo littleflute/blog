@@ -1,10 +1,11 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
 <title>JavaScript实现图片局部放大_放大镜效果</title>
 <style type="text/css">
-#magnifier{
+#id_div_4_Pic0 {
  width:342px;
  height:420px;
  position:absolute;
@@ -154,8 +155,8 @@ var magnifier = {
 }
 window.onload = function(){
  magnifier.init({
-       cont : document.getElementById('magnifier'),
-       img : document.getElementById('magnifierImg'),
+       cont : document.getElementById( "id_div_4_Pic0" ),
+       img : document.getElementById( "id_4_picNew" ),
        mag : document.getElementById('mag'),
        scale : 3
        });
@@ -163,16 +164,16 @@ window.onload = function(){
 </SCRIPT>
 </head>
 <body>
- <a href="https://github.com/littleflute/blog/edit/master/docs/2017/04/11/index.html">v0.0.5</a>-
+ <a href="https://github.com/littleflute/blog/edit/master/docs/2017/04/11/index.html">v0.0. 12 </a>-
  <a href="1.html">1.html</a>- <a href="showPic.html">showPic.html</a>- <a href="itest.html">itest.html</a>
  
-    <div id="magnifier">
+    <div id = "id_div_4_Pic0" >
         <img src="http://www.newxing.com/Tech/UploadPic/2010-4/20104162224613075.jpg" id="img" />
         <div id="Browser">
         </div>
     </div>
     <div id="mag">
-        <img id="magnifierImg" />
+        <img id = "id_4_picNew" />
     </div>
     <select style="position:absolute;top:200px;left:650px;width:100px;">
         <option>select测试</option>
