@@ -1,5 +1,5 @@
 ## blog
-### [v0.0.24](https://github.com/littleflute/blog/edit/master/README.md)
+### [v0.0.25](https://github.com/littleflute/blog/edit/master/README.md)
 ## Xd Zone [xd.js](xd.js) [xd.js*](https://github.com/littleflute/blog/edit/master/xd.js)
 <div id="debug"></div>
 <div id="demo">
@@ -17,6 +17,8 @@
 
  
 ## prj
+
+## [Games](https://littleflute.github.io/Games/) 
 ### [vc6](https://littleflute.github.io/vc6/)
 ### [xau](https://littleflute.github.io/xau/)
 ### [cchess](https://littleflute.github.io/cchess) 
