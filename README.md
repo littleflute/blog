@@ -1,5 +1,6 @@
 ## blog
-### [v0.0.25](https://github.com/littleflute/blog/edit/master/README.md)
+### [v0.0.31](https://github.com/littleflute/blog/edit/master/README.md)
+### [ebooks](https://github.com/littleflute/ebooks) 
 ## Xd Zone [xd.js](xd.js) [xd.js*](https://github.com/littleflute/blog/edit/master/xd.js)
 <div id="debug"></div>
 <div id="demo">
@@ -24,21 +25,8 @@
 ### [cchess](https://littleflute.github.io/cchess) 
 ### [englishtyping](https://shanuan.github.io/englishtyping) 
 ### [https://hongzhong22.github.io/home/](https://hongzhong22.github.io/home/)
-
-## more
-## more
-## more
-## more
-## more
-## more
-## more
-## more
-## more
-## more
-## more
-## more
-## more
-## more
+ 
+ 
 ## more
  
 ~~~html
