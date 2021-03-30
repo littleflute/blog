@@ -1,0 +1,1 @@
+ffmpeg.exe -y -f lavfi -i "color=color=%1@0.0:size=%2x%3,format=rgba" -c:v png -t %4 -threads 0 %5 -stats
