@@ -1,9 +1,9 @@
 {
     "request": {
-        "version": "0.0.16", 
+        "version": "0.0.21", 
         "width": 1024, 
         "height": 768, 
-        "music": "1.mp3", 
+        "music": "https://littleflute.github.io/blog/853101.mp3", 
         "video": "${VAR_VIDEO}", 
         "rate": "10", 
         "frames": [
