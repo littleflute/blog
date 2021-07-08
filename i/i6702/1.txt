@@ -1,0 +1,885 @@
+Transcript
+
+
+00:00
+I am here to sign a document betting $10,000
+00:03
+that my last video is in fact, correct.
+00:07
+This is the video in question.
+00:10
+Some people may have missed it,
+00:11
+but in this car, there is no motor, no batteries,
+00:15
+no energy source, besides the wind itself.
+00:18
+And the counterintuitive claim,
+00:19
+is that this car can maintain speeds
+00:22
+faster than the wind that's pushing it.
+00:25
+There is a physics professor at UCLA,
+00:28
+who got in touch, to say that he thought that I was wrong,
+00:31
+that the explanation was wrong.
+00:33
+You know, we went back and forth a little bit,
+00:35
+and eventually I said,
+00:36
+"Well, how about we bet $10,000?
+00:40
+"I can prove it to you.
+00:41
+"This vehicle really can go downwind faster than the wind."
+00:45
+And to my surprise, he is taking me up on the bet.
+00:48
+- Look, no one is perfect,
+00:50
+but you have a much lower error rate
+00:53
+than most people on YouTube, in YouTube Space.
+00:56
+- Now, Professor Alex Kusenko wanted this wager
+00:59
+and all related discourse to be public.
+01:01
+In fact, he suggested we get a celebrity
+01:03
+to witness the signing.
+01:04
+So I asked Neil deGrasse Tyson, Bill Nye,
+01:06
+and Sean Carroll to be our witnesses.
+01:08
+And they graciously agreed.
+01:10
+- And Alex, I just wanna say,
+01:12
+I agree with everything you said about Veritasium.
+01:15
+That generally I can watch it
+01:18
+and not have to wonder, is he gonna mess up?
+01:21
+How am I gonna-
+01:22
+- No, he's brilliant, no, he's brilliant.
+01:24
+- I'm excited about this bet,
+01:25
+because if I am wrong, then I wanna know.
+01:28
+Like the whole point of the channel is to get to the truth.
+01:31
+And that is, I think why we're all here today.
+01:33
+And I think, you know,
+01:34
+this is a great chance to sort of see.
+01:36
+I'm going to summarize Alex's main points in this video,
+01:39
+but I'll put his full presentation here.
+01:41
+- So let me first explain what I see in the video.
+01:46
+In the video, the vehicle is operated in a gusty wind.
+01:50
+Initially, you have the wind speed exceeding the car speed,
+01:55
+but then the wind speed is not constant.
+01:57
+The wind speed drops, and the car moves by inertia
+02:01
+with deceleration for awhile.
+02:03
+- So, basically Alex thinks a gust
+02:05
+pushes the car to a high speed.
+02:07
+And then when the wind dies,
+02:08
+the car is going faster than the wind momentarily,
+02:11
+but it must be slowing down.
+02:13
+- In fact, that will be my conclusion
+02:14
+at the end of this presentation,
+02:16
+that whenever you have velocity faster than the wind,
+02:18
+I'll actually show you in an equation,
+02:20
+the acceleration is negative.
+02:22
+The second effect is that the wind in the video
+02:26
+is measured at the height
+02:28
+of about a meter or a meter and a half.
+02:30
+But the propeller goes to some three meters
+02:32
+above the ground.
+02:33
+- Now, due to interactions with the ground,
+02:35
+there is a wind gradient.
+02:37
+Wind travels slower, close to the ground,
+02:39
+and then faster, higher up.
+02:41
+Now, Alex estimated that the wind speed of the propeller
+02:43
+might be 10 or 15% higher than at the tell-tale.
+02:47
+So it's possible that the car could be moving
+02:49
+slower than the wind at the propeller,
+02:51
+and yet appear to be moving faster than the wind
+02:53
+at the height of the tell-tale.
+02:55
+- Now, I think that this is a small effect.
+02:57
+However, in combination with the previous effect,
+03:00
+it just can make this more frequent, okay.
+03:03
+And that completes-
+03:04
+- Alex, if I remember the video correctly,
+03:07
+Derek reports that they've achieved
+03:09
+up to 2.8 times wind speed.
+03:12
+That feels much higher than what is possible here,
+03:17
+unless the wind had picked up
+03:19
+and then spontaneously sort of dropped.
+03:21
+- Very, very good question.
+03:22
+Okay, if you're going for the record,
+03:25
+you probably will do many attempts.
+03:27
+You will be sampling that gusty wind
+03:29
+over, and over, and over,
+03:32
+until you set the record, right?
+03:33
+That's how you set the record.
+03:34
+And on one of those occasions,
+03:37
+you will get a nice strong gust,
+03:39
+which is three times the air that comes after it, okay?
+03:43
+And that's when you will clock the record.
+03:45
+And that's where that 2.8 factor will come in.
+03:48
+- So what about the treadmill tests?
+03:50
+These are conducted in still air.
+03:53
+By moving the ground backwards,
+03:55
+you're simulating a perfectly steady tailwind.
+03:58
+And if you hold the car stationary on the treadmill,
+04:01
+well, that's equivalent to the car going exactly wind speed.
+04:05
+Now, if the car can move forward on the treadmill,
+04:08
+that shows it can accelerate faster than the wind.
+04:13
+But Alex had multiple explanations,
+04:14
+why these experiments don't actually show
+04:17
+what they claim to show.
+04:19
+- If you have this fluctuating speed of the treadmill,
+04:24
+and then if a human just sort of steers it,
+04:27
+it then can introduce unconsciously,
+04:29
+a bias towards the desired result.
+04:31
+- So, would it any be that the guy with the spork
+04:35
+is inducing the model craft
+04:38
+to go across the lane now and then?
+04:40
+And as you pointed out, I would go downhill now and then.
+04:44
+- Yeah, I'm sure, I'm a hundred percent sure
+04:47
+that the guy in the video doesn't do it on purpose, okay.
+04:53
+However, you know, if he is expecting forward drift-
+04:57
+- Yeah, oh he's trying.
+04:58
+- Yeah, yeah absolutely, that's exactly, okay,
+05:01
+so there you go.
+05:02
+- In the absence of convincing experimental evidence,
+05:05
+Alex turned to theoretical analyses,
+05:08
+like one by MIT Aero Professor, Mark Drela.
+05:11
+But here too, he found problems.
+05:14
+His main concern is that the equation for net force
+05:16
+includes the difference between the speeds of the car
+05:19
+and the wind in the denominator.
+05:21
+Which seems to imply that when traveling exactly wind speed,
+05:25
+you should get infinite force.
+05:27
+- Now, here's the real danger.
+05:29
+Because if Derek drives very close to the wind,
+05:33
+that difference in speed goes to zero.
+05:36
+If it's one millionth of one percent,
+05:39
+that's like a nuclear bomb exploding behind him.
+05:41
+Then Derek is definitely in trouble, right?
+05:43
+So we need to find something to save Derek's life here.
+05:46
+This is serious, right?
+05:48
+- But dividing by zero, come on, you guys.
+05:50
+I never looked at that.
+05:51
+- [Derek] Alex performed his own analysis,
+05:54
+and found no such divide by zero problems.
+05:57
+In fact, he found there's no way for the car
+06:00
+to accelerate at, or above wind speed.
+06:03
+- The acceleration of this craft is negative.
+06:06
+So when we, you know,
+06:08
+so it's possible to move the craft faster than the wind,
+06:10
+but it's not possible to move it at zero acceleration
+06:13
+which would be needed to maintain constant speed.
+06:16
+- [Derek] That is basically where we left it.
+06:18
+- That is right.
+06:19
+- Okay, thank you, thank you, Neil.
+06:20
+Thank you very much.
+06:21
+- Thanks guys, thanks Neil.
+06:22
+- So now it was up to me to convince Professor Kusenko
+06:25
+that Blackbird really can go faster than the wind,
+06:31
+When I posted about it on Twitter,
+06:33
+Alice Zhang, who runs Chinese Veritasium, said,
+06:35
+"I think you lost Derek.
+06:37
+I'm 80% on Alex's side now."
+06:40
+What's amazing to me, is that neither one of them
+06:41
+had seen my attempts to replicate the treadmill experiments.
+06:45
+For the first video, I asked my friend and YouTube maker,
+06:47
+Xyla Foxlin, to make a model downwind cart.
+06:50
+- All right. (wheels screeching)
+06:52
+(laughing)
+06:54
+- [Man] Oh, no!
+06:55
+- Version one ended in failure,
+06:57
+but Xyla was undeterred,
+06:59
+coming back in a couple of days with version two.
+07:01
+- Is it feeling like it's gonna...?
+07:03
+- Unlike these models, most of her projects actually work.
+07:06
+She is determined.
+07:08
+So maybe this tells us something
+07:10
+about whether you can
+07:11
+actually go faster than the wind, downwind.
+07:14
+What was clear to me is that I didn't do a good enough job
+07:17
+in the first video, explaining how Blackbird works
+07:20
+and providing convincing evidence
+07:21
+that it can really go faster than the wind
+07:24
+in a sustained way.
+07:25
+In my defense, I thought the concept
+07:27
+was well enough established.
+07:29
+Way back in 1969, Andrew Bauer
+07:31
+build the first successful downwind cart.
+07:34
+And he did it to settle a friendly wager
+07:37
+with Aero Engineer, Apolo Smith.
+07:39
+The bet was inspired by a claim in a students paper
+07:42
+from 20 years earlier.
+07:44
+Now, Rick Cavallaro, the builder of Blackbird
+07:45
+was completely unaware of all this
+07:47
+until after he built his cart.
+07:49
+But other analysis have been published
+07:51
+under names like the push-me pull-you boat.
+07:54
+So I didn't honestly think anyone would doubt
+07:56
+the vehicles operation, much less bet me $10,000.
+08:00
+But clearly, there is a need for a deeper explanation.
+08:04
+So I want to do that now by responding to the points
+08:06
+Alex raised.
+08:07
+So first, let's deal with wind gradient.
+08:10
+I mean, why didn't we measure
+08:11
+the speed of the wind higher up?
+08:12
+Well, the answer is because it's already been done.
+08:16
+They mounted tell-tales on fishing poles
+08:18
+out to the sides of the propeller and even above it.
+08:21
+Now, although the lowest tell-tale flips back first,
+08:23
+all of the tell-tales do eventually flip backwards
+08:27
+showing that every part of the vehicle
+08:28
+is going faster than the wind.
+08:31
+Could this be because of a big wind gust
+08:33
+that pushed the car up to high speed and then the wind died?
+08:36
+I don't think so.
+08:38
+Even though I didn't have a speedometer in the car
+08:40
+for my runs, someone on Twitter pointed out
+08:42
+that we could use the rotation of the back wheel
+08:45
+to determine the speed from the video footage.
+08:47
+This shows that even after the tell-tale flips backwards,
+08:50
+the car keeps accelerating.
+08:54
+Another thing I want to point out is that,
+08:55
+if wind gradient or gusts
+08:57
+were the reason that the car travels faster than the wind,
+09:00
+well, you'd expect the tell-tale to jump around
+09:02
+or at least not point straight back at me.
+09:05
+But it consistently does for over 30 seconds
+09:08
+until I had to hit the brakes
+09:09
+to avoid crashing into parked vehicles.
+09:12
+But if that's not enough for you,
+09:13
+when Blackbird achieved its record speed
+09:15
+of 27.7 miles per hour in a 10 mile per hour tail wind,
+09:20
+it was still accelerating.
+09:22
+And we know this because
+09:23
+there were multiple GPS units in the car and wind speeds
+09:27
+which were measured at the height of the propeller
+09:29
+at multiple locations.
+09:31
+The highlighted section shows
+09:32
+the ten second measurement period
+09:34
+over which the record was set.
+09:36
+Also in 2013, the U.S Physics Olympiad Semifinal Exam
+09:40
+asked questions about Blackbird.
+09:42
+Like, can it go faster than the wind downwind and upwind?
+09:47
+The solution says, both modes are possible.
+09:50
+And with sufficiently low energy loss,
+09:52
+any speed is possible.
+09:55
+Now, I'll admit that the evidence
+09:57
+I showed in the first video was not definitive
+09:59
+when gusts or gradients
+10:01
+could have explained the observations.
+10:04
+But now that you've seen this evidence,
+10:06
+are you convinced that Blackbird can go downwind
+10:08
+faster than the wind without slowing down?
+10:11
+Well, Professor Kusenko was not convinced.
+10:14
+So I wanna explain how the car works so clearly
+10:17
+that no one, not even the professor,
+10:19
+can doubt what's going on.
+10:21
+The first thing to know,
+10:22
+is that the propeller doesn't work like most people think.
+10:25
+It's not working like a windmill.
+10:26
+It doesn't turn the way the tailwind is pushing it.
+10:30
+Instead, it turns in the opposite direction,
+10:32
+working like a fan to push air backwards.
+10:35
+This fan is powered by the wheels,
+10:37
+which are connected to the propeller by a bike chain.
+10:40
+So at wind speed, the car can keep accelerating
+10:42
+because the wheels turn the fan, which blows air back,
+10:46
+generating forward thrust.
+10:48
+Now the big question is, to drive the fan,
+10:50
+there must be a backwards force on the wheels,
+10:53
+which tends to slow them down.
+10:55
+So why isn't this force bigger
+10:57
+than the thrust from the propeller
+10:59
+causing the car to slow down overall?
+11:01
+Well, the answer is,
+11:03
+the wheels are going so much faster over the ground
+11:06
+than the propeller is moving through the air.
+11:08
+So the thrust force can actually be larger.
+11:10
+I'm gonna do an analysis
+11:12
+in the frame of reference of the car.
+11:14
+And the important equation to know is,
+11:16
+power equals force times velocity.
+11:18
+So at the wheels, power is input into the system
+11:21
+by the ground moving underneath the car.
+11:24
+The power generated is the force of the ground on the wheels
+11:27
+times the velocity of the car.
+11:30
+At the propeller, work is done on the air,
+11:33
+as the propeller pushes it backwards.
+11:35
+The power out equals the force of the prop on the air,
+11:38
+times the speed of the car, minus the speed of the wind.
+11:42
+The prop is going slower through the air
+11:44
+due to the tailwind.
+11:46
+And if we assume no losses,
+11:47
+then the power in at the wheels,
+11:49
+equals the power out at the propeller.
+11:51
+From this equation,
+11:52
+we can see that the force at the propeller
+11:54
+will be greater than the force at the wheels.
+11:58
+And since the propeller is pushing air back,
+12:00
+the air applies an equal and opposite force
+12:03
+forward on the prop.
+12:05
+This is the thrust force, which will be greater
+12:07
+than the backwards force on the wheels.
+12:12
+So, this car works like a lever or a pulley
+12:15
+by applying a small force to the wheels
+12:17
+over a larger distance,
+12:19
+the propeller can apply a larger force
+12:22
+over a smaller distance.
+12:24
+This is just like when you're riding a bike going up hill,
+12:27
+you move the pedals fast, but with smaller force,
+12:30
+to make the wheels move slower over the ground,
+12:32
+but with a bigger force.
+12:35
+But now we've run into the divide by zero problem,
+12:37
+that Professor Kusenko warned us about.
+12:40
+When the speed of the car
+12:41
+is exactly equal to the speed of the wind,
+12:43
+it seems like the propeller can provide infinite force.
+12:46
+That can't be right, can it?
+12:48
+I mean, is our analysis flawed?
+12:50
+The answer is no, for two reasons.
+12:53
+First of all, this is exactly what you'd expect
+12:56
+theoretically, with any lever or pulley.
+12:58
+If one arm of the lever is zero,
+13:00
+then you can lift an infinite weight
+13:03
+with any amount of force on the other side.
+13:05
+The catch is, it's displacement will be zero.
+13:08
+But second of all, in practice,
+13:10
+there is a propeller efficiency term
+13:12
+that is ill-defined
+13:13
+when the propeller is not moving through the air.
+13:15
+- There's a better formula for the prop proficiency,
+13:18
+which is well-defined in the zero speed limit.
+13:21
+It makes an algebraic mess,
+13:23
+but it's perfectly well-defined.
+13:25
+- And then the divide by zero problem is eliminated.
+13:28
+But that equation makes the problem
+13:30
+look more complicated than it actually is.
+13:32
+You don't actually need aerodynamics.
+13:35
+Here, I have a little cart with a big wheel
+13:37
+that rolls on two smaller spools.
+13:40
+And what I'm gonna show
+13:41
+is that when you have two media
+13:44
+moving relative to one another,
+13:46
+well then if this car is in contact with both media,
+13:49
+it can actually move faster than their relative velocity.
+13:55
+So as I push the board to the right,
+13:59
+you can see that the car goes down the board
+14:02
+faster than the board is moving.
+14:06
+If you look carefully,
+14:07
+you'll see that the big wheel
+14:08
+isn't turning the way that the board is pushing it.
+14:13
+It's actually rotating in the opposite direction.
+14:16
+That's just like the propeller on Blackbird,
+14:18
+which pushes back against the air,
+14:21
+and that's how it's able to go faster
+14:24
+than the wind downwind.
+14:26
+Now you can build one of these cars for yourself at home,
+14:29
+or you can build a model downwind cart.
+14:34
+I told you, Xyla was determined.
+14:35
+Yeah, I'm gonna make the claim on camera.
+14:37
+I like, I think it's gonna work this time.
+14:40
+We're changing the propeller.
+14:41
+- It has to work
+14:42
+before we get kicked out of the treadmill store. (laughing)
+14:44
+(motors roaring)
+14:53
+(chuckling)
+14:55
+- [Derek] Does it work?
+14:56
+- It totally works.
+14:57
+- [Derek] Amazing.
+14:58
+- Oh my god, it's so good.
+15:01
+- Her fourth version of the cart works spectacularly
+15:04
+and it was designed to be replicated by anyone
+15:07
+using just a 3D printer and a simple list of materials.
+15:10
+She explains how to build it with more detail
+15:12
+on the engineering process
+15:13
+on a video over on her channel.
+15:15
+So go check it out.
+15:16
+Now, professor Kusenko has now conceded the bet,
+15:20
+and he transferred $10,000 to me.
+15:22
+So I wanna thank him for being a man of honor,
+15:24
+and changing his mind in light of the evidence I presented,
+15:28
+which is really not easy to do,
+15:29
+especially in a public debate like this one.
+15:32
+Now I do not wanna keep the money.
+15:34
+I wanna invest it in science communication.
+15:37
+So I'm holding a one-minute video competition.
+15:40
+I'll be awarding cash prizes to the top three videos
+15:44
+that explain a counterintuitive STEM concept.
+15:47
+I'll put some details down in the description.
+15:50
+What I love about science,
+15:52
+is that disagreements are not problems.
+15:55
+They are opportunities for everyone to learn something.
+15:58
+I learned a lot more about Blackbird aerodynamics,
+16:02
+and gear ratios than I knew before.
+16:04
+I also learned
+16:05
+that I should go into more depth in my videos.
+16:07
+I should make the evidence overwhelmingly convincing
+16:09
+and put in some equations toward the end
+16:11
+for those who want that level of detail.
+16:13
+I wanna thank everyone involved in the making this video.
+16:16
+Neil deGrasse Tyson, Bill Nye, Sean Carroll, Mark Drela,
+16:19
+Professor Kusenko and Xyla Foxlin,
+16:22
+but especially Rick Cavallaro,
+16:24
+the inventor and creator of Blackbird.
+16:26
+He was a fountain of information,
+16:28
+a constant source of support,
+16:30
+and the man leading the charge to help people understand
+16:32
+this area of physics for the past 15 years.
+16:35
+Let's hope this video puts the issue to rest
+16:38
+once and for all.
+16:40
+(electronics buzzing)
+16:43
+The Blackbird craft all started with a brain teaser.
+16:46
+And this video sponsor, Brilliant,
+16:48
+offers you a daily problem to solve every day,
+16:51
+like this one about gear ratios.
+16:53
+If the first gear spins 10 times per second,
+16:55
+at what rate does the final gear spin?
+16:57
+Now I did this problem the hard way,
+16:59
+but my wife figured out how to do it the easy way.
+17:01
+And that's what brain teasers are great for.
+17:03
+They get you thinking about the world,
+17:05
+and they give you insights into problems
+17:07
+you might think you already understand.
+17:09
+Just think about
+17:10
+how much more you would understand in a year,
+17:12
+if you got into the habit
+17:14
+of solving one novel unexpected problem per day.
+17:17
+And while you're at it,
+17:18
+why not take one of Brilliant's courses,
+17:20
+like on computer science, neural networks,
+17:22
+or classical physics.
+17:23
+Even physics professors can benefit
+17:25
+from some of the lessons on frames of reference.
+17:27
+Somehow I managed to go my whole degree
+17:30
+without learning Lagrangian mechanics.
+17:31
+So that's a course I'm working through at the moment.
+17:34
+It's a really elegant way of solving physics problems.
+17:37
+And I wish I had learned about it sooner.
+17:39
+For viewers of this channel,
+17:40
+Brilliant are offering 20% off an annual subscription
+17:43
+to the first 200 people to sign up.
+17:46
+Just go to Brilliant.org/Veritasium.
+17:48
+I will put that link down in the description.
+17:50
+So, I wanna thank Brilliant for supporting Veritasium,
+17:53
+and I wanna thank you for watching.
