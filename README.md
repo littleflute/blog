@@ -1,5 +1,6 @@
 ## blog
-### [v0.0.31](https://github.com/littleflute/blog/edit/master/README.md)
+### [v0.0.32](https://github.com/littleflute/blog/edit/master/README.md)
+## [新华社live](https://live.ixigua.com/room/7039316749187730212/)
 ### [ebooks](https://github.com/littleflute/ebooks) 
 ## Xd Zone [xd.js](xd.js) [xd.js*](https://github.com/littleflute/blog/edit/master/xd.js)
 <div id="debug"></div>
