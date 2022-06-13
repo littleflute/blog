@@ -1,6 +1,7 @@
 # html
-[html](..)
+[html]
+function=()
 
 ## v0.0.3
-[edit](https://github.com/littleflute/blog/edit/master/html/jsref/index.md)
+<byterange_+4>C+Programming</byterange_+4>(https://github.com/littleflute/blog/edit/master/html/jsref/index.md)
 
